@@ -7,7 +7,7 @@ from pprint import pprint
 client = MongoClient(
     os.getenv('MONGODB_HOST','localhost'),
     username=os.getenv('MONGODB_USERNAME', 'spegg'),
-    password=os.getenv('MONGODB_USERNAME', 'bad_password'),
+    password=os.getenv('MONGODB_PASSWORD', 'bad_password'),
     authSource=os.getenv('MONGODB_DATABASE', 'spegg'),
     authMechanism='SCRAM-SHA-256')
 

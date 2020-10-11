@@ -50,7 +50,7 @@ services:
         restart: always
 
         volumes:
-            - mongodb_data:/bitnami/mongodb
+            - "mongodb_data:/bitnami/mongodb:rw"
 
         environment:
             - MONGO_INITDB_ROOT_USERNAME
