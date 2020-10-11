@@ -63,20 +63,12 @@ def test():
             }
         },
         {
-            '$lookup': {
-                'from': "SubjectVersion",
-                'localField': 'subject_id',
-                'foreignField': 'subject_id',
-                'as': 'versions'
-            }
-        },
-        {
             '$group': {
                 '_id': '$_id',
                 'subject_id': {'$first': '$subject_id' },
                 'type': {'$first': '$type' },
                 'version': {'$first': '$version' },
-                'all_versions': { '$first': '$versions.version'},
+                'versions': { '$addToSet': '$versions.version'},
                 'references': {'$push': '$reference'},
             }
         },

@@ -9,20 +9,41 @@ from . import dbmodel
 BASE_URL="https://fachportal.gematik.de/fachportal-import/files/"
 
 FORMAT = '[convert] %(levelname)s: %(message)s'
-logging.basicConfig(format=FORMAT, level=logging.ERROR)
+logging.basicConfig(format=FORMAT, level=logging.WARNING)
 
 
 def convert_data():
+    index_validity = ET.parse("./raw-data/metadaten-xml/index-validity-status-from-excel-file.xml")
+
     for index in glob("./raw-data/metadaten-xml/index-characteristics-*.xml"):
         xml = ET.parse(index)
         index = index.rsplit('/', 1)[-1]
 
         for file_el in xml.getroot().iter('file'):
             id = file_el.find('id').text
+
+            if id.startswith('gemProdT_Kon_PTV'):
+                id = 'gemProdT_Kon'
+
             version = file_el.find('typeVersion').text
             descver = file_el.find('docVersion').text
 
             filenames = file_el.find('fileNames').findall('fileName')
+
+            url = requests.compat.urljoin(BASE_URL, f"../steckbriefe/{filenames[0].text}")
+            r = requests.head(url)
+            if r.status_code != 200:
+                error = f"URL not found {url}, referenced in {id}, v{version}, {index}"
+                logging.error (error)
+
+            validity_el = index_validity.findall(f".//file[id='{id}']")
+
+
+            if len(validity_el) == 0:
+                logging.warning(f"Unknown entity {id}, v{version} from {index}")
+            else:
+                pass
+
             xlsx_filename = filenames[1].text
 
             xlx_files = glob(f"./raw-data/**/{xlsx_filename}", recursive=True)

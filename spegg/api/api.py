@@ -23,6 +23,7 @@ class SubjectVersionResource(BaseModel):
     version: str
     type: dbmodel.SubjectType
     references: List[ResourceVersionReferenceResource] = []
+    all_versions: List[str] = []
 
 
 class SubjectResource(BaseModel):
@@ -58,15 +59,8 @@ async def get_all_subject_versions(subject_id:str):
     result = db.SubjectVersion.aggregate([
         {
             '$match': {'subject_id': subject_id }
-        },
-        {
-        '$lookup': {
-            'from': "ResourceVersion",
-            'localField': "resources",
-            'foreignField': "_id",
-            'as': "resources"
         }
-    }])
+    ])
     response = []
     for subj_dict in result:
         response.append(SubjectVersionResource(**subj_dict))
@@ -111,15 +105,23 @@ async def get_subject_version(subject_id:str, version:str):
             }
         },
         {
+            '$lookup': {
+                'from': "SubjectVersion",
+                'localField': 'subject_id',
+                'foreignField': 'subject_id',
+                'as': 'versions'
+            }
+        },
+        {
             '$group': {
                 '_id': '$_id',
                 'subject_id': {'$first': '$subject_id' },
                 'type': {'$first': '$type' },
                 'version': {'$first': '$version' },
-                'references': {'$push': '$reference'}
+                'all_versions': { '$first': '$versions.version'},
+                'references': {'$push': '$reference'},
             }
-        }
-
+        },
     ]))
 
     if len(result) == 0:
@@ -127,3 +129,27 @@ async def get_subject_version(subject_id:str, version:str):
     
     return SubjectVersionResource(**result[0])
     
+@api.get("/Resource")
+async def get_all_resources():
+    result = db.Resource.aggregate([
+        {
+            '$lookup': {
+                'from': "ResourceVersion",
+                'localField': 'id',
+                'foreignField': 'resource_id',
+                'as': 'versions'
+            }
+        },
+        {
+            '$project': {
+                '_id': 0,
+                'versions._id': 0,
+                'versions.resource_id': 0,
+            }
+        },
+    ])
+    response = []
+    for res_dict in result:
+        pprint(res_dict)
+        response.append(res_dict)
+    return response
