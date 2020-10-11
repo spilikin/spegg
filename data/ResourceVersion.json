@@ -1,0 +1,296 @@
+2020-10-11T06:28:51.567+0000	connected to: mongodb://localhost/
+{"_id":{"$oid":"5f828313b9e2a8aaea14b095"},"resource_id":"gemSpec_CVC_Root","version":"1.9.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_CVC_Root_V1.9.0.pdf"}
+{"_id":{"$oid":"5f828313b9e2a8aaea14b09b"},"resource_id":"gemSpec_DS_Anbieter","version":"1.1.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_DS_Anbieter_V1.1.0.pdf"}
+{"_id":{"$oid":"5f828313b9e2a8aaea14b0a1"},"resource_id":"gemSpec_Krypt","version":"2.13.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Krypt_V2.13.0.pdf"}
+{"_id":{"$oid":"5f828313b9e2a8aaea14b0aa"},"resource_id":"gemKPT_Test","version":"2.3.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemKPT_Test_V2.3.0.pdf"}
+{"_id":{"$oid":"5f828313b9e2a8aaea14b0b0"},"resource_id":"gemSpec_CVC_TSP","version":"1.12.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_CVC_TSP_V1.12.0.pdf"}
+{"_id":{"$oid":"5f828314b9e2a8aaea14b0ba"},"resource_id":"gemSpec_OM","version":"1.12.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_OM_V1.12.0.pdf"}
+{"_id":{"$oid":"5f828314b9e2a8aaea14b0c3"},"resource_id":"gemRL_TSL_SP_CP","version":"2.3.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemRL_TSL_SP_CP_V2.3.0.pdf"}
+{"_id":{"$oid":"5f828314b9e2a8aaea14b0cb"},"resource_id":"gemSpec_FD_KOMLE","version":"1.8.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_FD_KOMLE_V1.8.0.pdf"}
+{"_id":{"$oid":"5f828314b9e2a8aaea14b0d3"},"resource_id":"gemSpec_Net","version":"1.15.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Net_V1.15.0.pdf"}
+{"_id":{"$oid":"5f828314b9e2a8aaea14b0d9"},"resource_id":"gemSpec_PKI","version":"2.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_PKI_V2.5.0.pdf"}
+{"_id":{"$oid":"5f828314b9e2a8aaea14b0ee"},"resource_id":"gemSpec_Perf","version":"2.7.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Perf_V2.7.0.pdf"}
+{"_id":{"$oid":"5f828314b9e2a8aaea14b0fc"},"resource_id":"gemSpec_CAN_TI","version":"1.0.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_CAN_TI_V1.0.0.pdf"}
+{"_id":{"$oid":"5f828314b9e2a8aaea14b106"},"resource_id":"gemSpec_HBA_ObjSys","version":"3.13.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_HBA_ObjSys_V3.13.0.pdf"}
+{"_id":{"$oid":"5f828314b9e2a8aaea14b10c"},"resource_id":"gemSpec_HBA_ObjSys_G2_1","version":"4.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_HBA_ObjSys_G2_1_V4.5.0.pdf"}
+{"_id":{"$oid":"5f828315b9e2a8aaea14b116"},"resource_id":"gemSpec_PINPUK_TI","version":"1.3.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_PINPUK_TI_V1.3.0.pdf"}
+{"_id":{"$oid":"5f828317b9e2a8aaea14b11e"},"resource_id":"gemSpec_X_509_TSP","version":"1.13.0","url":"URL not found for document gemSpec_X_509_TSP_V1.13.0.pdf, referenced in gemAnbT_HBA, v1.1.2, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f828317b9e2a8aaea14b129"},"resource_id":"gemSpec_FM_VSDM","version":"2.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_FM_VSDM_V2.5.0.pdf"}
+{"_id":{"$oid":"5f828317b9e2a8aaea14b12f"},"resource_id":"gemSpec_KTR-AdV","version":"1.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_KTR-AdV_V1.5.0.pdf"}
+{"_id":{"$oid":"5f828317b9e2a8aaea14b14b"},"resource_id":"gemSpec_SMC-B_ObjSys","version":"3.13.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_SMC-B_ObjSys_V3.13.0.pdf"}
+{"_id":{"$oid":"5f828317b9e2a8aaea14b151"},"resource_id":"gemSpec_SMC-B_ObjSys_G2_1","version":"4.4.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_SMC-B_ObjSys_G2_1_V4.4.0.pdf"}
+{"_id":{"$oid":"5f828317b9e2a8aaea14b16d"},"resource_id":"gemSpec_VPN_ZugD","version":"1.13.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_VPN_ZugD_V1.13.0.pdf"}
+{"_id":{"$oid":"5f828317b9e2a8aaea14b19e"},"resource_id":"gemSpec_VZD","version":"1.7.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_VZD_V1.7.0.pdf"}
+{"_id":{"$oid":"5f828318b9e2a8aaea14b1ae"},"resource_id":"IHE-ITI-APPC","version":"1.2","url":"URL not found for document IHE-ITI-APPC_V1.2.pdf, referenced in gemProdT_Aktensystem_ePA, v1.1.0-0, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f828318b9e2a8aaea14b1b5"},"resource_id":"IHE-ITI-RMU","version":"1.1","url":"URL not found for document IHE-ITI-RMU_V1.1.pdf, referenced in gemProdT_Aktensystem_ePA, v1.1.0-0, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f828318b9e2a8aaea14b1bc"},"resource_id":"IHE-ITI-TF1","version":"15.0","url":"URL not found for document IHE-ITI-TF1_V15.0.pdf, referenced in gemProdT_Aktensystem_ePA, v1.1.0-0, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f828318b9e2a8aaea14b1c2"},"resource_id":"IHE-ITI-TF3","version":"15.0","url":"URL not found for document IHE-ITI-TF3_V15.0.pdf, referenced in gemProdT_Aktensystem_ePA, v1.1.0-0, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f828319b9e2a8aaea14b1c8"},"resource_id":"IHE-ITI-VS","version":"2.0","url":"URL not found for document IHE-ITI-VS_V2.0.pdf, referenced in gemProdT_Aktensystem_ePA, v1.1.0-0, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f828319b9e2a8aaea14b1ce"},"resource_id":"IHE-ITI-XCDR","version":"1.4","url":"URL not found for document IHE-ITI-XCDR_V1.4.pdf, referenced in gemProdT_Aktensystem_ePA, v1.1.0-0, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f828319b9e2a8aaea14b1d6"},"resource_id":"gemKPT_Test_UEePA","version":"1.0.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemKPT_Test_UEePA_V1.0.0.pdf"}
+{"_id":{"$oid":"5f828319b9e2a8aaea14b1dc"},"resource_id":"gemSpec_Aktensystem","version":"1.1.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Aktensystem_V1.1.0.pdf"}
+{"_id":{"$oid":"5f828319b9e2a8aaea14b1e2"},"resource_id":"gemSpec_Aktensystem_UEePA","version":"1.0.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Aktensystem_UEePA_V1.0.0.pdf"}
+{"_id":{"$oid":"5f828319b9e2a8aaea14b1e8"},"resource_id":"gemSpec_Authentisierung_Vers","version":"1.1.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Authentisierung_Vers_V1.1.0.pdf"}
+{"_id":{"$oid":"5f828319b9e2a8aaea14b1ee"},"resource_id":"gemSpec_Autorisierung","version":"1.1.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Autorisierung_V1.1.0.pdf"}
+{"_id":{"$oid":"5f828319b9e2a8aaea14b1f4"},"resource_id":"gemSpec_Autorisierung_UEePA","version":"1.0.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Autorisierung_UEePA_V1.0.0.pdf"}
+{"_id":{"$oid":"5f82831ab9e2a8aaea14b1fa"},"resource_id":"gemSpec_DM_ePA","version":"1.1.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_DM_ePA_V1.1.0.pdf"}
+{"_id":{"$oid":"5f82831ab9e2a8aaea14b200"},"resource_id":"gemSpec_DM_ePA_UEePA","version":"1.0.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_DM_ePA_UEePA_V1.0.0.pdf"}
+{"_id":{"$oid":"5f82831ab9e2a8aaea14b206"},"resource_id":"gemSpec_Dokumentenverwaltung","version":"1.1.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Dokumentenverwaltung_V1.1.0.pdf"}
+{"_id":{"$oid":"5f82831ab9e2a8aaea14b20c"},"resource_id":"gemSpec_Dokumentenverwaltung_UEePA","version":"1.0.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Dokumentenverwaltung_UEePA_V1.0.0.pdf"}
+{"_id":{"$oid":"5f82831ab9e2a8aaea14b21c"},"resource_id":"gemSpec_TBAuth","version":"1.2.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_TBAuth_V1.2.0.pdf"}
+{"_id":{"$oid":"5f82831ab9e2a8aaea14b222"},"resource_id":"gemSpec_TSL","version":"1.14.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_TSL_V1.14.0.pdf"}
+{"_id":{"$oid":"5f82831ab9e2a8aaea14b228"},"resource_id":"gemSpec_Zugangsgateway_Vers","version":"1.1.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Zugangsgateway_Vers_V1.1.0.pdf"}
+{"_id":{"$oid":"5f82831ab9e2a8aaea14b233"},"resource_id":"gemSMIME_KOMLE","version":"1.1.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSMIME_KOMLE_V1.1.0.pdf"}
+{"_id":{"$oid":"5f82831bb9e2a8aaea14b239"},"resource_id":"gemSpec_Basis_KTR_Consumer","version":"1.0.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Basis_KTR_Consumer_V1.0.0.pdf"}
+{"_id":{"$oid":"5f82831bb9e2a8aaea14b23f"},"resource_id":"gemSpec_CM_KOMLE","version":"1.6.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_CM_KOMLE_V1.6.0.pdf"}
+{"_id":{"$oid":"5f82831bb9e2a8aaea14b245"},"resource_id":"gemSpec_DS_Hersteller","version":"1.1.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_DS_Hersteller_V1.1.0.pdf"}
+{"_id":{"$oid":"5f82831bb9e2a8aaea14b24b"},"resource_id":"gemSpec_HSMProxy","version":"1.0.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_HSMProxy_V1.0.0.pdf"}
+{"_id":{"$oid":"5f82831bb9e2a8aaea14b259"},"resource_id":"gemSpec_Systemprozesse_dezTI","version":"1.1.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Systemprozesse_dezTI_V1.1.0.pdf"}
+{"_id":{"$oid":"5f82831bb9e2a8aaea14b277"},"resource_id":"BSI-CC-PP-0082","version":"2.0","url":"URL not found for document BSI-CC-PP-0082_V2.0.pdf, referenced in gemProdT_COS, v4.4.1-0, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f82831cb9e2a8aaea14b27f"},"resource_id":"gemSpec_COS","version":"3.12.1","url":"URL not found for document gemSpec_COS_V3.12.1.pdf, referenced in gemProdT_COS, v4.4.1-0, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f82831cb9e2a8aaea14b28e"},"resource_id":"gemSpec_TLK_COS_G2","version":"2.0.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_TLK_COS_G2_V2.0.0.pdf"}
+{"_id":{"$oid":"5f82831cb9e2a8aaea14b2a4"},"resource_id":"gemSpec_OID","version":"3.4.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_OID_V3.4.0.pdf"}
+{"_id":{"$oid":"5f82831cb9e2a8aaea14b2d6"},"resource_id":"gemSpec_ServiceMon","version":"1.3.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_ServiceMon_V1.3.0.pdf"}
+{"_id":{"$oid":"5f82831cb9e2a8aaea14b2dc"},"resource_id":"gemSpec_St_Ampel","version":"1.6.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_St_Ampel_V1.6.0.pdf"}
+{"_id":{"$oid":"5f82831cb9e2a8aaea14b2f9"},"resource_id":"gemSpec_SST_FD_VSDM","version":"1.6.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_SST_FD_VSDM_V1.6.0.pdf"}
+{"_id":{"$oid":"5f82831cb9e2a8aaea14b2ff"},"resource_id":"gemSpec_SST_VSDM","version":"2.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_SST_VSDM_V2.5.0.pdf"}
+{"_id":{"$oid":"5f82831cb9e2a8aaea14b307"},"resource_id":"gemSpec_eGK_Fach_VSDM","version":"1.2.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_eGK_Fach_VSDM_V1.2.0.pdf"}
+{"_id":{"$oid":"5f82831db9e2a8aaea14b316"},"resource_id":"gemSpec_Frontend_Vers","version":"1.1.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Frontend_Vers_V1.1.0.pdf"}
+{"_id":{"$oid":"5f82831db9e2a8aaea14b31c"},"resource_id":"gemSpec_Frontend_Vers_UEePA","version":"1.0.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Frontend_Vers_UEePA_V1.0.0.pdf"}
+{"_id":{"$oid":"5f82831db9e2a8aaea14b32c"},"resource_id":"gemSpec_SGD_ePA","version":"1.0.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_SGD_ePA_V1.0.0.pdf"}
+{"_id":{"$oid":"5f82831db9e2a8aaea14b337"},"resource_id":"ABDA_HBA_Opt","version":"Keine Angabe","url":"URL not found for document ABDA_HBA_Opt_VKeine Angabe.pdf, referenced in gemProdT_HBA, v4.3.0-0, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f82831db9e2a8aaea14b33d"},"resource_id":"BAEK_HBA_Holo","version":"2.3.4","url":"URL not found for document BAEK_HBA_Holo_V2.3.4.pdf, referenced in gemProdT_HBA, v4.3.0-0, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f82831eb9e2a8aaea14b343"},"resource_id":"BAEK_HBA_Opt","version":"2.4.0","url":"URL not found for document BAEK_HBA_Opt_V2.4.0.pdf, referenced in gemProdT_HBA, v4.3.0-0, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f82831eb9e2a8aaea14b349"},"resource_id":"BAEK_HBA_Opt_Vorlagen","version":"Keine Angabe","url":"URL not found for document BAEK_HBA_Opt_Vorlagen_VKeine Angabe.pdf, referenced in gemProdT_HBA, v4.3.0-0, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f82831eb9e2a8aaea14b34f"},"resource_id":"BAEK_TelematikID","version":"2.3.1","url":"URL not found for document BAEK_TelematikID_V2.3.1.pdf, referenced in gemProdT_HBA, v4.3.0-0, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f82831eb9e2a8aaea14b355"},"resource_id":"BPtK_HBA_Opt","version":"Keine Angabe","url":"URL not found for document BPtK_HBA_Opt_VKeine Angabe.pdf, referenced in gemProdT_HBA, v4.3.0-0, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f82831eb9e2a8aaea14b35b"},"resource_id":"BPtK_TelematikID","version":"1.1","url":"URL not found for document BPtK_TelematikID_V1.1.pdf, referenced in gemProdT_HBA, v4.3.0-0, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f82831fb9e2a8aaea14b361"},"resource_id":"BZÄK_HBA_Layout","version":"2.1","url":"URL not found for document BZÄK_HBA_Layout_V2.1.pdf, referenced in gemProdT_HBA, v4.3.0-0, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f82831fb9e2a8aaea14b367"},"resource_id":"BZÄK_HBA_Opt","version":"1.2","url":"URL not found for document BZÄK_HBA_Opt_V1.2.pdf, referenced in gemProdT_HBA, v4.3.0-0, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f82831fb9e2a8aaea14b36d"},"resource_id":"BZÄK_HBA_Opt_Vorlagen","version":"Keine Angabe","url":"URL not found for document BZÄK_HBA_Opt_Vorlagen_VKeine Angabe.pdf, referenced in gemProdT_HBA, v4.3.0-0, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f82831fb9e2a8aaea14b37f"},"resource_id":"gemSpec_Karten_Fach_TIP","version":"2.6.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Karten_Fach_TIP_V2.6.0.pdf"}
+{"_id":{"$oid":"5f82831fb9e2a8aaea14b38d"},"resource_id":"gemSpec_eGK_Opt","version":"3.8.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_eGK_Opt_V3.8.0.pdf"}
+{"_id":{"$oid":"5f828320b9e2a8aaea14b3b6"},"resource_id":"gemSpec_Karten_Fach_TIP_G2_1","version":"3.0.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Karten_Fach_TIP_G2_1_V3.0.0.pdf"}
+{"_id":{"$oid":"5f828320b9e2a8aaea14b3c9"},"resource_id":"TR-03143","version":"1.0","url":"URL not found for document TR-03143_V1.0.pdf, referenced in gemProdT_HBA_ObjSys, v4.3.1-3, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f828320b9e2a8aaea14b3d8"},"resource_id":"gemSpec_OID","version":"2.9.0","url":"URL not found for document gemSpec_OID_V2.9.0.pdf, referenced in gemProdT_HBA_ObjSys, v4.3.1-3, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f828320b9e2a8aaea14b3e2"},"resource_id":"gemSpec_TK","version":"3.7.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_TK_V3.7.0.pdf"}
+{"_id":{"$oid":"5f828320b9e2a8aaea14b3e7"},"resource_id":"gemSpec_TLK_COS_G2","version":"1.6.0","url":"URL not found for document gemSpec_TLK_COS_G2_V1.6.0.pdf, referenced in gemProdT_HBA_ObjSys, v4.3.1-3, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f828321b9e2a8aaea14b3fd"},"resource_id":"gemSpec_OID","version":"3.3.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_OID_V3.3.0.pdf"}
+{"_id":{"$oid":"5f828321b9e2a8aaea14b415"},"resource_id":"gemSpec_Intermediar_VSDM","version":"1.11.0","url":"URL not found for document gemSpec_Intermediar_VSDM_V1.11.0.pdf, referenced in gemProdT_Intermediaer_VSDM, v1.6.0-0, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f828321b9e2a8aaea14b436"},"resource_id":"gemSpec_KSR","version":"2.3.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_KSR_V2.3.0.pdf"}
+{"_id":{"$oid":"5f828321b9e2a8aaea14b457"},"resource_id":"gemSpec_KT","version":"3.10.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_KT_V3.10.0.pdf"}
+{"_id":{"$oid":"5f828321b9e2a8aaea14b46e"},"resource_id":"gemSpec_KTR-AdV-Terminal","version":"1.2.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_KTR-AdV-Terminal_V1.2.0.pdf"}
+{"_id":{"$oid":"5f828321b9e2a8aaea14b481"},"resource_id":"gemSpec_FLA_NFDM","version":"1.1.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_FLA_NFDM_V1.1.0.pdf"}
+{"_id":{"$oid":"5f828322b9e2a8aaea14b499"},"resource_id":"gemSpec_SST_PS_VSDM","version":"1.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_SST_PS_VSDM_V1.5.0.pdf"}
+{"_id":{"$oid":"5f828322b9e2a8aaea14b4b6"},"resource_id":"gemSpec_FM_ePA_KTR_Consumer","version":"1.0.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_FM_ePA_KTR_Consumer_V1.0.0.pdf"}
+{"_id":{"$oid":"5f828322b9e2a8aaea14b4d1"},"resource_id":"PP_KON","version":"Keine Angabe","url":"URL not found for document PP_KON_VKeine Angabe.pdf, referenced in gemProdT_Kon_PTV1, v1.10.x, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f828322b9e2a8aaea14b4d7"},"resource_id":"PP_NK","version":"Keine Angabe","url":"URL not found for document PP_NK_VKeine Angabe.pdf, referenced in gemProdT_Kon_PTV1, v1.10.x, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f828322b9e2a8aaea14b4ef"},"resource_id":"gemSpec_Kon","version":"5.6.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Kon_V5.6.0.pdf"}
+{"_id":{"$oid":"5f828322b9e2a8aaea14b4f5"},"resource_id":"gemSpec_Kon_SigProxy","version":"1.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Kon_SigProxy_V1.5.0.pdf"}
+{"_id":{"$oid":"5f828323b9e2a8aaea14b507"},"resource_id":"gemSpec_SMC_OPT","version":"3.7.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_SMC_OPT_V3.7.0.pdf"}
+{"_id":{"$oid":"5f828323b9e2a8aaea14b519"},"resource_id":"gemSpec_gSMC-K_ObjSys","version":"3.12.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_gSMC-K_ObjSys_V3.12.0.pdf"}
+{"_id":{"$oid":"5f828323b9e2a8aaea14b522"},"resource_id":"BSI-TR-03154","version":"1.0","url":"URL not found for document BSI-TR-03154_V1.0.pdf, referenced in gemProdT_Kon_PTV3, v3.3.1-0, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f828323b9e2a8aaea14b528"},"resource_id":"BSI-TR-03155","version":"1.0","url":"URL not found for document BSI-TR-03155_V1.0.pdf, referenced in gemProdT_Kon_PTV3, v3.3.1-0, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f828323b9e2a8aaea14b534"},"resource_id":"gemRL_QES_NFDM","version":"1.1.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemRL_QES_NFDM_V1.1.0.pdf"}
+{"_id":{"$oid":"5f828323b9e2a8aaea14b540"},"resource_id":"gemSpec_FM_AMTS","version":"1.4.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_FM_AMTS_V1.4.0.pdf"}
+{"_id":{"$oid":"5f828324b9e2a8aaea14b546"},"resource_id":"gemSpec_FM_NFDM","version":"1.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_FM_NFDM_V1.5.0.pdf"}
+{"_id":{"$oid":"5f828324b9e2a8aaea14b54e"},"resource_id":"gemSpec_InfoNFDM","version":"1.4.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_InfoNFDM_V1.4.0.pdf"}
+{"_id":{"$oid":"5f828324b9e2a8aaea14b554"},"resource_id":"gemSpec_Info_AMTS","version":"1.3.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Info_AMTS_V1.3.0.pdf"}
+{"_id":{"$oid":"5f828324b9e2a8aaea14b560"},"resource_id":"gemSpec_Kon_TBAuth","version":"1.4.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Kon_TBAuth_V1.4.0.pdf"}
+{"_id":{"$oid":"5f828324b9e2a8aaea14b580"},"resource_id":"gemSpec_eGK_Fach_AMTS","version":"1.2.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_eGK_Fach_AMTS_V1.2.0.pdf"}
+{"_id":{"$oid":"5f828324b9e2a8aaea14b586"},"resource_id":"gemSpec_eGK_Fach_NFDM","version":"1.1.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_eGK_Fach_NFDM_V1.1.0.pdf"}
+{"_id":{"$oid":"5f828324b9e2a8aaea14b597"},"resource_id":"BSI-TR-03157","version":"1.0","url":"URL not found for document BSI-TR-03157_V1.0.pdf, referenced in gemProdT_Kon_PTV4, v4.1.0-0, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f828325b9e2a8aaea14b5b5"},"resource_id":"gemSpec_FM_ePA","version":"1.1.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_FM_ePA_V1.1.0.pdf"}
+{"_id":{"$oid":"5f828325b9e2a8aaea14b605"},"resource_id":"gemSpec_MobKT","version":"2.12.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_MobKT_V2.12.0.pdf"}
+{"_id":{"$oid":"5f828325b9e2a8aaea14b62f"},"resource_id":"gemSpec_OCSP_Proxy","version":"1.9.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_OCSP_Proxy_V1.9.0.pdf"}
+{"_id":{"$oid":"5f828325b9e2a8aaea14b642"},"resource_id":"gemProdT_eGK_ObjSys_g2.1","version":"4.4.1","url":"URL not found for document gemProdT_eGK_ObjSys_g2.1_V4.4.1.pdf, referenced in gemProdT_PK_eGK_G2_1, v1.0.0-0, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f828325b9e2a8aaea14b64d"},"resource_id":"gemSpec_OID","version":"3.1.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_OID_V3.1.0.pdf"}
+{"_id":{"$oid":"5f828325b9e2a8aaea14b657"},"resource_id":"gemSpec_PK_eGK","version":"1.2.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_PK_eGK_V1.2.0.pdf"}
+{"_id":{"$oid":"5f828326b9e2a8aaea14b662"},"resource_id":"gemSpec_eGK_ObjSys_G2_1","version":"4.3.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_eGK_ObjSys_G2_1_V4.3.0.pdf"}
+{"_id":{"$oid":"5f828326b9e2a8aaea14b695"},"resource_id":"KZBV_SMCB_Konf","version":"1.0","url":"URL not found for document KZBV_SMCB_Konf_V1.0.pdf, referenced in gemProdT_SMC-B, v4.5.0-0, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f828326b9e2a8aaea14b6dc"},"resource_id":"gemSpec_OID","version":"2.10.0","url":"URL not found for document gemSpec_OID_V2.10.0.pdf, referenced in gemProdT_SMC-B_ObjSys, v4.3.0-3, index-characteristics-OPB310.xml"}
+{"_id":{"$oid":"5f828326b9e2a8aaea14b729"},"resource_id":"gemSpec_SigD","version":"1.0.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_SigD_V1.0.0.pdf"}
+{"_id":{"$oid":"5f828327b9e2a8aaea14b862"},"resource_id":"gemSpec_eGK_ObjSys","version":"3.12.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_eGK_ObjSys_V3.12.0.pdf"}
+{"_id":{"$oid":"5f828327b9e2a8aaea14b91a"},"resource_id":"gemSpec_gSMC-KT_ObjSys","version":"3.9.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_gSMC-KT_ObjSys_V3.9.0.pdf"}
+{"_id":{"$oid":"5f828328b9e2a8aaea14b939"},"resource_id":"gemSpec_gSMC-KT_ObjSys_G2_1","version":"4.2.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_gSMC-KT_ObjSys_G2_1_V4.2.0.pdf"}
+{"_id":{"$oid":"5f828328b9e2a8aaea14b94b"},"resource_id":"gemSpec_OID","version":"2.12.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_OID_V2.12.0.pdf"}
+{"_id":{"$oid":"5f828328b9e2a8aaea14b9e4"},"resource_id":"gemKPT_Betr","version":"3.4.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemKPT_Betr_V3.4.0.pdf"}
+{"_id":{"$oid":"5f828328b9e2a8aaea14b9e9"},"resource_id":"gemKPT_Test","version":"2.4.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemKPT_Test_V2.4.0.pdf"}
+{"_id":{"$oid":"5f828328b9e2a8aaea14b9ef"},"resource_id":"gemRL_Betr_TI","version":"2.2.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemRL_Betr_TI_V2.2.0.pdf"}
+{"_id":{"$oid":"5f828328b9e2a8aaea14b9f4"},"resource_id":"gemRL_TSL_SP_CP","version":"2.4.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemRL_TSL_SP_CP_V2.4.0.pdf"}
+{"_id":{"$oid":"5f828329b9e2a8aaea14b9fd"},"resource_id":"gemSpec_PKI","version":"2.6.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_PKI_V2.6.0.pdf"}
+{"_id":{"$oid":"5f828329b9e2a8aaea14ba02"},"resource_id":"gemSpec_VZD","version":"1.8.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_VZD_V1.8.0.pdf"}
+{"_id":{"$oid":"5f828329b9e2a8aaea14ba10"},"resource_id":"gemSpec_Krypt","version":"2.14.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Krypt_V2.14.0.pdf"}
+{"_id":{"$oid":"5f828329b9e2a8aaea14ba1a"},"resource_id":"gemKPT_Betr","version":"3.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemKPT_Betr_V3.5.0.pdf"}
+{"_id":{"$oid":"5f828329b9e2a8aaea14ba1f"},"resource_id":"gemKPT_Test","version":"2.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemKPT_Test_V2.5.0.pdf"}
+{"_id":{"$oid":"5f828329b9e2a8aaea14ba24"},"resource_id":"gemRL_Betr_TI","version":"2.3.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemRL_Betr_TI_V2.3.0.pdf"}
+{"_id":{"$oid":"5f828329b9e2a8aaea14ba2d"},"resource_id":"gemSpec_Net","version":"1.16.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Net_V1.16.0.pdf"}
+{"_id":{"$oid":"5f828329b9e2a8aaea14ba32"},"resource_id":"gemSpec_PKI","version":"2.7.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_PKI_V2.7.0.pdf"}
+{"_id":{"$oid":"5f828329b9e2a8aaea14ba37"},"resource_id":"gemSpec_VZD","version":"1.9.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_VZD_V1.9.0.pdf"}
+{"_id":{"$oid":"5f82832ab9e2a8aaea14ba45"},"resource_id":"gemSpec_Krypt","version":"2.15.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Krypt_V2.15.0.pdf"}
+{"_id":{"$oid":"5f82832ab9e2a8aaea14ba4f"},"resource_id":"gemKPT_Test","version":"2.1.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemKPT_Test_V2.1.0.pdf"}
+{"_id":{"$oid":"5f82832ab9e2a8aaea14ba54"},"resource_id":"gemRL_TSL_SP_CP","version":"2.2.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemRL_TSL_SP_CP_V2.2.0.pdf"}
+{"_id":{"$oid":"5f82832ab9e2a8aaea14ba59"},"resource_id":"gemSpec_DS_Anbieter","version":"1.0.1","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_DS_Anbieter_V1.0.1.pdf"}
+{"_id":{"$oid":"5f82832ab9e2a8aaea14ba5e"},"resource_id":"gemSpec_Net","version":"1.14.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Net_V1.14.0.pdf"}
+{"_id":{"$oid":"5f82832ab9e2a8aaea14ba63"},"resource_id":"gemSpec_PKI","version":"2.3.1","url":"URL not found for document gemSpec_PKI_V2.3.1.pdf, referenced in gemProdT_WA_aAdG, v1.0.0, index-characteristics-OPB2131.xml"}
+{"_id":{"$oid":"5f82832ab9e2a8aaea14ba68"},"resource_id":"gemSpec_VZD","version":"1.6.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_VZD_V1.6.0.pdf"}
+{"_id":{"$oid":"5f82832bb9e2a8aaea14ba77"},"resource_id":"gemKPT_Betr","version":"3.7.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemKPT_Betr_V3.7.0.pdf"}
+{"_id":{"$oid":"5f82832bb9e2a8aaea14ba7c"},"resource_id":"gemRL_Betr_TI","version":"2.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemRL_Betr_TI_V2.5.0.pdf"}
+{"_id":{"$oid":"5f82832bb9e2a8aaea14ba82"},"resource_id":"gemSpec_DS_Anbieter","version":"1.2.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_DS_Anbieter_V1.2.0.pdf"}
+{"_id":{"$oid":"5f82832bb9e2a8aaea14ba8e"},"resource_id":"gemSpec_Aktensystem","version":"1.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Aktensystem_V1.5.0.pdf"}
+{"_id":{"$oid":"5f82832bb9e2a8aaea14ba93"},"resource_id":"gemSpec_Authentisierung_Vers","version":"1.3.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Authentisierung_Vers_V1.3.0.pdf"}
+{"_id":{"$oid":"5f82832bb9e2a8aaea14ba98"},"resource_id":"gemSpec_Autorisierung","version":"1.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Autorisierung_V1.5.0.pdf"}
+{"_id":{"$oid":"5f82832bb9e2a8aaea14ba9d"},"resource_id":"gemSpec_DM_ePA","version":"1.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_DM_ePA_V1.5.0.pdf"}
+{"_id":{"$oid":"5f82832bb9e2a8aaea14baa4"},"resource_id":"gemSpec_Dokumentenverwaltung","version":"1.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Dokumentenverwaltung_V1.5.0.pdf"}
+{"_id":{"$oid":"5f82832bb9e2a8aaea14baa9"},"resource_id":"gemSpec_Net","version":"1.18.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Net_V1.18.0.pdf"}
+{"_id":{"$oid":"5f82832cb9e2a8aaea14baae"},"resource_id":"gemSpec_PKI","version":"2.9.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_PKI_V2.9.0.pdf"}
+{"_id":{"$oid":"5f82832cb9e2a8aaea14bab3"},"resource_id":"gemSpec_Perf","version":"2.11.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Perf_V2.11.0.pdf"}
+{"_id":{"$oid":"5f82832cb9e2a8aaea14bab9"},"resource_id":"gemSpec_SGD_ePA","version":"1.4.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_SGD_ePA_V1.4.0.pdf"}
+{"_id":{"$oid":"5f82832cb9e2a8aaea14babe"},"resource_id":"gemSpec_Zugangsgateway_Vers","version":"1.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Zugangsgateway_Vers_V1.5.0.pdf"}
+{"_id":{"$oid":"5f82832cb9e2a8aaea14bada"},"resource_id":"gemSpec_Krypt","version":"2.17.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Krypt_V2.17.0.pdf"}
+{"_id":{"$oid":"5f82832cb9e2a8aaea14bae4"},"resource_id":"gemKPT_Test","version":"2.7.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemKPT_Test_V2.7.0.pdf"}
+{"_id":{"$oid":"5f82832cb9e2a8aaea14baeb"},"resource_id":"gemSpec_CVC_TSP","version":"1.13.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_CVC_TSP_V1.13.0.pdf"}
+{"_id":{"$oid":"5f82832cb9e2a8aaea14baf4"},"resource_id":"gemSpec_OM","version":"1.14.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_OM_V1.14.0.pdf"}
+{"_id":{"$oid":"5f82832db9e2a8aaea14bb00"},"resource_id":"gemRL_TSL_SP_CP","version":"2.6.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemRL_TSL_SP_CP_V2.6.0.pdf"}
+{"_id":{"$oid":"5f82832db9e2a8aaea14bb07"},"resource_id":"gemSpec_FD_KOMLE","version":"1.10.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_FD_KOMLE_V1.10.0.pdf"}
+{"_id":{"$oid":"5f82832db9e2a8aaea14bb38"},"resource_id":"gemSpec_HBA_ObjSys_G2_1","version":"4.6.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_HBA_ObjSys_G2_1_V4.6.0.pdf"}
+{"_id":{"$oid":"5f82832db9e2a8aaea14bb47"},"resource_id":"gemSpec_X_509_TSP","version":"1.16.0","url":"URL not found for document gemSpec_X_509_TSP_V1.16.0.pdf, referenced in gemAnbT_HBA, v1.5.1, index-characteristics-OPB400.xml"}
+{"_id":{"$oid":"5f82832db9e2a8aaea14bb68"},"resource_id":"gemSpec_KTR-AdV","version":"1.7.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_KTR-AdV_V1.7.0.pdf"}
+{"_id":{"$oid":"5f82832db9e2a8aaea14bb7a"},"resource_id":"gemSpec_FM_ePA_KTR_Consumer","version":"1.2.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_FM_ePA_KTR_Consumer_V1.2.0.pdf"}
+{"_id":{"$oid":"5f82832eb9e2a8aaea14bbab"},"resource_id":"gemSpec_SMC-B_ObjSys_G2_1","version":"4.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_SMC-B_ObjSys_G2_1_V4.5.0.pdf"}
+{"_id":{"$oid":"5f82832eb9e2a8aaea14bbc5"},"resource_id":"gemSpec_SigD","version":"1.3.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_SigD_V1.3.0.pdf"}
+{"_id":{"$oid":"5f82832eb9e2a8aaea14bbdf"},"resource_id":"gemSpec_VPN_ZugD","version":"1.15.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_VPN_ZugD_V1.15.0.pdf"}
+{"_id":{"$oid":"5f82832eb9e2a8aaea14bc05"},"resource_id":"gemSpec_KSR","version":"2.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_KSR_V2.5.0.pdf"}
+{"_id":{"$oid":"5f82832eb9e2a8aaea14bc2f"},"resource_id":"gemSpec_FD_eRp","version":"1.0.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_FD_eRp_V1.0.0.pdf"}
+{"_id":{"$oid":"5f82832eb9e2a8aaea14bc42"},"resource_id":"gemSpec_eRp_FdV","version":"1.0.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_eRp_FdV_V1.0.0.pdf"}
+{"_id":{"$oid":"5f82832fb9e2a8aaea14bc57"},"resource_id":"gemSpec_VZD","version":"1.10.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_VZD_V1.10.0.pdf"}
+{"_id":{"$oid":"5f82832fb9e2a8aaea14bc8f"},"resource_id":"gemSpec_SST_LD_BD","version":"1.2.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_SST_LD_BD_V1.2.0.pdf"}
+{"_id":{"$oid":"5f82832fb9e2a8aaea14bc96"},"resource_id":"gemSpec_TSL","version":"1.17.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_TSL_V1.17.0.pdf"}
+{"_id":{"$oid":"5f82832fb9e2a8aaea14bca2"},"resource_id":"gemSMIME_KOMLE","version":"1.3.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSMIME_KOMLE_V1.3.0.pdf"}
+{"_id":{"$oid":"5f82832fb9e2a8aaea14bca7"},"resource_id":"gemSpec_Basis_KTR_Consumer","version":"1.2.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Basis_KTR_Consumer_V1.2.0.pdf"}
+{"_id":{"$oid":"5f82832fb9e2a8aaea14bcac"},"resource_id":"gemSpec_CM_KOMLE","version":"1.8.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_CM_KOMLE_V1.8.0.pdf"}
+{"_id":{"$oid":"5f82832fb9e2a8aaea14bcb1"},"resource_id":"gemSpec_DS_Hersteller","version":"1.2.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_DS_Hersteller_V1.2.0.pdf"}
+{"_id":{"$oid":"5f82832fb9e2a8aaea14bcc0"},"resource_id":"gemSpec_Systemprozesse_dezTI","version":"1.2.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Systemprozesse_dezTI_V1.2.0.pdf"}
+{"_id":{"$oid":"5f828330b9e2a8aaea14bce1"},"resource_id":"gemSpec_COS","version":"3.13.1","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_COS_V3.13.1.pdf"}
+{"_id":{"$oid":"5f828330b9e2a8aaea14bcfd"},"resource_id":"gemSpec_OID","version":"3.8.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_OID_V3.8.0.pdf"}
+{"_id":{"$oid":"5f828330b9e2a8aaea14bd2d"},"resource_id":"gemSpec_ServiceMon","version":"1.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_ServiceMon_V1.5.0.pdf"}
+{"_id":{"$oid":"5f828330b9e2a8aaea14bd9c"},"resource_id":"gemSpec_eGK_Opt","version":"3.10.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_eGK_Opt_V3.10.0.pdf"}
+{"_id":{"$oid":"5f828330b9e2a8aaea14bdf8"},"resource_id":"gemSpec_OID","version":"3.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_OID_V3.5.0.pdf"}
+{"_id":{"$oid":"5f828331b9e2a8aaea14be0b"},"resource_id":"gemSpec_IDP_Dienst","version":"1.0.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_IDP_Dienst_V1.0.0.pdf"}
+{"_id":{"$oid":"5f828331b9e2a8aaea14be11"},"resource_id":"gemSpec_IDP_FD","version":"1.0.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_IDP_FD_V1.0.0.pdf"}
+{"_id":{"$oid":"5f828331b9e2a8aaea14be2d"},"resource_id":"gemSpec_Intermediar_VSDM","version":"1.12.0","url":"URL not found for document gemSpec_Intermediar_VSDM_V1.12.0.pdf, referenced in gemProdT_Intermediaer_VSDM, v1.6.3-0, index-characteristics-OPB400.xml"}
+{"_id":{"$oid":"5f828331b9e2a8aaea14be6a"},"resource_id":"gemSpec_KT","version":"3.13.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_KT_V3.13.0.pdf"}
+{"_id":{"$oid":"5f828331b9e2a8aaea14be7f"},"resource_id":"gemSpec_SMC_OPT","version":"3.8.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_SMC_OPT_V3.8.0.pdf"}
+{"_id":{"$oid":"5f828331b9e2a8aaea14be8f"},"resource_id":"gemSpec_KTR-AdV-Terminal","version":"1.3.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_KTR-AdV-Terminal_V1.3.0.pdf"}
+{"_id":{"$oid":"5f828332b9e2a8aaea14bee3"},"resource_id":"BSI-TR-03154","version":"1.1","url":"URL not found for document BSI-TR-03154_V1.1.pdf, referenced in gemProdT_Kon_PTV4, v4.4.0-0, index-characteristics-OPB400.xml"}
+{"_id":{"$oid":"5f828332b9e2a8aaea14bee8"},"resource_id":"BSI-TR-03155","version":"1.1","url":"URL not found for document BSI-TR-03155_V1.1.pdf, referenced in gemProdT_Kon_PTV4, v4.4.0-0, index-characteristics-OPB400.xml"}
+{"_id":{"$oid":"5f828332b9e2a8aaea14beed"},"resource_id":"BSI-TR-03157","version":"1.2","url":"URL not found for document BSI-TR-03157_V1.2.pdf, referenced in gemProdT_Kon_PTV4, v4.4.0-0, index-characteristics-OPB400.xml"}
+{"_id":{"$oid":"5f828333b9e2a8aaea14bef7"},"resource_id":"gemErrata_1_Kon_PTV4","version":"1.0.0","url":"URL not found for document gemErrata_1_Kon_PTV4_V1.0.0.pdf, referenced in gemProdT_Kon_PTV4, v4.4.0-0, index-characteristics-OPB400.xml"}
+{"_id":{"$oid":"5f828333b9e2a8aaea14befe"},"resource_id":"gemRL_QES_NFDM","version":"1.4","url":"URL not found for document gemRL_QES_NFDM_V1.4.pdf, referenced in gemProdT_Kon_PTV4, v4.4.0-0, index-characteristics-OPB400.xml"}
+{"_id":{"$oid":"5f828333b9e2a8aaea14bf11"},"resource_id":"gemSpec_FM_NFDM","version":"1.6.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_FM_NFDM_V1.6.0.pdf"}
+{"_id":{"$oid":"5f828333b9e2a8aaea14bf18"},"resource_id":"gemSpec_FM_ePA","version":"1.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_FM_ePA_V1.5.0.pdf"}
+{"_id":{"$oid":"5f828333b9e2a8aaea14bf1d"},"resource_id":"gemSpec_InfoNFDM","version":"1.6.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_InfoNFDM_V1.6.0.pdf"}
+{"_id":{"$oid":"5f828333b9e2a8aaea14bf22"},"resource_id":"gemSpec_Info_AMTS","version":"1.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Info_AMTS_V1.5.0.pdf"}
+{"_id":{"$oid":"5f828333b9e2a8aaea14bf2d"},"resource_id":"gemSpec_Kon","version":"5.10.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Kon_V5.10.0.pdf"}
+{"_id":{"$oid":"5f828333b9e2a8aaea14bf32"},"resource_id":"gemSpec_Kon_SigProxy","version":"1.7.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Kon_SigProxy_V1.7.0.pdf"}
+{"_id":{"$oid":"5f828334b9e2a8aaea14c01d"},"resource_id":"gemSpec_MobKT","version":"2.14.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_MobKT_V2.14.0.pdf"}
+{"_id":{"$oid":"5f828334b9e2a8aaea14c05c"},"resource_id":"gemSpec_PKG","version":"0.0.0","url":"URL not found for document gemSpec_PKG_V0.0.0.pdf, referenced in gemProdT_PKG, v1.0.0, index-characteristics-OPB400.xml"}
+{"_id":{"$oid":"5f828335b9e2a8aaea14c27e"},"resource_id":"gemSpec_OID","version":"3.6.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_OID_V3.6.0.pdf"}
+{"_id":{"$oid":"5f828335b9e2a8aaea14c289"},"resource_id":"gemSpec_eGK_ObjSys_G2_1","version":"4.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_eGK_ObjSys_G2_1_V4.5.0.pdf"}
+{"_id":{"$oid":"5f828336b9e2a8aaea14c321"},"resource_id":"gemSpec_ePA_FdV","version":"1.6.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_ePA_FdV_V1.6.0.pdf"}
+{"_id":{"$oid":"5f828336b9e2a8aaea14c32b"},"resource_id":"xxx","version":"xxx","url":"URL not found for document xxx_Vxxx.pdf, referenced in gemProdT_ePA_FdV_AdV, v1.0.0-0, index-characteristics-OPB400.xml"}
+{"_id":{"$oid":"5f828336b9e2a8aaea14c337"},"resource_id":"gemSpec_DM_eRp","version":"1.0.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_DM_eRp_V1.0.0.pdf"}
+{"_id":{"$oid":"5f828336b9e2a8aaea14c35e"},"resource_id":"gemSpec_IDP_Frontend","version":"1.0.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_IDP_Frontend_V1.0.0.pdf"}
+{"_id":{"$oid":"5f828337b9e2a8aaea14c3f8"},"resource_id":"gemKPT_Betr","version":"3.6.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemKPT_Betr_V3.6.0.pdf"}
+{"_id":{"$oid":"5f828337b9e2a8aaea14c3fd"},"resource_id":"gemRL_Betr_TI","version":"2.4.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemRL_Betr_TI_V2.4.0.pdf"}
+{"_id":{"$oid":"5f828337b9e2a8aaea14c402"},"resource_id":"gemSpec_Aktensystem","version":"1.4.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Aktensystem_V1.4.0.pdf"}
+{"_id":{"$oid":"5f828337b9e2a8aaea14c407"},"resource_id":"gemSpec_Aktensystem_UEePA","version":"1.1.0","url":"URL not found for document gemSpec_Aktensystem_UEePA_V1.1.0.pdf, referenced in gemAnbT_Aktensystem_ePA, v1.1.3, index-characteristics-OPB_313.xml"}
+{"_id":{"$oid":"5f828337b9e2a8aaea14c40c"},"resource_id":"gemSpec_Authentisierung_Vers","version":"1.2.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Authentisierung_Vers_V1.2.0.pdf"}
+{"_id":{"$oid":"5f828337b9e2a8aaea14c411"},"resource_id":"gemSpec_Autorisierung","version":"1.4.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Autorisierung_V1.4.0.pdf"}
+{"_id":{"$oid":"5f828337b9e2a8aaea14c416"},"resource_id":"gemSpec_DM_ePA","version":"1.4.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_DM_ePA_V1.4.0.pdf"}
+{"_id":{"$oid":"5f828337b9e2a8aaea14c41d"},"resource_id":"gemSpec_Dokumentenverwaltung","version":"1.4.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Dokumentenverwaltung_V1.4.0.pdf"}
+{"_id":{"$oid":"5f828338b9e2a8aaea14c422"},"resource_id":"gemSpec_Dokumentenverwaltung_UEePA","version":"1.2.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Dokumentenverwaltung_UEePA_V1.2.0.pdf"}
+{"_id":{"$oid":"5f828338b9e2a8aaea14c427"},"resource_id":"gemSpec_Net","version":"1.17.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Net_V1.17.0.pdf"}
+{"_id":{"$oid":"5f828338b9e2a8aaea14c42c"},"resource_id":"gemSpec_PKI","version":"2.8.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_PKI_V2.8.0.pdf"}
+{"_id":{"$oid":"5f828338b9e2a8aaea14c431"},"resource_id":"gemSpec_Perf","version":"2.10.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Perf_V2.10.0.pdf"}
+{"_id":{"$oid":"5f828338b9e2a8aaea14c436"},"resource_id":"gemSpec_SGD_ePA","version":"1.3.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_SGD_ePA_V1.3.0.pdf"}
+{"_id":{"$oid":"5f828338b9e2a8aaea14c43b"},"resource_id":"gemSpec_Zugangsgateway_Vers","version":"1.4.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Zugangsgateway_Vers_V1.4.0.pdf"}
+{"_id":{"$oid":"5f828338b9e2a8aaea14c455"},"resource_id":"gemSpec_Krypt","version":"2.16.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Krypt_V2.16.0.pdf"}
+{"_id":{"$oid":"5f828338b9e2a8aaea14c45f"},"resource_id":"gemKPT_Test","version":"2.6.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemKPT_Test_V2.6.0.pdf"}
+{"_id":{"$oid":"5f828339b9e2a8aaea14c46c"},"resource_id":"gemSpec_OM","version":"1.13.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_OM_V1.13.0.pdf"}
+{"_id":{"$oid":"5f828339b9e2a8aaea14c478"},"resource_id":"gemRL_TSL_SP_CP","version":"2.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemRL_TSL_SP_CP_V2.5.0.pdf"}
+{"_id":{"$oid":"5f828339b9e2a8aaea14c47f"},"resource_id":"gemSpec_FD_KOMLE","version":"1.9.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_FD_KOMLE_V1.9.0.pdf"}
+{"_id":{"$oid":"5f828339b9e2a8aaea14c4a5"},"resource_id":"gemSpec_X_509_TSP","version":"1.15.0","url":"URL not found for document gemSpec_X_509_TSP_V1.15.0.pdf, referenced in gemAnbT_HBA, v1.5.0, index-characteristics-OPB_313.xml"}
+{"_id":{"$oid":"5f828339b9e2a8aaea14c4b4"},"resource_id":"gemSpec_KTR-AdV","version":"1.6.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_KTR-AdV_V1.6.0.pdf"}
+{"_id":{"$oid":"5f828339b9e2a8aaea14c4c6"},"resource_id":"gemSpec_FM_ePA_KTR_Consumer","version":"1.1.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_FM_ePA_KTR_Consumer_V1.1.0.pdf"}
+{"_id":{"$oid":"5f82833ab9e2a8aaea14c595"},"resource_id":"gemSpec_SST_LD_BD","version":"1.1.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_SST_LD_BD_V1.1.0.pdf"}
+{"_id":{"$oid":"5f82833ab9e2a8aaea14c5a5"},"resource_id":"gemSMIME_KOMLE","version":"1.2.1","url":"https://fachportal.gematik.de/fachportal-import/files/gemSMIME_KOMLE_V1.2.1.pdf"}
+{"_id":{"$oid":"5f82833ab9e2a8aaea14c5aa"},"resource_id":"gemSpec_Basis_KTR_Consumer","version":"1.1.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Basis_KTR_Consumer_V1.1.0.pdf"}
+{"_id":{"$oid":"5f82833ab9e2a8aaea14c5af"},"resource_id":"gemSpec_CM_KOMLE","version":"1.7.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_CM_KOMLE_V1.7.0.pdf"}
+{"_id":{"$oid":"5f82833ab9e2a8aaea14c5f5"},"resource_id":"gemSpec_OID","version":"3.7.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_OID_V3.7.0.pdf"}
+{"_id":{"$oid":"5f82833bb9e2a8aaea14c702"},"resource_id":"gemSpec_KT","version":"3.12.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_KT_V3.12.0.pdf"}
+{"_id":{"$oid":"5f82833bb9e2a8aaea14c796"},"resource_id":"gemSpec_FM_ePA","version":"1.4.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_FM_ePA_V1.4.0.pdf"}
+{"_id":{"$oid":"5f82833bb9e2a8aaea14c7a5"},"resource_id":"gemSpec_Kon","version":"5.9.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Kon_V5.9.0.pdf"}
+{"_id":{"$oid":"5f82833cb9e2a8aaea14c7dc"},"resource_id":"gemSpec_MobKT","version":"2.13.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_MobKT_V2.13.0.pdf"}
+{"_id":{"$oid":"5f82833cb9e2a8aaea14c832"},"resource_id":"gemSpec_Autorisierung_UEePA","version":"1.2.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Autorisierung_UEePA_V1.2.0.pdf"}
+{"_id":{"$oid":"5f82833cb9e2a8aaea14c83b"},"resource_id":"gemSpec_Dokumentenverwaltung_UEePA","version":"1.1.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Dokumentenverwaltung_UEePA_V1.1.0.pdf"}
+{"_id":{"$oid":"5f82833db9e2a8aaea14ca6f"},"resource_id":"gemSpec_Frontend_Vers","version":"1.4.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Frontend_Vers_V1.4.0.pdf"}
+{"_id":{"$oid":"5f82833db9e2a8aaea14ca74"},"resource_id":"gemSpec_Frontend_Vers_UEePA","version":"1.2.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Frontend_Vers_UEePA_V1.2.0.pdf"}
+{"_id":{"$oid":"5f82833db9e2a8aaea14cae8"},"resource_id":"gemKPT_Test","version":"2.6.1","url":"https://fachportal.gematik.de/fachportal-import/files/gemKPT_Test_V2.6.1.pdf"}
+{"_id":{"$oid":"5f82833eb9e2a8aaea14caf7"},"resource_id":"gemSpec_KT","version":"3.13.1","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_KT_V3.13.1.pdf"}
+{"_id":{"$oid":"5f82833eb9e2a8aaea14cafe"},"resource_id":"gemSpec_Krypt","version":"2.16.1","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Krypt_V2.16.1.pdf"}
+{"_id":{"$oid":"5f82833eb9e2a8aaea14cb03"},"resource_id":"gemSpec_Net","version":"1.17.1","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Net_V1.17.1.pdf"}
+{"_id":{"$oid":"5f82833eb9e2a8aaea14cb0c"},"resource_id":"gemSpec_PKI","version":"2.8.1","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_PKI_V2.8.1.pdf"}
+{"_id":{"$oid":"5f82833eb9e2a8aaea14cb11"},"resource_id":"gemSpec_Perf","version":"2.10.1","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Perf_V2.10.1.pdf"}
+{"_id":{"$oid":"5f82833eb9e2a8aaea14cb2f"},"resource_id":"gemSpec_Authentisierung_Vers","version":"1.2.1","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Authentisierung_Vers_V1.2.1.pdf"}
+{"_id":{"$oid":"5f82833eb9e2a8aaea14cb36"},"resource_id":"gemSpec_DM_ePA","version":"1.4.2","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_DM_ePA_V1.4.2.pdf"}
+{"_id":{"$oid":"5f82833eb9e2a8aaea14cb45"},"resource_id":"gemSpec_FM_ePA","version":"1.4.2","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_FM_ePA_V1.4.2.pdf"}
+{"_id":{"$oid":"5f82833fb9e2a8aaea14cb52"},"resource_id":"gemSpec_Kon","version":"5.9.3","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Kon_V5.9.3.pdf"}
+{"_id":{"$oid":"5f82833fb9e2a8aaea14cb8c"},"resource_id":"gemSpec_Frontend_Vers","version":"1.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Frontend_Vers_V1.5.0.pdf"}
+{"_id":{"$oid":"5f82833fb9e2a8aaea14cba7"},"resource_id":"gemSpec_Aktensystem","version":"1.4.1","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Aktensystem_V1.4.1.pdf"}
+{"_id":{"$oid":"5f82833fb9e2a8aaea14cbb0"},"resource_id":"gemSpec_Autorisierung","version":"1.4.1","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Autorisierung_V1.4.1.pdf"}
+{"_id":{"$oid":"5f82833fb9e2a8aaea14cbb5"},"resource_id":"gemSpec_DM_ePA","version":"1.4.1","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_DM_ePA_V1.4.1.pdf"}
+{"_id":{"$oid":"5f82833fb9e2a8aaea14cbbc"},"resource_id":"gemSpec_Dokumentenverwaltung","version":"1.4.1","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Dokumentenverwaltung_V1.4.1.pdf"}
+{"_id":{"$oid":"5f82833fb9e2a8aaea14cbcb"},"resource_id":"gemSpec_Zugangsgateway_Vers","version":"1.4.1","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Zugangsgateway_Vers_V1.4.1.pdf"}
+{"_id":{"$oid":"5f828340b9e2a8aaea14cbf5"},"resource_id":"gemSpec_SST_LD_BD","version":"1.1.1","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_SST_LD_BD_V1.1.1.pdf"}
+{"_id":{"$oid":"5f828340b9e2a8aaea14cc65"},"resource_id":"gemSpec_FM_ePA","version":"1.4.1","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_FM_ePA_V1.4.1.pdf"}
+{"_id":{"$oid":"5f828340b9e2a8aaea14cc72"},"resource_id":"gemSpec_Kon","version":"5.9.1","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Kon_V5.9.1.pdf"}
+{"_id":{"$oid":"5f828340b9e2a8aaea14cd11"},"resource_id":"gemSpec_Frontend_Vers","version":"1.5.1","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Frontend_Vers_V1.5.1.pdf"}
+{"_id":{"$oid":"5f828340b9e2a8aaea14cd27"},"resource_id":"gemKPT_Betr","version":"3.6.1","url":"https://fachportal.gematik.de/fachportal-import/files/gemKPT_Betr_V3.6.1.pdf"}
+{"_id":{"$oid":"5f828341b9e2a8aaea14cd2e"},"resource_id":"gemSpec_Aktensystem","version":"1.4.2","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Aktensystem_V1.4.2.pdf"}
+{"_id":{"$oid":"5f828341b9e2a8aaea14cd37"},"resource_id":"gemSpec_Autorisierung","version":"1.4.2","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Autorisierung_V1.4.2.pdf"}
+{"_id":{"$oid":"5f828341b9e2a8aaea14cd40"},"resource_id":"gemSpec_Dokumentenverwaltung","version":"1.4.2","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Dokumentenverwaltung_V1.4.2.pdf"}
+{"_id":{"$oid":"5f828341b9e2a8aaea14cd6c"},"resource_id":"gemSpec_Autorisierung_UEePA","version":"1.3.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Autorisierung_UEePA_V1.3.0.pdf"}
+{"_id":{"$oid":"5f828341b9e2a8aaea14cd73"},"resource_id":"gemSpec_DM_ePA_UEePA","version":"1.1.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_DM_ePA_UEePA_V1.1.0.pdf"}
+{"_id":{"$oid":"5f828341b9e2a8aaea14cd93"},"resource_id":"gemSMIME_KOMLE","version":"1.2.2","url":"https://fachportal.gematik.de/fachportal-import/files/gemSMIME_KOMLE_V1.2.2.pdf"}
+{"_id":{"$oid":"5f828341b9e2a8aaea14cdb3"},"resource_id":"gemSpec_FM_ePA_KTR_Consumer","version":"1.1.1","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_FM_ePA_KTR_Consumer_V1.1.1.pdf"}
+{"_id":{"$oid":"5f828342b9e2a8aaea14cdf7"},"resource_id":"gemSpec_Kon","version":"5.9.2","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Kon_V5.9.2.pdf"}
+{"_id":{"$oid":"5f828342b9e2a8aaea14ce31"},"resource_id":"gemSpec_Frontend_Vers","version":"1.5.2","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Frontend_Vers_V1.5.2.pdf"}
+{"_id":{"$oid":"5f828342b9e2a8aaea14ce4b"},"resource_id":"gemSpec_Basis_KTR_Consumer","version":"1.3.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Basis_KTR_Consumer_V1.3.0.pdf"}
+{"_id":{"$oid":"5f828342b9e2a8aaea14ce50"},"resource_id":"gemSpec_CM_KOMLE","version":"1.8.1","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_CM_KOMLE_V1.8.1.pdf"}
+{"_id":{"$oid":"5f828342b9e2a8aaea14ce61"},"resource_id":"gemSpec_Systemprozesse_dezTI","version":"1.3.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Systemprozesse_dezTI_V1.3.0.pdf"}
+{"_id":{"$oid":"5f828342b9e2a8aaea14ce89"},"resource_id":"gemSpec_HBA_ObjSys_G2_1","version":"5.0.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_HBA_ObjSys_G2_1_V5.0.0.pdf"}
+{"_id":{"$oid":"5f828343b9e2a8aaea14ceca"},"resource_id":"gemSpec_SMC-B_ObjSys_G2_1","version":"5.0.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_SMC-B_ObjSys_G2_1_V5.0.0.pdf"}
+{"_id":{"$oid":"5f828343b9e2a8aaea14cef6"},"resource_id":"gemErrata_1_Kon_PTV3","version":"1.0.1","url":"URL not found for document gemErrata_1_Kon_PTV3_V1.0.1.pdf, referenced in gemProdT_Kon_PTV3, v3.6.0-2, index-characteristics-OPB2131ERRPTV36.xml"}
+{"_id":{"$oid":"5f828343b9e2a8aaea14cefc"},"resource_id":"gemErrata_2_Kon_PTV3","version":"1.0.0","url":"URL not found for document gemErrata_2_Kon_PTV3_V1.0.0.pdf, referenced in gemProdT_Kon_PTV3, v3.6.0-2, index-characteristics-OPB2131ERRPTV36.xml"}
+{"_id":{"$oid":"5f828344b9e2a8aaea14cf02"},"resource_id":"gemErrata_3_Kon_PTV3","version":"1.0.0","url":"URL not found for document gemErrata_3_Kon_PTV3_V1.0.0.pdf, referenced in gemProdT_Kon_PTV3, v3.6.0-2, index-characteristics-OPB2131ERRPTV36.xml"}
+{"_id":{"$oid":"5f828344b9e2a8aaea14cf09"},"resource_id":"gemErrata_4_Kon_PTV3","version":"1.0.1","url":"URL not found for document gemErrata_4_Kon_PTV3_V1.0.1.pdf, referenced in gemProdT_Kon_PTV3, v3.6.0-2, index-characteristics-OPB2131ERRPTV36.xml"}
+{"_id":{"$oid":"5f828344b9e2a8aaea14cf10"},"resource_id":"gemRL_QES_NFDM","version":"1.4.1","url":"https://fachportal.gematik.de/fachportal-import/files/gemRL_QES_NFDM_V1.4.1.pdf"}
+{"_id":{"$oid":"5f828344b9e2a8aaea14cf17"},"resource_id":"gemSpec_CVC_TSP","version":"1.10.1","url":"URL not found for document gemSpec_CVC_TSP_V1.10.1.pdf, referenced in gemProdT_Kon_PTV3, v3.6.0-2, index-characteristics-OPB2131ERRPTV36.xml"}
+{"_id":{"$oid":"5f828344b9e2a8aaea14cf1c"},"resource_id":"gemSpec_DS_Hersteller","version":"1.0.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_DS_Hersteller_V1.0.0.pdf"}
+{"_id":{"$oid":"5f828344b9e2a8aaea14cf21"},"resource_id":"gemSpec_FM_AMTS","version":"1.3.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_FM_AMTS_V1.3.0.pdf"}
+{"_id":{"$oid":"5f828344b9e2a8aaea14cf26"},"resource_id":"gemSpec_FM_NFDM","version":"1.4.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_FM_NFDM_V1.4.0.pdf"}
+{"_id":{"$oid":"5f828345b9e2a8aaea14cf2b"},"resource_id":"gemSpec_FM_VSDM","version":"2.4.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_FM_VSDM_V2.4.0.pdf"}
+{"_id":{"$oid":"5f828345b9e2a8aaea14cf34"},"resource_id":"gemSpec_KSR","version":"2.2.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_KSR_V2.2.0.pdf"}
+{"_id":{"$oid":"5f828345b9e2a8aaea14cf3a"},"resource_id":"gemSpec_Kon","version":"5.4.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Kon_V5.4.0.pdf"}
+{"_id":{"$oid":"5f828345b9e2a8aaea14cf3f"},"resource_id":"gemSpec_Kon_SigProxy","version":"1.4.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Kon_SigProxy_V1.4.0.pdf"}
+{"_id":{"$oid":"5f828345b9e2a8aaea14cf45"},"resource_id":"gemSpec_Kon_TBAuth","version":"1.2.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Kon_TBAuth_V1.2.0.pdf"}
+{"_id":{"$oid":"5f828345b9e2a8aaea14cf4a"},"resource_id":"gemSpec_Krypt","version":"2.11.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Krypt_V2.11.0.pdf"}
+{"_id":{"$oid":"5f828345b9e2a8aaea14cf51"},"resource_id":"gemSpec_OM","version":"1.10.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_OM_V1.10.0.pdf"}
+{"_id":{"$oid":"5f828345b9e2a8aaea14cf5a"},"resource_id":"gemSpec_Perf","version":"2.5.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_Perf_V2.5.0.pdf"}
+{"_id":{"$oid":"5f828346b9e2a8aaea14cf63"},"resource_id":"gemSpec_SST_VSDM","version":"2.4.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_SST_VSDM_V2.4.0.pdf"}
+{"_id":{"$oid":"5f828346b9e2a8aaea14cf68"},"resource_id":"gemSpec_TBAuth","version":"1.0.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_TBAuth_V1.0.0.pdf"}
+{"_id":{"$oid":"5f828346b9e2a8aaea14cf6d"},"resource_id":"gemSpec_TSL","version":"1.13.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_TSL_V1.13.0.pdf"}
+{"_id":{"$oid":"5f828346b9e2a8aaea14cf72"},"resource_id":"gemSpec_VPN_ZugD","version":"1.12.0","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_VPN_ZugD_V1.12.0.pdf"}
+{"_id":{"$oid":"5f828346b9e2a8aaea14cf7f"},"resource_id":"gemSpec_gSMC-K_ObjSys","version":"3.11.1","url":"https://fachportal.gematik.de/fachportal-import/files/gemSpec_gSMC-K_ObjSys_V3.11.1.pdf"}
+2020-10-11T06:28:51.580+0000	exported 294 records
