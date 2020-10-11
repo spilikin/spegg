@@ -71,21 +71,5 @@ def test():
             }
         }
 
-
-#        {'$limit':1}
     ]))
     pprint(result)
-'''
-                    'localField': "resources",
-                'foreignField': "_id",
-                'pipeline': [
-                    {
-                        '$lookup': {
-                            'from': "Resource",
-                            'localField': "resource_id",
-                            'foreignField': "id",
-                            'as': "_res"
-                        },
-                    },
-                ],
-'''

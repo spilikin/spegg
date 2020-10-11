@@ -1,4 +1,3 @@
-2020-10-11T06:28:50.941+0000	connected to: mongodb://localhost/
 {"_id":{"$oid":"5f828313b9e2a8aaea14b092"},"id":"gemSpec_CVC_Root","description":"Spezifikation CVC-Root"}
 {"_id":{"$oid":"5f828313b9e2a8aaea14b098"},"id":"gemSpec_DS_Anbieter","description":"Spezifikation Datenschutz- und Sicherheitsanforderungen der TI an Anbieter"}
 {"_id":{"$oid":"5f828313b9e2a8aaea14b09e"},"id":"gemSpec_Krypt","description":"Übergreifende Spezifikation Verwendung kryptographischer Algorithmen in der Telematikinfrastruktur"}
@@ -125,4 +124,3 @@
 {"_id":{"$oid":"5f828343b9e2a8aaea14cef9"},"id":"gemErrata_2_Kon_PTV3","description":"Errata 2 zum Konnektor PTV 3 (eMP/AMTS, NFDM)"}
 {"_id":{"$oid":"5f828343b9e2a8aaea14ceff"},"id":"gemErrata_3_Kon_PTV3","description":"Errata 3 zum Konnektor PTV 3 (eMP/AMTS, NFDM)"}
 {"_id":{"$oid":"5f828344b9e2a8aaea14cf05"},"id":"gemErrata_4_Kon_PTV3","description":"Errata 4 zum Konnektor PTV3 (eMP/AMTS, NFDM)"}
-2020-10-11T06:28:50.948+0000	exported 126 records
