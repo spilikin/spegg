@@ -1,13 +1,14 @@
 from pymongo import MongoClient
 import logging
 import datetime
+import os
 from pprint import pprint
 
 client = MongoClient(
-    'localhost',
-    username='spegg',
-    password='bad_password',
-    authSource='spegg',
+    os.getenv('MONGODB_HOST','localhost'),
+    username=os.getenv('MONGODB_USERNAME', 'spegg'),
+    password=os.getenv('MONGODB_USERNAME', 'bad_password'),
+    authSource=os.getenv('MONGODB_DATABASE', 'spegg'),
     authMechanism='SCRAM-SHA-256')
 
 db = client.spegg

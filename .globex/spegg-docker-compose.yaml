@@ -31,21 +31,31 @@ services:
             - "traefik.http.routers.api.rule=Host(`api.spegg.spilikin.dev`)"
             - "traefik.http.routers.api.entrypoints=websecure"
             - "traefik.http.routers.api.tls.certresolver=myresolver"
+        environment:
+            - MONGODB_USERNAME
+            - MONGODB_PASSWORD 
+            - MONGODB_HOST=mongo
+    
+    spegg-vue:
+        build:
+            context: https://github.com/spilikin/spegg-vue.git#staging
+        labels:
+            - "traefik.enable=true"
+            - "traefik.http.routers.vue.rule=Host(`spegg.spilikin.dev`)"
+            - "traefik.http.routers.vue.entrypoints=websecure"
+            - "traefik.http.routers.vue.tls.certresolver=myresolver"
 
-    # vansu-service:
-    #     build:
-    #         context: https://github.com/spilikin/vansu-service.git
-    #     labels:
-    #         - "traefik.enable=true"
-    #         - "traefik.http.routers.api.rule=Host(`api.globex.spilikin.dev`)"
-    #         - "traefik.http.routers.api.entrypoints=websecure"
-    #         - "traefik.http.routers.api.tls.certresolver=myresolver"
-    # vansu-vue:
-    #     build:
-    #         context: https://github.com/spilikin/vansu-vue.git#staging
-    #     labels:
-    #         - "traefik.enable=true"
-    #         - "traefik.http.routers.vue.rule=Host(`globex.spilikin.dev`)"
-    #         - "traefik.http.routers.vue.entrypoints=websecure"
-    #         - "traefik.http.routers.vue.tls.certresolver=myresolver"
-            
+    mongo:
+        image: bitnami/mongodb:latest
+        restart: always
+
+        volumes:
+            - mongodb_data:/bitnami/mongodb
+
+        environment:
+            - MONGO_INITDB_ROOT_USERNAME
+            - MONGO_INITDB_ROOT_PASSWORD
+            - MONGODB_USERNAME
+            - MONGODB_PASSWORD 
+            - MONGODB_DATABASE=spegg
+        
