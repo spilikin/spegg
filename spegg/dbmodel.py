@@ -39,3 +39,10 @@ class SubjectVersion(BaseModel):
 class SubjectVersionDescriptor(BaseModel):
     subject_id: str
     version: str
+
+class Requirement(BaseModel):
+    id: str
+    title: str
+    text: str
+    html: str
+    level: str

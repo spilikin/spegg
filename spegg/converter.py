@@ -2,6 +2,8 @@ import xml.etree.ElementTree as ET
 import requests
 from glob import glob
 import logging
+from openpyxl import load_workbook
+from typing import List
 
 from .db import db
 from . import dbmodel
@@ -100,3 +102,19 @@ def convert_data():
         # uncomment for fast partial import
         #break
                 
+#pprint (load_requirements(doc_filename, 'Anforderungen'))
+#pprint (load_requirements(desc_filename, 'Blattanforderungen'))
+def load_requirements(filename: str, sheetname: str) -> List[Requirement]:
+    result = []
+    wb = load_workbook(filename)
+    ws = wb[sheetname]
+    for row in ws.iter_rows(min_row=2):
+        print(row[0].value)
+        result.append(dbmodel.Requirement(
+            id=row[0].value,
+            title=row[1].value,
+            text=row[2].value,
+            html=row[3].value,
+            level=row[4].value
+        ))
+    return result
