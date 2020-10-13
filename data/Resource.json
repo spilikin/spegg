@@ -1,126 +1,126 @@
-{"_id":{"$oid":"5f83210aabc2b9c560cef8eb"},"id":"gemSpec_CVC_Root","description":"Spezifikation CVC-Root"}
-{"_id":{"$oid":"5f83210aabc2b9c560cef8f1"},"id":"gemSpec_DS_Anbieter","description":"Spezifikation Datenschutz- und Sicherheitsanforderungen der TI an Anbieter"}
-{"_id":{"$oid":"5f83210aabc2b9c560cef8f7"},"id":"gemSpec_Krypt","description":"Übergreifende Spezifikation Verwendung kryptographischer Algorithmen in der Telematikinfrastruktur"}
-{"_id":{"$oid":"5f83210aabc2b9c560cef901"},"id":"gemKPT_Test","description":"Testkonzept der TI"}
-{"_id":{"$oid":"5f83210aabc2b9c560cef907"},"id":"gemSpec_CVC_TSP","description":"Spezifikation Trust Service Provider CVC"}
-{"_id":{"$oid":"5f83210babc2b9c560cef911"},"id":"gemSpec_OM","description":"Übergreifende Spezifikation Operations und Maintenance"}
-{"_id":{"$oid":"5f83210babc2b9c560cef91a"},"id":"gemRL_TSL_SP_CP","description":"Certificate Policy Gemeinsame Zertifizierungsrichtlinie für Teilnehmer der gematik-TSL"}
-{"_id":{"$oid":"5f83210babc2b9c560cef922"},"id":"gemSpec_FD_KOMLE","description":"Spezifikation Fachdienst KOM-LE"}
-{"_id":{"$oid":"5f83210babc2b9c560cef92a"},"id":"gemSpec_Net","description":"Übergreifende Spezifikation Netzwerk"}
-{"_id":{"$oid":"5f83210babc2b9c560cef930"},"id":"gemSpec_PKI","description":"Übergreifende Spezifikation – Spezifikation PKI"}
-{"_id":{"$oid":"5f83210babc2b9c560cef945"},"id":"gemSpec_Perf","description":"Übergreifende Spezifikation Performance und Mengengerüst TI-Plattform"}
-{"_id":{"$oid":"5f83210cabc2b9c560cef953"},"id":"gemSpec_CAN_TI","description":"Übergreifende Spezifikation CAN-Policy"}
-{"_id":{"$oid":"5f83210cabc2b9c560cef95d"},"id":"gemSpec_HBA_ObjSys","description":"Spezifikation des elektronischen Heilberufsausweises HBA-Objektsystem"}
-{"_id":{"$oid":"5f83210cabc2b9c560cef963"},"id":"gemSpec_HBA_ObjSys_G2_1","description":"Spezifikation des elektronischen Heilberufsausweises HBA-Objektsystem"}
-{"_id":{"$oid":"5f83210cabc2b9c560cef96d"},"id":"gemSpec_PINPUK_TI","description":"Übergreifende Spezifikation PIN/PUK-Policy für Smartcards der Telematikinfrastruktur"}
-{"_id":{"$oid":"5f83210cabc2b9c560cef975"},"id":"gemSpec_X_509_TSP","description":"Spezifikation Trust Service Provider X.509"}
-{"_id":{"$oid":"5f83210dabc2b9c560cef980"},"id":"gemSpec_FM_VSDM","description":"Spezifikation Fachmodul VSDM"}
-{"_id":{"$oid":"5f83210dabc2b9c560cef986"},"id":"gemSpec_KTR-AdV","description":"Spezifikation KTR-AdV"}
-{"_id":{"$oid":"5f83210dabc2b9c560cef9a2"},"id":"gemSpec_SMC-B_ObjSys","description":"Spezifikation der Security Module Card SMC-B Objektsystem"}
-{"_id":{"$oid":"5f83210eabc2b9c560cef9a8"},"id":"gemSpec_SMC-B_ObjSys_G2_1","description":"Spezifikation der Security Module Card SMC-B Objektsystem"}
-{"_id":{"$oid":"5f83210eabc2b9c560cef9c4"},"id":"gemSpec_VPN_ZugD","description":"Spezifikation VPN-Zugangsdienst"}
-{"_id":{"$oid":"5f83210fabc2b9c560cef9f5"},"id":"gemSpec_VZD","description":"Spezifikation Verzeichnisdienst"}
-{"_id":{"$oid":"5f83210fabc2b9c560cefa05"},"id":"IHE-ITI-APPC","description":"IHE International (2018): IHE IT Infrastructure (ITI) Technical Framework Supplement, Advanced Patient Privacy Consents (APPC),Revision 1.2 – Trial Implementation, http://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_APPC.pdf"}
-{"_id":{"$oid":"5f832110abc2b9c560cefa0b"},"id":"IHE-ITI-RMU","description":"IHE International (2018): IHE IT Infrastructure (ITI) Technical Framework Supplement, Restricted Metadata Update (RMU),Revision 1.1 – Trial Implementation, https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_RMU.pdf"}
-{"_id":{"$oid":"5f832110abc2b9c560cefa11"},"id":"IHE-ITI-TF1","description":"IHE International (2018): IHE IT Infrastructure (ITI) Technical Framework, Volume 1 (ITI TF-1) – Integration Profiles,Revision 15.0, http://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol1.pdf"}
-{"_id":{"$oid":"5f832110abc2b9c560cefa18"},"id":"IHE-ITI-TF3","description":"IHE International (2018): IHE IT Infrastructure (ITI) Technical Framework, Volume 3 (ITI TF-3) – Cross-Transaction Specifications and Content Specifications,Revision 15.0, http://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol3.pdf"}
-{"_id":{"$oid":"5f832110abc2b9c560cefa1e"},"id":"IHE-ITI-VS","description":"IHE Deutschland (2018): Value Sets für Aktenprojekte im deutschen Gesundheitswesen, Implementierungsleitfaden, Version 2.0,http://www.ihe-d.de/download/ihe-valuesets-v2-0/"}
-{"_id":{"$oid":"5f832111abc2b9c560cefa26"},"id":"IHE-ITI-XCDR","description":"IHE International (2017): IHE IT Infrastructure (ITI) Technical Framework Supplement, Cross-Community Document Reliable Interchange (XCDR),Revision 1.4 – Trial Implementation, http://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_XCDR.pdf"}
-{"_id":{"$oid":"5f832111abc2b9c560cefa2e"},"id":"gemKPT_Test_UEePA","description":"Addendum zum Testkonzept der TI"}
-{"_id":{"$oid":"5f832111abc2b9c560cefa34"},"id":"gemSpec_Aktensystem","description":"Spezifikation Aktensystem ePA"}
-{"_id":{"$oid":"5f832111abc2b9c560cefa3a"},"id":"gemSpec_Aktensystem_UEePA","description":"Addendum zur Spezifikation ePA-Aktensystem"}
-{"_id":{"$oid":"5f832111abc2b9c560cefa40"},"id":"gemSpec_Authentisierung_Vers","description":"Spezifikation Authentisierung des Versicherten ePA"}
-{"_id":{"$oid":"5f832111abc2b9c560cefa46"},"id":"gemSpec_Autorisierung","description":"Spezifikation Autorisierung ePA"}
-{"_id":{"$oid":"5f832111abc2b9c560cefa4c"},"id":"gemSpec_Autorisierung_UEePA","description":"Addendum zur Spezifikation Autorisierung ePA"}
-{"_id":{"$oid":"5f832111abc2b9c560cefa52"},"id":"gemSpec_DM_ePA","description":"Datenmodell ePA"}
-{"_id":{"$oid":"5f832111abc2b9c560cefa58"},"id":"gemSpec_DM_ePA_UEePA","description":"Addendum zum Datenmodell ePA"}
-{"_id":{"$oid":"5f832112abc2b9c560cefa5e"},"id":"gemSpec_Dokumentenverwaltung","description":"Spezifikation Dokumentenverwaltung ePA"}
-{"_id":{"$oid":"5f832112abc2b9c560cefa64"},"id":"gemSpec_Dokumentenverwaltung_UEePA","description":"Addendum zur Spezifikation ePA-Dokumentenverwaltung"}
-{"_id":{"$oid":"5f832112abc2b9c560cefa74"},"id":"gemSpec_TBAuth","description":"Übergreifende Spezifikation Tokenbasierte Authentisierung"}
-{"_id":{"$oid":"5f832112abc2b9c560cefa7a"},"id":"gemSpec_TSL","description":"Spezifikation TSL-Dienst"}
-{"_id":{"$oid":"5f832112abc2b9c560cefa80"},"id":"gemSpec_Zugangsgateway_Vers","description":"Spezifikation Zugangsgateway des Versicherten ePA"}
-{"_id":{"$oid":"5f832112abc2b9c560cefa8b"},"id":"gemSMIME_KOMLE","description":"S/MIME-Profil Kommunikation Leistungserbringer (KOM-LE)"}
-{"_id":{"$oid":"5f832112abc2b9c560cefa93"},"id":"gemSpec_Basis_KTR_Consumer","description":"Spezifikation Basis-/KTR-Consumer"}
-{"_id":{"$oid":"5f832112abc2b9c560cefa99"},"id":"gemSpec_CM_KOMLE","description":"Spezifikation KOM-LE-Clientmodul"}
-{"_id":{"$oid":"5f832113abc2b9c560cefa9f"},"id":"gemSpec_DS_Hersteller","description":"Spezifikation Datenschutz- und Sicherheitsanforderungen der TI an Hersteller"}
-{"_id":{"$oid":"5f832113abc2b9c560cefaa5"},"id":"gemSpec_HSMProxy","description":"Übergreifende Spezifikation HSM-Proxy"}
-{"_id":{"$oid":"5f832113abc2b9c560cefab3"},"id":"gemSpec_Systemprozesse_dezTI","description":"Spezifikation Systemprozesse der dezentralen TI"}
-{"_id":{"$oid":"5f832113abc2b9c560cefad1"},"id":"BSI-CC-PP-0082","description":"BSI: Protection Profile – COS BSI-CC-PP-0082"}
-{"_id":{"$oid":"5f832113abc2b9c560cefad9"},"id":"gemSpec_COS","description":"Spezifikation des Card Operating System (COS)"}
-{"_id":{"$oid":"5f832114abc2b9c560cefaea"},"id":"gemSpec_TLK_COS_G2","description":"gematik: Spezifikation Testlaborkarte COS/Objektsysteme"}
-{"_id":{"$oid":"5f832114abc2b9c560cefb00"},"id":"gemSpec_OID","description":"gematik: Spezifikation Festlegung von OIDs"}
-{"_id":{"$oid":"5f832115abc2b9c560cefb33"},"id":"gemSpec_ServiceMon","description":"Spezifikation Service Monitoring"}
-{"_id":{"$oid":"5f832115abc2b9c560cefb39"},"id":"gemSpec_St_Ampel","description":"Spezifikation Störungsampel"}
-{"_id":{"$oid":"5f832115abc2b9c560cefb56"},"id":"gemSpec_SST_FD_VSDM","description":"Schnittstellenspezifikation Fachdienste (UFS/VSDD/CMS)"}
-{"_id":{"$oid":"5f832115abc2b9c560cefb5c"},"id":"gemSpec_SST_VSDM","description":"Schnittstellenspezifikation Transport VSDM"}
-{"_id":{"$oid":"5f832115abc2b9c560cefb64"},"id":"gemSpec_eGK_Fach_VSDM","description":"Speicherstrukturen der eGK für die Fachanwendung VSDM"}
-{"_id":{"$oid":"5f832115abc2b9c560cefb73"},"id":"gemSpec_Frontend_Vers","description":"Spezifikation ePA-Frontend des Versicherten"}
-{"_id":{"$oid":"5f832115abc2b9c560cefb79"},"id":"gemSpec_Frontend_Vers_UEePA","description":"Addendum zur Spezifikation ePA-Frontend des Versicherten"}
-{"_id":{"$oid":"5f832116abc2b9c560cefb87"},"id":"gemSpec_SGD_ePA","description":"Spezifikation Schlüsselgenerierungsdienst ePA"}
-{"_id":{"$oid":"5f832116abc2b9c560cefb92"},"id":"ABDA_HBA_Opt","description":"ABDA: Handbuch für den Apothekerausweis / HBA Stand von Oktober 2018"}
-{"_id":{"$oid":"5f832116abc2b9c560cefb98"},"id":"BAEK_HBA_Holo","description":"BÄK: Anforderungen an Kartenkörper und Hologramm des eArztausweises"}
-{"_id":{"$oid":"5f832116abc2b9c560cefb9e"},"id":"BAEK_HBA_Opt","description":"BÄK: Handbuch zur optischen Gestaltung des eArztausweises"}
-{"_id":{"$oid":"5f832116abc2b9c560cefba4"},"id":"BAEK_HBA_Opt_Vorlagen","description":"BÄK: Dateivorlagen zu BÄK_HBA_Opt"}
-{"_id":{"$oid":"5f832117abc2b9c560cefbaa"},"id":"BAEK_TelematikID","description":"Identity Management Konzept der eArztausweise und Telematik-ID"}
-{"_id":{"$oid":"5f832117abc2b9c560cefbb0"},"id":"BPtK_HBA_Opt","description":"BPtK: Handbuch zur optischen Gestaltung des elektronischen Heilberufsausweises für Psychologische Psychotherapeuten und Kinder- und Jugendlichenpsychotherapeuten Stand vom 29.06.2015"}
-{"_id":{"$oid":"5f832117abc2b9c560cefbb7"},"id":"BPtK_TelematikID","description":"BPtK: Spezifikation Telematik-ID"}
-{"_id":{"$oid":"5f832117abc2b9c560cefbbd"},"id":"BZÄK_HBA_Layout","description":"Layout des elektronischen Zahnarztausweises"}
-{"_id":{"$oid":"5f832118abc2b9c560cefbc3"},"id":"BZÄK_HBA_Opt","description":"BZÄK: Vorgaben an inhaltliche Gestaltung Antragsprozess, Layout und Zertifikate elektronischer Zahnarztausweis"}
-{"_id":{"$oid":"5f832118abc2b9c560cefbc9"},"id":"BZÄK_HBA_Opt_Vorlagen","description":"BZÄK: Dateivorlagen zu BZÄK_HBA_Opt"}
-{"_id":{"$oid":"5f832118abc2b9c560cefbdb"},"id":"gemSpec_Karten_Fach_TIP","description":"Befüllvorschriften für die Plattformanteile der Karten der TI"}
-{"_id":{"$oid":"5f832118abc2b9c560cefbe9"},"id":"gemSpec_eGK_Opt","description":"Spezifikation der elektronischen Gesundheitskarte – Äußere Gestaltung"}
-{"_id":{"$oid":"5f832118abc2b9c560cefc12"},"id":"gemSpec_Karten_Fach_TIP_G2_1","description":"Befüllvorschriften für die Plattformanteile der Karten der TI der Generation G2.1"}
-{"_id":{"$oid":"5f832119abc2b9c560cefc25"},"id":"TR-03143","description":"BSI: eHealth G2-COS Konsistenz-Prüftool"}
-{"_id":{"$oid":"5f832119abc2b9c560cefc3e"},"id":"gemSpec_TK","description":"Spezifikation für Testkarten gematik (eGK, HBA, (g)SMC) der Generation 2"}
-{"_id":{"$oid":"5f83211aabc2b9c560cefc71"},"id":"gemSpec_Intermediar_VSDM","description":"Spezifikation Intermediär VSDM"}
-{"_id":{"$oid":"5f83211aabc2b9c560cefc92"},"id":"gemSpec_KSR","description":"Spezifikation Konfigurationsdienst"}
-{"_id":{"$oid":"5f83211babc2b9c560cefcb3"},"id":"gemSpec_KT","description":"Spezifikation eHealth-Kartenterminal"}
-{"_id":{"$oid":"5f83211babc2b9c560cefcca"},"id":"gemSpec_KTR-AdV-Terminal","description":"Spezifikation KTR-AdV-Terminal"}
-{"_id":{"$oid":"5f83211babc2b9c560cefcdd"},"id":"gemSpec_FLA_NFDM","description":"Spezifikation Fachlogik der Fachanwendung NFDM in KTR-AdV (FLA-NFDM)"}
-{"_id":{"$oid":"5f83211babc2b9c560cefcf5"},"id":"gemSpec_SST_PS_VSDM","description":"Schnittstellenspezifikation Primärsysteme VSDM"}
-{"_id":{"$oid":"5f83211cabc2b9c560cefd12"},"id":"gemSpec_FM_ePA_KTR_Consumer","description":"Spezifikation Fachmodul ePA im KTR-Consumer"}
-{"_id":{"$oid":"5f83211cabc2b9c560cefd2b"},"id":"PP_KON","description":"CommonCriteriaSchutzprofil(ProtectionProfile) Schutzprofil 2: Anforderungen an den Konnektor: BSI-CC-PP-0098"}
-{"_id":{"$oid":"5f83211cabc2b9c560cefd31"},"id":"PP_NK","description":"CommonCriteriaSchutzprofil(ProtectionProfile) Schutzprofil 1: Anforderungen an den Netzkonnektor BSI-CC-PP-0097"}
-{"_id":{"$oid":"5f83211cabc2b9c560cefd49"},"id":"gemSpec_Kon","description":"Spezifikation Konnektor"}
-{"_id":{"$oid":"5f83211dabc2b9c560cefd4f"},"id":"gemSpec_Kon_SigProxy","description":"Spezifikation Konnektor Signaturproxy"}
-{"_id":{"$oid":"5f83211dabc2b9c560cefd61"},"id":"gemSpec_SMC_OPT","description":"Gemeinsame optische Merkmale der SMC"}
-{"_id":{"$oid":"5f83211dabc2b9c560cefd73"},"id":"gemSpec_gSMC-K_ObjSys","description":"Spezifikation der gSMC-K Objektsystem"}
-{"_id":{"$oid":"5f83211dabc2b9c560cefd7c"},"id":"BSI-TR-03154","description":"Technische Richtlinie Konnektor – Prüfspezifikation für das Fachmodul NFDM"}
-{"_id":{"$oid":"5f83211dabc2b9c560cefd82"},"id":"BSI-TR-03155","description":"Technische Richtlinie Konnektor – Prüfspezifikation für das Fachmodul AMTS"}
-{"_id":{"$oid":"5f83211eabc2b9c560cefd91"},"id":"gemRL_QES_NFDM","description":"Signaturrichtlinie QES Notfalldaten-Management (NFDM)"}
-{"_id":{"$oid":"5f83211eabc2b9c560cefd9d"},"id":"gemSpec_FM_AMTS","description":"Spezifikation Fachmodul AMTS"}
-{"_id":{"$oid":"5f83211eabc2b9c560cefda3"},"id":"gemSpec_FM_NFDM","description":"Spezifikation Fachmodul NFDM"}
-{"_id":{"$oid":"5f83211eabc2b9c560cefdab"},"id":"gemSpec_InfoNFDM","description":"Informationsmodell Notfalldaten-Management (NFDM)"}
-{"_id":{"$oid":"5f83211eabc2b9c560cefdb1"},"id":"gemSpec_Info_AMTS","description":"Informationsmodell eMP/AMTS-Datenmanagement"}
-{"_id":{"$oid":"5f83211eabc2b9c560cefdbd"},"id":"gemSpec_Kon_TBAuth","description":"Spezifikation Konnektor Basisdienst tokenbasierte Authentisierung"}
-{"_id":{"$oid":"5f83211eabc2b9c560cefdde"},"id":"gemSpec_eGK_Fach_AMTS","description":"Speicherstrukturen der eGK für die Fachanwendung AMTS"}
-{"_id":{"$oid":"5f83211eabc2b9c560cefde4"},"id":"gemSpec_eGK_Fach_NFDM","description":"Speicherstrukturen der eGK für die Fachanwendung NFDM"}
-{"_id":{"$oid":"5f83211fabc2b9c560cefdf5"},"id":"BSI-TR-03157","description":"Technische Richtlinie Konnektor – Prüfspezifikation für das Fachmodul ePA"}
-{"_id":{"$oid":"5f83211fabc2b9c560cefe13"},"id":"gemSpec_FM_ePA","description":"Spezifikation Fachmodul ePA"}
-{"_id":{"$oid":"5f832120abc2b9c560cefe63"},"id":"gemSpec_MobKT","description":"Spezifikation Mobiles Kartenterminal"}
-{"_id":{"$oid":"5f832120abc2b9c560cefe8d"},"id":"gemSpec_OCSP_Proxy","description":"Spezifikation OCSP-Proxy"}
-{"_id":{"$oid":"5f832120abc2b9c560cefea0"},"id":"gemProdT_eGK_ObjSys_g2.1","description":"Gematik: Produkttypsteckbrief Zulassungsobjekt eGK-Objektsystem"}
-{"_id":{"$oid":"5f832121abc2b9c560cefeb5"},"id":"gemSpec_PK_eGK","description":"Spezifikation für Prüfkarten des Typs eGK der Generation 2.1"}
-{"_id":{"$oid":"5f832121abc2b9c560cefebf"},"id":"gemSpec_eGK_ObjSys_G2_1","description":"Spezifikation der elektronischen Gesundheitskarte eGK-Objektsystem (G2.1)"}
-{"_id":{"$oid":"5f832121abc2b9c560cefef3"},"id":"KZBV_SMCB_Konf","description":"Festlegungen zu Identifier, Nummern und Bezeichner für die SMC-B der Vertragszahnärzteschaft"}
-{"_id":{"$oid":"5f832122abc2b9c560ceff87"},"id":"gemSpec_SigD","description":"Spezifikation Signaturdienst"}
-{"_id":{"$oid":"5f832125abc2b9c560cf00bf"},"id":"gemSpec_eGK_ObjSys","description":"Spezifikation der elektronischen Gesundheitskarte eGK-Objektsystem"}
-{"_id":{"$oid":"5f832126abc2b9c560cf0179"},"id":"gemSpec_gSMC-KT_ObjSys","description":"Spezifikation der gSMC-KT Objektsystem"}
-{"_id":{"$oid":"5f832126abc2b9c560cf0198"},"id":"gemSpec_gSMC-KT_ObjSys_G2_1","description":"Spezifikation der gSMC-KT Objektsystem"}
-{"_id":{"$oid":"5f832128abc2b9c560cf0248"},"id":"gemKPT_Betr","description":"Betriebskonzept Online-Produktivbetrieb"}
-{"_id":{"$oid":"5f832128abc2b9c560cf0253"},"id":"gemRL_Betr_TI","description":"Übergreifende Richtlinien zum Betrieb der TI"}
-{"_id":{"$oid":"5f832131abc2b9c560cf0495"},"id":"gemSpec_FD_eRp","description":"Spezifikation E-Rezept Fachdienst"}
-{"_id":{"$oid":"5f832131abc2b9c560cf04a8"},"id":"gemSpec_eRp_FdV","description":"Spezifikation E-Rezept-Frontend des Versicherten"}
-{"_id":{"$oid":"5f832132abc2b9c560cf04f8"},"id":"gemSpec_SST_LD_BD","description":"Spezifikation Logdaten und Betriebsdatenerfassung"}
-{"_id":{"$oid":"5f832137abc2b9c560cf0675"},"id":"gemSpec_IDP_Dienst","description":"Spezifikation Identity Provider - Dienst"}
-{"_id":{"$oid":"5f832137abc2b9c560cf067b"},"id":"gemSpec_IDP_FD","description":"Spezifikation Identity Provider – Fachdienste"}
-{"_id":{"$oid":"5f83213aabc2b9c560cf0762"},"id":"gemErrata_1_Kon_PTV4","description":"Errata zum Konnektor PTV 4"}
-{"_id":{"$oid":"5f83213cabc2b9c560cf08c9"},"id":"gemSpec_PKG","description":"Spezifikation Private Key Generator"}
-{"_id":{"$oid":"5f832141abc2b9c560cf0b8f"},"id":"gemSpec_ePA_FdV","description":"Spezifikation ePA-Frontend des Versicherten"}
-{"_id":{"$oid":"5f832142abc2b9c560cf0b9a"},"id":"xxx","description":"xxx"}
-{"_id":{"$oid":"5f832142abc2b9c560cf0ba6"},"id":"gemSpec_DM_eRp","description":"Datenmodell E-Rezept"}
-{"_id":{"$oid":"5f832142abc2b9c560cf0bcd"},"id":"gemSpec_IDP_Frontend","description":"Spezifikation Identity Provider - Frontend"}
-{"_id":{"$oid":"5f83215babc2b9c560cf1773"},"id":"gemErrata_1_Kon_PTV3","description":"Errata zu Release 3.0.0 Online-Produktivbetrieb (Stufe 3) Erprobung und Produktivbetrieb führt zu Release 3.0.0-1"}
-{"_id":{"$oid":"5f83215babc2b9c560cf1779"},"id":"gemErrata_2_Kon_PTV3","description":"Errata 2 zum Konnektor PTV 3 (eMP/AMTS, NFDM)"}
-{"_id":{"$oid":"5f83215babc2b9c560cf177f"},"id":"gemErrata_3_Kon_PTV3","description":"Errata 3 zum Konnektor PTV 3 (eMP/AMTS, NFDM)"}
-{"_id":{"$oid":"5f83215cabc2b9c560cf1785"},"id":"gemErrata_4_Kon_PTV3","description":"Errata 4 zum Konnektor PTV3 (eMP/AMTS, NFDM)"}
+{"_id":{"$oid":"5f862425dae9806294372489"},"id":"gemKPT_Betr","description":"Betriebskonzept Online-Produktivbetrieb"}
+{"_id":{"$oid":"5f862425dae980629437248f"},"id":"gemRL_Betr_TI","description":"Übergreifende Richtlinien zum Betrieb der TI"}
+{"_id":{"$oid":"5f862426dae9806294372495"},"id":"gemSpec_Aktensystem","description":"Spezifikation Aktensystem ePA"}
+{"_id":{"$oid":"5f862426dae980629437249b"},"id":"gemSpec_Aktensystem_UEePA","description":"Addendum zur Spezifikation ePA-Aktensystem"}
+{"_id":{"$oid":"5f862426dae98062943724a1"},"id":"gemSpec_Authentisierung_Vers","description":"Spezifikation Authentisierung des Versicherten ePA"}
+{"_id":{"$oid":"5f862426dae98062943724a8"},"id":"gemSpec_Autorisierung","description":"Spezifikation Autorisierung ePA"}
+{"_id":{"$oid":"5f862426dae98062943724ae"},"id":"gemSpec_DM_ePA","description":"Datenmodell ePA"}
+{"_id":{"$oid":"5f862426dae98062943724b4"},"id":"gemSpec_DS_Anbieter","description":"Spezifikation Datenschutz- und Sicherheitsanforderungen der TI an Anbieter"}
+{"_id":{"$oid":"5f862426dae98062943724ba"},"id":"gemSpec_Dokumentenverwaltung","description":"Spezifikation Dokumentenverwaltung ePA"}
+{"_id":{"$oid":"5f862426dae98062943724c0"},"id":"gemSpec_Dokumentenverwaltung_UEePA","description":"Addendum zur Spezifikation ePA-Dokumentenverwaltung"}
+{"_id":{"$oid":"5f862427dae98062943724c6"},"id":"gemSpec_Net","description":"Übergreifende Spezifikation Netzwerk"}
+{"_id":{"$oid":"5f862427dae98062943724cc"},"id":"gemSpec_PKI","description":"Übergreifende Spezifikation – Spezifikation PKI"}
+{"_id":{"$oid":"5f862427dae98062943724d2"},"id":"gemSpec_Perf","description":"Übergreifende Spezifikation Performance und Mengengerüst TI-Plattform"}
+{"_id":{"$oid":"5f862427dae98062943724d8"},"id":"gemSpec_SGD_ePA","description":"Spezifikation Schlüsselgenerierungsdienst ePA"}
+{"_id":{"$oid":"5f862427dae98062943724de"},"id":"gemSpec_Zugangsgateway_Vers","description":"Spezifikation Zugangsgateway des Versicherten ePA"}
+{"_id":{"$oid":"5f862427dae98062943724f7"},"id":"gemSpec_CVC_Root","description":"Spezifikation CVC-Root"}
+{"_id":{"$oid":"5f862428dae98062943724ff"},"id":"gemSpec_Krypt","description":"Übergreifende Spezifikation Verwendung kryptographischer Algorithmen in der Telematikinfrastruktur"}
+{"_id":{"$oid":"5f862428dae980629437250a"},"id":"gemKPT_Test","description":"Testkonzept der TI"}
+{"_id":{"$oid":"5f862428dae9806294372512"},"id":"gemSpec_CVC_TSP","description":"Spezifikation Trust Service Provider CVC"}
+{"_id":{"$oid":"5f862428dae980629437251c"},"id":"gemSpec_OM","description":"Übergreifende Spezifikation Operations und Maintenance"}
+{"_id":{"$oid":"5f862428dae9806294372529"},"id":"gemRL_TSL_SP_CP","description":"Certificate Policy Gemeinsame Zertifizierungsrichtlinie für Teilnehmer der gematik-TSL"}
+{"_id":{"$oid":"5f862428dae9806294372531"},"id":"gemSpec_FD_KOMLE","description":"Spezifikation Fachdienst KOM-LE"}
+{"_id":{"$oid":"5f862429dae9806294372546"},"id":"gemSpec_CAN_TI","description":"Übergreifende Spezifikation CAN-Policy"}
+{"_id":{"$oid":"5f862429dae9806294372550"},"id":"gemSpec_HBA_ObjSys_G2_1","description":"Spezifikation des elektronischen Heilberufsausweises HBA-Objektsystem"}
+{"_id":{"$oid":"5f862429dae980629437255a"},"id":"gemSpec_PINPUK_TI","description":"Übergreifende Spezifikation PIN/PUK-Policy für Smartcards der Telematikinfrastruktur"}
+{"_id":{"$oid":"5f862429dae9806294372564"},"id":"gemSpec_X_509_TSP","description":"Spezifikation Trust Service Provider X.509"}
+{"_id":{"$oid":"5f86242adae9806294372573"},"id":"gemSpec_FM_VSDM","description":"Spezifikation Fachmodul VSDM"}
+{"_id":{"$oid":"5f86242adae9806294372579"},"id":"gemSpec_KTR-AdV","description":"Spezifikation KTR-AdV"}
+{"_id":{"$oid":"5f86242adae980629437258c"},"id":"gemSpec_FM_ePA_KTR_Consumer","description":"Spezifikation Fachmodul ePA im KTR-Consumer"}
+{"_id":{"$oid":"5f86242adae98062943725bc"},"id":"gemSpec_SMC-B_ObjSys","description":"Spezifikation der Security Module Card SMC-B Objektsystem"}
+{"_id":{"$oid":"5f86242bdae98062943725c2"},"id":"gemSpec_SMC-B_ObjSys_G2_1","description":"Spezifikation der Security Module Card SMC-B Objektsystem"}
+{"_id":{"$oid":"5f86242bdae98062943725de"},"id":"gemSpec_SigD","description":"SpezifikationSignaturdienst"}
+{"_id":{"$oid":"5f86242bdae98062943725f9"},"id":"gemSpec_VPN_ZugD","description":"Spezifikation VPN-Zugangsdienst"}
+{"_id":{"$oid":"5f86242cdae9806294372621"},"id":"gemSpec_KSR","description":"Spezifikation Konfigurationsdienst"}
+{"_id":{"$oid":"5f86242cdae980629437263e"},"id":"gemSpec_VZD","description":"Spezifikation Verzeichnisdienst"}
+{"_id":{"$oid":"5f86242ddae9806294372654"},"id":"IHE-ITI-APPC","description":"IHE International (2018): IHE IT Infrastructure (ITI) Technical Framework Supplement, Advanced Patient Privacy Consents (APPC),Revision 1.2 – Trial Implementation, http://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_APPC.pdf"}
+{"_id":{"$oid":"5f86242ddae980629437265a"},"id":"IHE-ITI-RMU","description":"IHE International (2018): IHE IT Infrastructure (ITI) Technical Framework Supplement, Restricted Metadata Update (RMU),Revision 1.1 – Trial Implementation, https://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_RMU.pdf"}
+{"_id":{"$oid":"5f86242ddae9806294372660"},"id":"IHE-ITI-TF1","description":"IHE International (2018): IHE IT Infrastructure (ITI) Technical Framework, Volume 1 (ITI TF-1) – Integration Profiles,Revision 15.0, http://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol1.pdf"}
+{"_id":{"$oid":"5f86242ddae9806294372667"},"id":"IHE-ITI-TF3","description":"IHE International (2018): IHE IT Infrastructure (ITI) Technical Framework, Volume 3 (ITI TF-3) – Cross-Transaction Specifications and Content Specifications,Revision 15.0, http://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_TF_Vol3.pdf"}
+{"_id":{"$oid":"5f86242ddae980629437266d"},"id":"IHE-ITI-VS","description":"IHE Deutschland (2018): Value Sets für Aktenprojekte im deutschen Gesundheitswesen, Implementierungsleitfaden, Version 2.0,http://www.ihe-d.de/download/ihe-valuesets-v2-0/"}
+{"_id":{"$oid":"5f86242edae9806294372673"},"id":"IHE-ITI-XCDR","description":"IHE International (2017): IHE IT Infrastructure (ITI) Technical Framework Supplement, Cross-Community Document Reliable Interchange (XCDR),Revision 1.4 – Trial Implementation, http://www.ihe.net/uploadedFiles/Documents/ITI/IHE_ITI_Suppl_XCDR.pdf"}
+{"_id":{"$oid":"5f86242edae980629437268f"},"id":"gemSpec_SST_LD_BD","description":"Spezifikation Logdaten und Betriebsdatenerfassung"}
+{"_id":{"$oid":"5f86242edae9806294372695"},"id":"gemSpec_TBAuth","description":"Übergreifende Spezifikation Tokenbasierte Authentisierung"}
+{"_id":{"$oid":"5f86242edae980629437269b"},"id":"gemSpec_TSL","description":"Spezifikation TSL-Dienst"}
+{"_id":{"$oid":"5f86242edae98062943726a8"},"id":"gemSMIME_KOMLE","description":"S/MIME-Profil Kommunikation Leistungserbringer (KOM-LE)"}
+{"_id":{"$oid":"5f86242fdae98062943726ae"},"id":"gemSpec_Basis_KTR_Consumer","description":"Spezifikation Basis-/KTR-Consumer"}
+{"_id":{"$oid":"5f86242fdae98062943726b4"},"id":"gemSpec_CM_KOMLE","description":"Spezifikation KOM-LE-Clientmodul"}
+{"_id":{"$oid":"5f86242fdae98062943726ba"},"id":"gemSpec_DS_Hersteller","description":"Spezifikation Datenschutz- und Sicherheitsanforderungen der TI an Hersteller"}
+{"_id":{"$oid":"5f86242fdae98062943726c0"},"id":"gemSpec_HSMProxy","description":"Übergreifende Spezifikation HSM-Proxy"}
+{"_id":{"$oid":"5f86242fdae98062943726d0"},"id":"gemSpec_Systemprozesse_dezTI","description":"Spezifikation Systemprozesse der dezentralen TI"}
+{"_id":{"$oid":"5f862430dae98062943726ee"},"id":"BSI-CC-PP-0082","description":"BSI: Protection Profile – COS BSI-CC-PP-0082"}
+{"_id":{"$oid":"5f862430dae98062943726f6"},"id":"gemSpec_COS","description":"Spezifikation des Card Operating System (COS)"}
+{"_id":{"$oid":"5f862430dae9806294372705"},"id":"gemSpec_TLK_COS_G2","description":"gematik: Spezifikation der Testlaborkarte COS / Objektsysteme"}
+{"_id":{"$oid":"5f862430dae9806294372718"},"id":"gemSpec_OID","description":"Spezifikation Festlegung von OIDs"}
+{"_id":{"$oid":"5f862431dae980629437274a"},"id":"gemSpec_ServiceMon","description":"Spezifikation Service Monitoring"}
+{"_id":{"$oid":"5f862431dae9806294372750"},"id":"gemSpec_St_Ampel","description":"Spezifikation Störungsampel"}
+{"_id":{"$oid":"5f862431dae980629437276e"},"id":"gemSpec_SST_FD_VSDM","description":"Schnittstellenspezifikation Fachdienste (UFS/VSDD/CMS)"}
+{"_id":{"$oid":"5f862432dae9806294372776"},"id":"gemSpec_SST_VSDM","description":"Schnittstellenspezifikation Transport VSDM"}
+{"_id":{"$oid":"5f862432dae980629437277e"},"id":"gemSpec_eGK_Fach_VSDM","description":"Speicherstrukturen der eGK für die Fachanwendung VSDM"}
+{"_id":{"$oid":"5f862432dae9806294372787"},"id":"ABDA_HBA_Opt","description":"ABDA: Handbuch für den Apothekerausweis / HBA Stand von Oktober 2018"}
+{"_id":{"$oid":"5f862432dae980629437278d"},"id":"BAEK_HBA_Holo","description":"BÄK: Anforderungen an Kartenkörper und Hologramm des eArztausweises"}
+{"_id":{"$oid":"5f862432dae9806294372793"},"id":"BAEK_HBA_Opt","description":"BÄK: Handbuch zur optischen Gestaltung des eArztausweises"}
+{"_id":{"$oid":"5f862433dae9806294372799"},"id":"BAEK_HBA_Opt_Vorlagen","description":"BÄK: Dateivorlagen zu BÄK_HBA_Opt"}
+{"_id":{"$oid":"5f862433dae980629437279f"},"id":"BAEK_TelematikID","description":"Identity Management Konzept der eArztausweise und Telematik-ID"}
+{"_id":{"$oid":"5f862433dae98062943727a5"},"id":"BPtK_HBA_Opt","description":"BPtK: Handbuch zur optischen Gestaltung des elektronischen Heilberufsausweises für Psychologische Psychotherapeuten und Kinder- und Jugendlichenpsychotherapeuten Stand vom 29.06.2015"}
+{"_id":{"$oid":"5f862433dae98062943727ab"},"id":"BPtK_TelematikID","description":"BPtK: Spezifikation Telematik-ID"}
+{"_id":{"$oid":"5f862434dae98062943727b1"},"id":"BZÄK_HBA_Layout","description":"Layout des elektronischen Zahnarztausweises"}
+{"_id":{"$oid":"5f862434dae98062943727b7"},"id":"BZÄK_HBA_Opt","description":"BZÄK: Vorgaben an inhaltliche Gestaltung Antragsprozess, Layout und Zertifikate elektronischer Zahnarztausweis"}
+{"_id":{"$oid":"5f862434dae98062943727bd"},"id":"BZÄK_HBA_Opt_Vorlagen","description":"BZÄK: Dateivorlagen zu BZÄK_HBA_Opt"}
+{"_id":{"$oid":"5f862434dae98062943727cd"},"id":"gemSpec_HBA_ObjSys","description":"Spezifikation des elektronischen Heilberufsausweises HBA-Objektsystem"}
+{"_id":{"$oid":"5f862434dae98062943727d3"},"id":"gemSpec_Karten_Fach_TIP","description":"Befüllvorschriften für die Plattformanteile der Karten der TI"}
+{"_id":{"$oid":"5f862434dae98062943727e1"},"id":"gemSpec_eGK_Opt","description":"Spezifikation der elektronischen Gesundheitskarte – Äußere Gestaltung"}
+{"_id":{"$oid":"5f862435dae980629437280a"},"id":"gemSpec_Karten_Fach_TIP_G2_1","description":"Befüllvorschriften für die Plattformanteile der Karten der TI der Generation G2.1"}
+{"_id":{"$oid":"5f862435dae980629437281e"},"id":"TR-03143","description":"BSI: eHealth G2-COS Konsistenz-Prüftool"}
+{"_id":{"$oid":"5f862436dae9806294372842"},"id":"gemSpec_Intermediar_VSDM","description":"Spezifikation Intermediär VSDM"}
+{"_id":{"$oid":"5f862436dae9806294372884"},"id":"gemSpec_KT","description":"Spezifikation eHealth-Kartenterminal"}
+{"_id":{"$oid":"5f862436dae980629437289a"},"id":"gemSpec_SMC_OPT","description":"Gemeinsame optische Merkmale der SMC"}
+{"_id":{"$oid":"5f862437dae98062943728a0"},"id":"gemSpec_gSMC-KT_ObjSys","description":"Spezifikation der gSMC-KT Objektsystem"}
+{"_id":{"$oid":"5f862437dae98062943728a6"},"id":"gemSpec_gSMC-KT_ObjSys_G2_1","description":"Spezifikation der gSMC-KT Objektsystem"}
+{"_id":{"$oid":"5f862437dae98062943728b4"},"id":"gemSpec_KTR-AdV-Terminal","description":"Spezifikation KTR-AdV-Terminal"}
+{"_id":{"$oid":"5f862437dae98062943728c7"},"id":"gemSpec_FLA_NFDM","description":"Spezifikation Fachlogik der Fachanwendung NFDM in KTR-AdV (FLA-NFDM)"}
+{"_id":{"$oid":"5f862438dae98062943728df"},"id":"gemSpec_SST_PS_VSDM","description":"Schnittstellenspezifikation Primärsysteme VSDM"}
+{"_id":{"$oid":"5f862438dae9806294372911"},"id":"BSI-TR-03154","description":"Technische Richtlinie Konnektor – Prüfspezifikation für das Fachmodul NFDM"}
+{"_id":{"$oid":"5f862439dae9806294372917"},"id":"BSI-TR-03155","description":"Technische Richtlinie Konnektor – Prüfspezifikation für das Fachmodul AMTS"}
+{"_id":{"$oid":"5f862439dae980629437291d"},"id":"BSI-TR-03157","description":"Technische Richtlinie Konnektor – Prüfspezifikation für das Fachmodul ePA"}
+{"_id":{"$oid":"5f862439dae9806294372925"},"id":"PP_KON","description":"CommonCriteriaSchutzprofil(ProtectionProfile) Schutzprofil 2: Anforderungen an den Konnektor: BSI-CC-PP-0098"}
+{"_id":{"$oid":"5f862439dae980629437292b"},"id":"PP_NK","description":"CommonCriteriaSchutzprofil(ProtectionProfile) Schutzprofil 1: Anforderungen an den Netzkonnektor BSI-CC-PP-0097"}
+{"_id":{"$oid":"5f86243adae9806294372931"},"id":"gemErrata_1_Kon_PTV4","description":"Errata zum Konnektor PTV 4"}
+{"_id":{"$oid":"5f86243adae9806294372939"},"id":"gemRL_QES_NFDM","description":"Signaturrichtlinie QES Notfalldaten-Management (NFDM)"}
+{"_id":{"$oid":"5f86243adae980629437294c"},"id":"gemSpec_FM_AMTS","description":"Spezifikation Fachmodul AMTS"}
+{"_id":{"$oid":"5f86243adae9806294372952"},"id":"gemSpec_FM_NFDM","description":"Spezifikation Fachmodul NFDM"}
+{"_id":{"$oid":"5f86243adae980629437295a"},"id":"gemSpec_FM_ePA","description":"Spezifikation Fachmodul ePA"}
+{"_id":{"$oid":"5f86243adae9806294372960"},"id":"gemSpec_InfoNFDM","description":"Informationsmodell Notfalldaten-Management (NFDM)"}
+{"_id":{"$oid":"5f86243adae9806294372966"},"id":"gemSpec_Info_AMTS","description":"Informationsmodell eMP/AMTS-Datenmanagement"}
+{"_id":{"$oid":"5f86243bdae9806294372972"},"id":"gemSpec_Kon","description":"Spezifikation Konnektor"}
+{"_id":{"$oid":"5f86243bdae9806294372978"},"id":"gemSpec_Kon_SigProxy","description":"Spezifikation Konnektor Signaturproxy"}
+{"_id":{"$oid":"5f86243bdae980629437297e"},"id":"gemSpec_Kon_TBAuth","description":"Spezifikation Konnektor Basisdienst tokenbasierte Authentisierung"}
+{"_id":{"$oid":"5f86243bdae98062943729a2"},"id":"gemSpec_eGK_Fach_AMTS","description":"Speicherstrukturen der eGK für die Fachanwendung AMTS"}
+{"_id":{"$oid":"5f86243bdae98062943729a8"},"id":"gemSpec_eGK_Fach_NFDM","description":"Speicherstrukturen der eGK für die Fachanwendung NFDM"}
+{"_id":{"$oid":"5f86243bdae98062943729b0"},"id":"gemSpec_gSMC-K_ObjSys","description":"Spezifikation der gSMC-K Objektsystem"}
+{"_id":{"$oid":"5f86243cdae98062943729c0"},"id":"gemSpec_MobKT","description":"Spezifikation Mobiles Kartenterminal"}
+{"_id":{"$oid":"5f86243cdae98062943729ea"},"id":"gemSpec_OCSP_Proxy","description":"Spezifikation OCSP-Proxy"}
+{"_id":{"$oid":"5f86243ddae98062943729fd"},"id":"gemProdT_eGK_ObjSys_g2.1","description":"Gematik: Produkttypsteckbrief Zulassungsobjekt eGK-Objektsystem"}
+{"_id":{"$oid":"5f86243ddae9806294372a12"},"id":"gemSpec_PK_eGK","description":"Spezifikation für Prüfkarten des Typs eGK der Generation 2.1"}
+{"_id":{"$oid":"5f86243ddae9806294372a1c"},"id":"gemSpec_eGK_ObjSys_G2_1","description":"Spezifikation der elektronischen Gesundheitskarte eGK-Objektsystem (G2.1)"}
+{"_id":{"$oid":"5f86243ddae9806294372a27"},"id":"gemKPT_Test_UEePA","description":"Addendum zum Testkonzept der TI"}
+{"_id":{"$oid":"5f86243ddae9806294372a2f"},"id":"gemSpec_Autorisierung_UEePA","description":"Addendum zur Spezifikation Autorisierung ePA"}
+{"_id":{"$oid":"5f86243edae9806294372a35"},"id":"gemSpec_DM_ePA_UEePA","description":"Addendum zum Datenmodell ePA"}
+{"_id":{"$oid":"5f86243edae9806294372a6a"},"id":"KZBV_SMCB_Konf","description":"Festlegungen zu Identifier, Nummern und Bezeichner für die SMC-B der Vertragszahnärzteschaft"}
+{"_id":{"$oid":"5f862444dae9806294372c3c"},"id":"gemSpec_eGK_ObjSys","description":"Spezifikation der elektronischen Gesundheitskarte eGK-Objektsystem"}
+{"_id":{"$oid":"5f862445dae9806294372c8d"},"id":"gemSpec_Frontend_Vers","description":"Spezifikation ePA-Frontend des Versicherten"}
+{"_id":{"$oid":"5f862446dae9806294372c94"},"id":"gemSpec_Frontend_Vers_UEePA","description":"Addendum zur Spezifikation ePA-Frontend des Versicherten"}
+{"_id":{"$oid":"5f862450dae9806294372f72"},"id":"gemSpec_FD_eRp","description":"Spezifikation E-Rezept Fachdienst"}
+{"_id":{"$oid":"5f862451dae9806294372f85"},"id":"gemSpec_eRp_FdV","description":"Spezifikation E-Rezept-Frontend des Versicherten"}
+{"_id":{"$oid":"5f862455dae9806294373112"},"id":"gemSpec_TK","description":"Spezifikation für Testkarten gematik (eGK, HBA, (g)SMC) der Generation 2"}
+{"_id":{"$oid":"5f862455dae980629437313b"},"id":"gemSpec_IDP_Dienst","description":"Spezifikation Identity Provider - Dienst"}
+{"_id":{"$oid":"5f862456dae9806294373141"},"id":"gemSpec_IDP_FD","description":"Spezifikation Identity Provider – Fachdienste"}
+{"_id":{"$oid":"5f86245bdae9806294373369"},"id":"gemSpec_PKG","description":"Spezifikation Private Key Generator"}
+{"_id":{"$oid":"5f862461dae980629437362f"},"id":"gemSpec_ePA_FdV","description":"Spezifikation ePA-Frontend des Versicherten"}
+{"_id":{"$oid":"5f862462dae9806294373638"},"id":"xxx","description":"xxx"}
+{"_id":{"$oid":"5f862462dae9806294373644"},"id":"gemSpec_DM_eRp","description":"Datenmodell E-Rezept"}
+{"_id":{"$oid":"5f862462dae980629437366b"},"id":"gemSpec_IDP_Frontend","description":"Spezifikation Identity Provider - Frontend"}
+{"_id":{"$oid":"5f862484dae98062943742e6"},"id":"gemErrata_1_Kon_PTV3","description":"Errata zu Release 3.0.0 Online-Produktivbetrieb (Stufe 3) Erprobung und Produktivbetrieb führt zu Release 3.0.0-1"}
+{"_id":{"$oid":"5f862484dae98062943742ec"},"id":"gemErrata_2_Kon_PTV3","description":"Errata 2 zum Konnektor PTV 3 (eMP/AMTS, NFDM)"}
+{"_id":{"$oid":"5f862484dae98062943742f2"},"id":"gemErrata_3_Kon_PTV3","description":"Errata 3 zum Konnektor PTV 3 (eMP/AMTS, NFDM)"}
+{"_id":{"$oid":"5f862484dae98062943742f8"},"id":"gemErrata_4_Kon_PTV3","description":"Errata 4 zum Konnektor PTV3 (eMP/AMTS, NFDM)"}

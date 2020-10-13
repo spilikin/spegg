@@ -76,6 +76,9 @@ async def get_all_subject_versions(subject_id:str):
 @api.get("/Subject/{subject_id}/{version}", response_model=SubjectVersionResource)
 async def get_subject_version(subject_id:str, version:str):
     result = list(db.SubjectVersion.aggregate([
+        {
+            '$match': {'subject_id': subject_id, 'version': version}
+        },
         {"$unwind":"$references"},
         {
             '$lookup': {
