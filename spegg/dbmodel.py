@@ -29,20 +29,33 @@ class SubjectType(str, Enum):
     ThirdParty = 'ThirdParty'
     Requirements = 'Requirements'
 
-class SubjectVersion(BaseModel):
-    subject_id: str
-    version: str
-    type: SubjectType
-    resources: List[PydanticObjectId] = []
+class Subject(BaseModel):
+    id: str
+    type: SubjectType    
+    title: str
+    description = ""
 
-
-class SubjectVersionDescriptor(BaseModel):
-    subject_id: str
-    version: str
-
-class Requirement(BaseModel):
+class RequirementReference(BaseModel):
     id: str
     title: str
     text: str
     html: str
     level: str
+    test_procedure: str
+
+class ResourceReference(BaseModel):
+    resource_id: str
+    resource_version: str
+    requirements: List[RequirementReference] = []
+
+class SubjectVersion(BaseModel):
+    subject_id: str
+    title: str
+    version: str
+    type: SubjectType
+    references: List[ResourceReference] = []
+    description = ""
+
+class SubjectVersionDescriptor(BaseModel):
+    subject_id: str
+    version: str

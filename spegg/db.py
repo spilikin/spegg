@@ -29,15 +29,92 @@ def test():
     result = list(db.SubjectVersion.aggregate([
         {
             '$match': {'subject_id': 'gemAnbT_CVC_Root', 'version': '1.0.2'}
-        },        
+        },
+        {"$unwind":"$references"},
         {
             '$lookup': {
                 'from': "ResourceVersion",
-                'localField': 'resources',
-                'foreignField': '_id',
-                'as': "reference"
+                'let': {'resource_id': '$references.resource_id', 'version': '$references.resource_version'},
+                'pipeline': [
+                    { 
+                        '$match': {
+                            '$expr': { 
+                                '$and': [
+                                    { '$eq': [ "$resource_id",  "$$resource_id" ] },
+                                    { '$eq': [ "$version",  "$$version" ] },
+                                ]
+                            }
+                        },
+                    },
+                ],
+                'as': 'resource_version'
             },
         },
+        {
+            '$lookup': {
+                'from': "Resource",
+                'localField': 'resource_version.resource_id',
+                'foreignField': 'id',
+                'as': 'resource'
+            }
+        },
+        {"$unwind":"$resource_version"},
+        {
+            '$addFields': {
+                'references.version': '$resource_version.version',
+                'references.url': '$resource_version.url'
+            }
+        },
+        {
+            '$project': { 
+                'subject_id': 1,
+                'type': 1,
+                'version': 1,
+                'references.version': 1,
+                'references.url': 1,
+                'references.requirements_count': {'$size': "$references.requirements"},
+                'references.resource': { "$arrayElemAt": [ "$resource", 0 ] },
+            }
+        },
+        {
+            '$group': {
+                '_id': '$_id',
+                'subject_id': {'$first': '$subject_id' },
+                'type': {'$first': '$type' },
+                'version': {'$first': '$version' },
+                'references': {'$push': '$references'},
+            }
+        },
+        {
+            '$lookup': {
+                'from': "SubjectVersion",
+                'localField': 'subject_id',
+                'foreignField': 'subject_id',
+                'as': '_versions'
+            }
+        },
+        {
+            '$addFields': {
+                'all_versions': '$_versions.version'
+            }
+        },
+        {
+            '$project': { 
+                "_versions": 0,
+            }
+        },
+
+    ]))
+    pprint(result)
+
+'''
+                'let': {'subject_id': '$subject_id'},
+                'pipeline': [
+                    {'$match': {'subject_id':'$subject_id'}},
+                ],
+
+
+
         {"$unwind":"$reference"},
         {
             '$lookup': {
@@ -81,5 +158,4 @@ def test():
             }
         },
 
-    ]))
-    pprint(result)
+'''
