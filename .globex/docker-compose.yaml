@@ -49,8 +49,8 @@ services:
         image: bitnami/mongodb:latest
         restart: always
 
-        volumes:
-            - "mongodb_data:/bitnami/mongodb:rw"
+#        volumes:
+#            - "mongodb_data:/bitnami/mongodb:rw"
 
         environment:
             - MONGO_INITDB_ROOT_USERNAME
