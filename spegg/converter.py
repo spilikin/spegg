@@ -30,7 +30,7 @@ def convert_data():
             id = file_el.find('id').text
 
             # this version breaks the import
-            if id.startswith('gemProdT_Kon_PTV5_ALT'):
+            if id.startswith('gemProdT_Kon_PTV5_ALT') or id.startswith('gemProdT_PKG'):
                 continue
 
             if id.startswith('gemProdT_Kon_PTV'):
