@@ -5,6 +5,7 @@ import logging
 from openpyxl import load_workbook
 from typing import List
 import re
+from pprint import pprint
 
 from .db import db
 from . import dbmodel
@@ -28,8 +29,13 @@ def convert_data():
         for file_el in xml.getroot().iter('file'):
             id = file_el.find('id').text
 
+            # this version breaks the import
+            if id.startswith('gemProdT_Kon_PTV5_ALT'):
+                continue
+
             if id.startswith('gemProdT_Kon_PTV'):
                 id = 'gemProdT_Kon'
+
 
             version = file_el.find('typeVersion').text
             descver = file_el.find('docVersion').text
