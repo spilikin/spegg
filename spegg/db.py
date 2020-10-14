@@ -69,6 +69,7 @@ def test():
             '$project': { 
                 'subject_id': 1,
                 'type': 1,
+                'title': 1,
                 'version': 1,
                 'references.version': 1,
                 'references.url': 1,
@@ -80,7 +81,8 @@ def test():
             '$group': {
                 '_id': '$_id',
                 'subject_id': {'$first': '$subject_id' },
-                'type': {'$first': '$type' },
+                'type': {'$first': '$type'},
+                'title': {'$first': '$title'},
                 'version': {'$first': '$version' },
                 'references': {'$push': '$references'},
             }

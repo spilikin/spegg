@@ -90,7 +90,7 @@ def convert_data():
                 rid = doc_el.find('id').text
                 rver = doc_el.find('docVersion').text
 
-                resource = dbmodel.Resource(id=rid, description=doc_el.find('description').text)
+                resource = dbmodel.Resource(id=rid, title=doc_el.find('description').text)
                 db.Resource.update({'id':rid}, resource.dict(), upsert=True)
 
                 rv_dict = db.ResourceVersion.find_one({'resource_id': resource.id, 'version': rver})

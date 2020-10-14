@@ -13,17 +13,24 @@ api = APIRouter()
 async def root():
     return {"version": __version__}
 
-class ResourceVersionReferenceResource(BaseModel):
+class ReferenceResourceShort(BaseModel):
     resource: dbmodel.Resource
     version: str
     url: str
     requirements_count: int
 
+class ReferenceResource(BaseModel):
+    resource: dbmodel.Resource
+    version: str
+    url: str
+    requirements: List[dbmodel.RequirementReference] = []
+
 class SubjectVersionResource(BaseModel):
     subject_id: str
     version: str
+    title: str
     type: dbmodel.SubjectType
-    references: Optional[List[ResourceVersionReferenceResource]] = None
+    references: Optional[List[ReferenceResourceShort]] = None
     all_versions: Optional[List[str]] = None
 
 class SubjectResource(BaseModel):
@@ -118,6 +125,7 @@ async def get_subject_version(subject_id:str, version:str):
             '$project': { 
                 'subject_id': 1,
                 'type': 1,
+                'title': 1,
                 'version': 1,
                 'references.version': 1,
                 'references.url': 1,
@@ -130,6 +138,7 @@ async def get_subject_version(subject_id:str, version:str):
                 '_id': '$_id',
                 'subject_id': {'$first': '$subject_id' },
                 'type': {'$first': '$type' },
+                'title': {'$first': '$title' },
                 'version': {'$first': '$version' },
                 'references': {'$push': '$references'},
             }
@@ -156,11 +165,9 @@ async def get_subject_version(subject_id:str, version:str):
 
     if len(result) == 0:
         raise HTTPException(status_code=404, detail="Subject not found")
-    
-    pprint(result[0])
 
     return SubjectVersionResource(**result[0])
-    
+
 @api.get("/Resource")
 async def get_all_resources():
     result = db.Resource.aggregate([
@@ -184,3 +191,74 @@ async def get_all_resources():
     for res_dict in result:
         response.append(res_dict)
     return response
+
+@api.get("/Reference/{subject_id}/{version}/{resource_id}")
+async def get_resoirce_reference(subject_id: str, version: str, resource_id: str):
+    result = list(db.SubjectVersion.aggregate([
+        {
+            '$match': {'subject_id': subject_id, 'version': version}
+        },
+        { "$unwind": "$references" },
+        { '$match': { 'references.resource_id': resource_id } },
+        { "$group": {
+            "_id": "$_id",
+            "resource_id": { "$first": "$references.resource_id" },
+            "version": { "$first": "$references.resource_version" },
+            "subject_id": { "$first": "$subject_id" },
+            "subject_version": { "$first": "$version" },
+            "url": { "$first": "$references.url" },
+            "requirements": { "$first": "$references.requirements" },
+        }},
+        {
+            '$lookup': {
+                'from': "Resource",
+                'localField': 'resource_id',
+                'foreignField': 'id',
+                'as': 'resource'
+            }
+        },
+        {
+            '$lookup': {
+                'from': "ResourceVersion",
+                'let': {'resource_id': '$resource_id', 'version': '$version'},
+                'pipeline': [
+                    { 
+                        '$match': {
+                            '$expr': { 
+                                '$and': [
+                                    { '$eq': [ "$resource_id",  "$$resource_id" ] },
+                                    { '$eq': [ "$version",  "$$version" ] },
+                                ]
+                            }
+                        },
+                    },
+                ],
+                'as': 'resource_version'
+            },
+        },
+        {
+            '$addFields': {
+                'title': { '$arrayElemAt': [ "$resource.title", 0 ] },
+                'url': { '$arrayElemAt': [ '$resource_version.url', 0 ] },
+                'referred_by.subject_id': '$subject_id',
+                'referred_by.subject_version': '$subject_version',
+            }
+        },
+        { 
+            '$project': {
+                '_id': 0,
+                'title': 1,
+                'version': 1,
+                'resource_id': 1,
+                'url': 1,
+                'referred_by': 1,
+                'requirements': 1,
+            } 
+        }, 
+    ]))
+    if len(result) == 0:
+        raise HTTPException(status_code=404, detail="Subject not found")
+    
+    pprint(result)
+
+    return result[0]

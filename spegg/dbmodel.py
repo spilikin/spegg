@@ -16,7 +16,7 @@ class PydanticObjectId(ObjectId):
 
 class Resource(BaseModel):
     id: str
-    description: str
+    title: str
 
 class ResourceVersion(BaseModel):
     resource_id: str 
