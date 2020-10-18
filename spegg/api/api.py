@@ -3,7 +3,7 @@ from spegg.db import db
 import spegg.dbmodel as dbmodel
 from enum import Enum
 from pydantic import BaseModel
-from typing import List, Optional
+from typing import List, Optional, Dict
 from pprint import pprint
 from . import __version__
 
@@ -13,17 +13,38 @@ api = APIRouter()
 async def root():
     return {"version": __version__}
 
+class DiffType(str, Enum):
+    Added = 'Added'
+    Removed = 'Removed'
+    Changed = 'Changed'
+
+class Diff(BaseModel):
+    type: DiffType
+    changes: Dict[str, str] = {}
+
 class ReferenceResourceShort(BaseModel):
     resource: dbmodel.Resource
     version: str
     url: str
     requirements_count: int
+    diff: Optional[Diff]
+
+class RequirementReferenceResource(BaseModel):
+    id: str
+    title: str
+    text: str
+    html: str
+    level: str
+    test_procedure: str
+    diff: Optional[Diff]
 
 class ReferenceResource(BaseModel):
     resource: dbmodel.Resource
     version: str
     url: str
-    requirements: List[dbmodel.RequirementReference] = []
+    subject_id: str
+    subject_version: str
+    requirements: List[RequirementReferenceResource] = []
 
 class SubjectVersionResource(BaseModel):
     subject_id: str
@@ -40,6 +61,12 @@ class SubjectResource(BaseModel):
     versions: List[str] = []
     latest_version: str
 
+class ResourceResource(BaseModel):
+    id: str
+    title: str
+    versions: List[dbmodel.ResourceVersion] = []
+
+ 
 
 @api.get("/Subject", response_model=List[SubjectResource])
 async def get_all_subjects():
@@ -81,8 +108,8 @@ async def get_all_subject_versions(subject_id:str):
     return response
 
 @api.get("/Subject/{subject_id}/{version}", response_model=SubjectVersionResource)
-async def get_subject_version(subject_id:str, version:str):
-    result = list(db.SubjectVersion.aggregate([
+async def get_subject_version(subject_id:str, version:str, compare: Optional[str] = None) -> SubjectVersionResource:
+    query_result = list(db.SubjectVersion.aggregate([
         {
             '$match': {'subject_id': subject_id, 'version': version}
         },
@@ -163,14 +190,34 @@ async def get_subject_version(subject_id:str, version:str):
         },
     ]))
 
-    if len(result) == 0:
+    if len(query_result) == 0:
         raise HTTPException(status_code=404, detail="Subject not found")
 
-    return SubjectVersionResource(**result[0])
+    subject = SubjectVersionResource(**query_result[0])
 
-@api.get("/Resource")
+    if compare != None:
+        other = await get_subject_version(subject_id, compare)
+        for other_reference in other.references:
+            this_reference = next((obj for obj in subject.references if obj.resource.id == other_reference.resource.id), None)
+            if this_reference != None:
+                if this_reference.version != other_reference.version:
+                    this_reference.diff = Diff(type=DiffType.Changed, changes={'version': other_reference.version})
+            else:
+                other_reference.diff = Diff(type=DiffType.Removed)
+                subject.references.append(other_reference)
+        for this_reference in subject.references:
+            other_reference = next((obj for obj in other.references if obj.resource.id == this_reference.resource.id), None)
+            if other_reference == None:
+                this_reference.diff = Diff(type=DiffType.Added)
+        
+        subject.references.sort(key=lambda ref: ref.diff.type if ref.diff != None else '', reverse=True)
+
+
+    return subject
+
+@api.get("/Resource", response_model=List[ResourceResource])
 async def get_all_resources():
-    result = db.Resource.aggregate([
+    query_result = db.Resource.aggregate([
         {
             '$lookup': {
                 'from': "ResourceVersion",
@@ -183,18 +230,17 @@ async def get_all_resources():
             '$project': {
                 '_id': 0,
                 'versions._id': 0,
-                'versions.resource_id': 0,
             }
         },
     ])
     response = []
-    for res_dict in result:
-        response.append(res_dict)
+    for res_dict in query_result:
+        response.append(ResourceResource(**res_dict))
     return response
 
-@api.get("/Reference/{subject_id}/{version}/{resource_id}")
-async def get_resoirce_reference(subject_id: str, version: str, resource_id: str):
-    result = list(db.SubjectVersion.aggregate([
+@api.get("/Reference/{subject_id}/{version}/{resource_id}", response_model=ReferenceResource)
+async def get_resource_reference(subject_id: str, version: str, resource_id: str, compare: Optional[str] = None):
+    query_result = list(db.SubjectVersion.aggregate([
         {
             '$match': {'subject_id': subject_id, 'version': version}
         },
@@ -238,27 +284,64 @@ async def get_resoirce_reference(subject_id: str, version: str, resource_id: str
         },
         {
             '$addFields': {
-                'title': { '$arrayElemAt': [ "$resource.title", 0 ] },
+                'resource': { '$arrayElemAt': [ "$resource", 0 ] },
                 'url': { '$arrayElemAt': [ '$resource_version.url', 0 ] },
-                'referred_by.subject_id': '$subject_id',
-                'referred_by.subject_version': '$subject_version',
             }
         },
         { 
             '$project': {
                 '_id': 0,
-                'title': 1,
+                'resource': 1,
                 'version': 1,
-                'resource_id': 1,
                 'url': 1,
-                'referred_by': 1,
+                'subject_id': 1,
+                'subject_version': 1,
                 'requirements': 1,
-            } 
+            }             
         }, 
     ]))
-    if len(result) == 0:
+    if len(query_result) == 0:
         raise HTTPException(status_code=404, detail="Subject not found")
-    
-    pprint(result)
 
-    return result[0]
+    reference = ReferenceResource(**query_result[0])
+
+    if compare:
+        other = await get_resource_reference(subject_id, compare, resource_id)
+        for other_req in other.requirements:
+            this_req = next((req for req in reference.requirements if req.id == other_req.id), None)
+            if this_req != None:
+                if this_req.text != other_req.text:
+                    print (this_req.text)
+                    print (other_req.text)
+                    this_req.diff = Diff(type=DiffType.Changed, changes={'html': other_req.html})
+            else:
+                other_req.diff = Diff(type=DiffType.Removed)
+                reference.requirements.append(other_req)
+        for this_req in reference.requirements:
+            other_req = next((req for req in other.requirements if req.id == this_req.id), None)
+            if other_req == None:
+                this_req.diff = Diff(type=DiffType.Added)
+
+        reference.requirements.sort(key=lambda req: req.diff.type if req.diff != None else '', reverse=True)
+
+
+    return reference
+
+'''
+    if compare != None:
+        other = await get_subject_version(subject_id, compare)
+        for other_reference in other.references:
+            this_reference = next((obj for obj in subject.references if obj.resource.id == other_reference.resource.id), None)
+            if this_reference != None:
+                if this_reference.version != other_reference.version:
+                    this_reference.diff = Diff(type=DiffType.Changed, changes={'version': other_reference.version})
+            else:
+                other_reference.diff = Diff(type=DiffType.Removed)
+                subject.references.append(other_reference)
+        for this_reference in subject.references:
+            other_reference = next((obj for obj in other.references if obj.resource.id == this_reference.resource.id), None)
+            if other_reference == None:
+                this_reference.diff = Diff(type=DiffType.Added)
+        
+        subject.references.sort(key=lambda ref: ref.diff.type if ref.diff != None else '', reverse=True)
+'''
