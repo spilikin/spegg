@@ -1,17 +1,3 @@
-docker-compose exec mongo bash -c 'mongo --username=$MONGODB_USERNAME --password=$MONGODB_PASSWORD --authenticationDatabase $MONGODB_DATABASE'
+= Spegg: navigator for gematik specifications and requirements
 
-.Count versions of all resources (documents)
-db.ResourceVersion.aggregate(
-    [ 
-        {
-            $group: {
-                _id: "$resource_id", 
-                count: { $sum: 1}
-            }
-        },  
-        {
-            $sort : { count: -1 }
-        }
-    ]
-)
-
+This is a prototype for web-based navigation of gematik specifications and requirements. Specification data is imported from https://fachportal.gematik.de/spezifikationen/[Fachportal] and stored in https://www.mongodb.com[MongoDB]. It provides a simple REST API to the specification data based on https://fastapi.tiangolo.com[FastAPI] and uses VueJS Single Page Application to visualize the API.
