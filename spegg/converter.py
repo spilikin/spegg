@@ -15,6 +15,9 @@ BASE_URL="https://fachportal.gematik.de/fachportal-import/files/"
 FORMAT = '[convert] %(levelname)s: %(message)s'
 logging.basicConfig(format=FORMAT, level=logging.WARNING)
 
+document_aliases={
+    'gemSpec_Frontend_Vers': 'gemSpec_ePA_FdV'
+}
 
 def convert_data():
     index_validity = ET.parse("./raw-data/metadaten-xml/index-validity-status-from-excel-file.xml")
