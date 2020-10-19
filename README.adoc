@@ -1,6 +1,6 @@
 = Spegg: navigator for gematik specifications and requirements
 
-This is a prototype for web-based navigation of gematik specifications and requirements. Specification data is imported from https://fachportal.gematik.de/spezifikationen/[Fachportal] and stored in https://www.mongodb.com[MongoDB]. It provides a simple REST API to the specification data based on https://fastapi.tiangolo.com[FastAPI] and uses VueJS Single Page Application to visualize the API.
+This is a prototype for web-based navigation of gematik specifications and requirements. Specification data is imported from https://fachportal.gematik.de/spezifikationen/[Fachportal] and stored in https://www.mongodb.com[MongoDB]. It provides a simple REST API to the specification data based on https://fastapi.tiangolo.com[FastAPI] and uses https://github.com/spilikin/spegg-vue/[Single Page Application] based on https://vuejs.org[Vue.js] to visualize the Data.
 
 == Architecture
 image::draw.io/Architecture.svg[Architecture]
