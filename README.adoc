@@ -3,7 +3,7 @@
 This is a prototype for web-based navigation of gematik specifications and requirements. Specification data is imported from https://fachportal.gematik.de/spezifikationen/[Fachportal] and stored in https://www.mongodb.com[MongoDB]. It provides a simple REST API to the specification data based on https://fastapi.tiangolo.com[FastAPI] and uses VueJS Single Page Application to visualize the API.
 
 == Architecture
-image::draw.io/Architecture.svg[Architecture]
+image::draw.io/Architecture.png[Architecture]
 
 
 == Data Modell
