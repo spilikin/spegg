@@ -26,9 +26,9 @@ def clean():
        db[c].delete_many({})
 
 def test():
-    result = list(db.SubjectVersion.aggregate([
+    query_result = list(db.SubjectVersion.aggregate([
         {
-            '$match': {'subject_id': 'gemAnbT_CVC_Root', 'version': '1.0.2'}
+            '$match': {'subject_id': 'gemProdT_FD_KOMLE', 'version': '1.3.0-0'}
         },
         {"$unwind":"$references"},
         {
@@ -81,8 +81,8 @@ def test():
             '$group': {
                 '_id': '$_id',
                 'subject_id': {'$first': '$subject_id' },
-                'type': {'$first': '$type'},
-                'title': {'$first': '$title'},
+                'type': {'$first': '$type' },
+                'title': {'$first': '$title' },
                 'version': {'$first': '$version' },
                 'references': {'$push': '$references'},
             }
@@ -105,59 +105,14 @@ def test():
                 "_versions": 0,
             }
         },
-
     ]))
-    pprint(result)
 
-'''
-                'let': {'subject_id': '$subject_id'},
-                'pipeline': [
-                    {'$match': {'subject_id':'$subject_id'}},
-                ],
+    pprint(query_result)
 
+    query_result = list(db.SubjectVersion.aggregate([
+        {
+            '$match': {'subject_id': 'gemProdT_FD_KOMLE', 'version': '1.3.0-0'}
+        },
+    ]))
 
-
-        {"$unwind":"$reference"},
-        {
-            '$lookup': {
-                'from': "Resource",
-                'localField': 'reference.resource_id',
-                'foreignField': 'id',
-                'as': 'resource'
-            }
-        },
-        {
-            '$addFields': {
-                'reference.resource': '$resource'
-            }
-        },
-        {
-            '$project': { 
-                'subject_id': 1,
-                'type': 1,
-                'version': 1,
-                'reference.version': 1,
-                'reference.url': 1,
-                "reference.resource": { "$arrayElemAt": [ "$reference.resource", 0 ] },
-            }
-        },
-        {
-            '$lookup': {
-                'from': "SubjectVersion",
-                'localField': 'subject_id',
-                'foreignField': 'subject_id',
-                'as': 'versions'
-            }
-        },
-        {
-            '$group': {
-                '_id': '$_id',
-                'subject_id': {'$first': '$subject_id' },
-                'type': {'$first': '$type' },
-                'version': {'$first': '$version' },
-                'all_versions': { '$first': '$versions.version'},
-                'references': {'$push': '$reference'},
-            }
-        },
-
-'''
+    pprint(query_result)
