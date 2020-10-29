@@ -48,6 +48,12 @@ class ResourceReference(BaseModel):
     resource_version: str
     requirements: List[RequirementReference] = []
 
+class SubjectValidity(str, Enum):
+    Invalid = 'Invalid'
+    ValidFrozen = 'ValidFrozen'
+    ValidActive = 'ValidActive'
+    Pending = 'Pending'
+
 class SubjectVersion(BaseModel):
     subject_id: str
     title: str
@@ -55,6 +61,7 @@ class SubjectVersion(BaseModel):
     type: SubjectType
     references: List[ResourceReference] = []
     description = ""
+    validity: SubjectValidity = SubjectValidity.Invalid
 
 class SubjectVersionDescriptor(BaseModel):
     subject_id: str
