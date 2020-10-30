@@ -51,6 +51,7 @@ class SubjectVersionResource(BaseModel):
     version: str
     title: str
     type: dbmodel.SubjectType
+    validity: dbmodel.SubjectValidity
     references: Optional[List[ReferenceResourceShort]] = None
     all_versions: Optional[List[str]] = None
 
@@ -90,7 +91,9 @@ async def get_all_subjects():
         response.append(SubjectResource(**subj_dict))
     return response
 
-@api.get("/Subject/{subject_id}", response_model=List[SubjectVersionResource])
+@api.get("/Subject/{subject_id}", 
+    response_model=List[SubjectVersionResource], 
+    response_model_exclude_unset=True)
 async def get_all_subject_versions(subject_id:str):
     result = db.SubjectVersion.aggregate([
         {
@@ -154,6 +157,7 @@ async def get_subject_version(subject_id:str, version:str, compare: Optional[str
                 'type': 1,
                 'title': 1,
                 'version': 1,
+                'validity': 1,
                 'references.version': 1,
                 'references.url': 1,
                 'references.requirements_count': {'$size': "$references.requirements"},
@@ -167,6 +171,7 @@ async def get_subject_version(subject_id:str, version:str, compare: Optional[str
                 'type': {'$first': '$type' },
                 'title': {'$first': '$title' },
                 'version': {'$first': '$version' },
+                'validity': {'$first': '$validity' },
                 'references': {'$push': '$references'},
             }
         },
