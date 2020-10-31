@@ -67,10 +67,17 @@ class SubjectResource(BaseModel):
     versions: List[SubjectVersionShortResource] = []
     latest_version: str
 
-class ResourceResource(BaseModel):
+class ResourceListItemResource(BaseModel):
     id: str
     title: str
     versions: List[dbmodel.ResourceVersion] = [] 
+
+class ResourceVersionResource(BaseModel):
+    id: str
+    title: str
+    url: str
+    versions: List[dbmodel.ResourceVersion] = [] 
+    refereced_by_subjects: List[SubjectVersionShortResource] = []
 
 @api.get(
     "/Subject", 
@@ -240,33 +247,6 @@ async def get_subject_version(subject_id:str, version:str, compare: Optional[str
     return subject
 
 @api.get(
-    "/Resource", 
-    response_model=List[ResourceResource],
-    response_model_exclude_unset=True
-)
-async def get_all_resources():
-    query_result = db.Resource.aggregate([
-        {
-            '$lookup': {
-                'from': "ResourceVersion",
-                'localField': 'id',
-                'foreignField': 'resource_id',
-                'as': 'versions'
-            }
-        },
-        {
-            '$project': {
-                '_id': 0,
-                'versions._id': 0,
-            }
-        },
-    ])
-    response = []
-    for res_dict in query_result:
-        response.append(ResourceResource(**res_dict))
-    return response
-
-@api.get(
     "/Reference/{subject_id}/{version}/{resource_id}", 
     response_model=ReferenceResource,
     response_model_exclude_unset=True
@@ -359,21 +339,108 @@ async def get_resource_reference(subject_id: str, version: str, resource_id: str
 
     return reference
 
-'''
-    if compare != None:
-        other = await get_subject_version(subject_id, compare)
-        for other_reference in other.references:
-            this_reference = next((obj for obj in subject.references if obj.resource.id == other_reference.resource.id), None)
-            if this_reference != None:
-                if this_reference.version != other_reference.version:
-                    this_reference.diff = Diff(type=DiffType.Changed, changes={'version': other_reference.version})
-            else:
-                other_reference.diff = Diff(type=DiffType.Removed)
-                subject.references.append(other_reference)
-        for this_reference in subject.references:
-            other_reference = next((obj for obj in other.references if obj.resource.id == this_reference.resource.id), None)
-            if other_reference == None:
-                this_reference.diff = Diff(type=DiffType.Added)
-        
-        subject.references.sort(key=lambda ref: ref.diff.type if ref.diff != None else '', reverse=True)
-'''
+@api.get(
+    "/Resource", 
+    response_model=List[ResourceListItemResource],
+    response_model_exclude_unset=True
+)
+async def get_all_resources():
+    query_result = db.Resource.aggregate([
+        {
+            '$lookup': {
+                'from': "ResourceVersion",
+                'localField': 'id',
+                'foreignField': 'resource_id',
+                'as': 'versions'
+            }
+        },
+        {
+            '$project': {
+                '_id': 0,
+                'versions._id': 0,
+            }
+        },
+    ])
+    response = []
+    for res_dict in query_result:
+        response.append(ResourceListItemResource(**res_dict))
+    return response
+
+@api.get(
+    "/Resource/{resource_id}/{version}", 
+    response_model=ResourceVersionResource,
+    response_model_exclude_unset=True
+)
+async def get_resource_version(resource_id: str, version: str, compare: Optional[str] = None):
+    query_result = list(db.ResourceVersion.aggregate([
+        {
+            '$match': {'resource_id': resource_id, 'version': version}
+        },
+        {
+            '$lookup': {
+                'from': "ResourceVersion",
+                'localField': 'resource_id',
+                'foreignField': 'resource_id',
+                'as': 'versions'
+            }
+        },
+        {
+            '$lookup': {
+                'from': "Resource",
+                'localField': 'resource_id',
+                'foreignField': 'id',
+                'as': 'resource'
+            }
+        },
+        {
+            '$addFields': {
+                'id': { '$arrayElemAt': [ '$resource.id', 0 ] },
+                'title': { '$arrayElemAt': [ '$resource.title', 0 ] },
+            }
+        },
+
+        {
+            '$lookup': {
+                'from': "SubjectVersion",
+                'localField': 'resource_id',
+                'foreignField': 'references.resource_id',
+                'as': 'subject_versions'
+            }
+        },
+
+        {
+            '$lookup': {
+                'from': "SubjectVersion",
+                'let': {'resource_id': '$resource_id', 'version': '$version'},
+                'pipeline': [
+                    { "$unwind": "$references" },
+                    { 
+                        '$match': { 
+                            '$and': [
+                                { 'references.resource_id': resource_id },
+                                { 'references.resource_version': version },
+                            ]
+                        } 
+                    },
+
+                ],
+                'as': 'refereced_by_subjects'
+            },
+        },
+
+
+        {
+            '$project': {
+                'resource_id': 0,
+                'resource': 0,
+                'refereced_by_subjects.references': 0,
+            }
+        },
+
+
+    ]))
+
+    if len(query_result) == 0:
+        raise HTTPException(status_code=404, detail="ResourceVersion not found")
+
+    return ResourceVersionResource(**query_result[0])

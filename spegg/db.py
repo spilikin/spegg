@@ -26,93 +26,75 @@ def clean():
        db[c].delete_many({})
 
 def test():
-    query_result = list(db.SubjectVersion.aggregate([
+    resource_id = 'gemSpec_CM_KOMLE'
+    version = '1.8.0'
+
+    query_result = list(db.ResourceVersion.aggregate([
         {
-            '$match': {'subject_id': 'gemProdT_FD_KOMLE', 'version': '1.3.0-0'}
+            '$match': {'resource_id': resource_id, 'version': version}
         },
-        {"$unwind":"$references"},
         {
             '$lookup': {
                 'from': "ResourceVersion",
-                'let': {'resource_id': '$references.resource_id', 'version': '$references.resource_version'},
-                'pipeline': [
-                    { 
-                        '$match': {
-                            '$expr': { 
-                                '$and': [
-                                    { '$eq': [ "$resource_id",  "$$resource_id" ] },
-                                    { '$eq': [ "$version",  "$$version" ] },
-                                ]
-                            }
-                        },
-                    },
-                ],
-                'as': 'resource_version'
-            },
+                'localField': 'resource_id',
+                'foreignField': 'resource_id',
+                'as': 'versions'
+            }
         },
         {
             '$lookup': {
                 'from': "Resource",
-                'localField': 'resource_version.resource_id',
+                'localField': 'resource_id',
                 'foreignField': 'id',
                 'as': 'resource'
             }
         },
-        {"$unwind":"$resource_version"},
         {
             '$addFields': {
-                'references.version': '$resource_version.version',
-                'references.url': '$resource_version.url'
+                'id': { '$arrayElemAt': [ '$resource.id', 0 ] },
+                'title': { '$arrayElemAt': [ '$resource.title', 0 ] },
             }
         },
-        {
-            '$project': { 
-                'subject_id': 1,
-                'type': 1,
-                'title': 1,
-                'version': 1,
-                'references.version': 1,
-                'references.url': 1,
-                'references.requirements_count': {'$size': "$references.requirements"},
-                'references.resource': { "$arrayElemAt": [ "$resource", 0 ] },
-            }
-        },
-        {
-            '$group': {
-                '_id': '$_id',
-                'subject_id': {'$first': '$subject_id' },
-                'type': {'$first': '$type' },
-                'title': {'$first': '$title' },
-                'version': {'$first': '$version' },
-                'references': {'$push': '$references'},
-            }
-        },
+
         {
             '$lookup': {
                 'from': "SubjectVersion",
-                'localField': 'subject_id',
-                'foreignField': 'subject_id',
-                'as': '_versions'
+                'localField': 'resource_id',
+                'foreignField': 'references.resource_id',
+                'as': 'subject_versions'
             }
         },
-        {
-            '$addFields': {
-                'all_versions': '$_versions.version'
-            }
-        },
-        {
-            '$project': { 
-                "_versions": 0,
-            }
-        },
-    ]))
 
-    pprint(query_result)
-
-    query_result = list(db.SubjectVersion.aggregate([
         {
-            '$match': {'subject_id': 'gemProdT_FD_KOMLE', 'version': '1.3.0-0'}
+            '$lookup': {
+                'from': "SubjectVersion",
+                'let': {'resource_id': '$resource_id', 'version': '$version'},
+                'pipeline': [
+                    { "$unwind": "$references" },
+                    { 
+                        '$match': { 
+                            '$and': [
+                                { 'references.resource_id': resource_id },
+                                { 'references.resource_version': version },
+                            ]
+                        } 
+                    },
+
+                ],
+                'as': 'subject_versions'
+            },
         },
+
+
+        {
+            '$project': {
+                'resource_id': 0,
+                'resource': 0,
+                'subject_versions.references': 0,
+            }
+        },
+
+
     ]))
 
     pprint(query_result)
