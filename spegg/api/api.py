@@ -22,7 +22,7 @@ class Diff(BaseModel):
     type: DiffType
     changes: Dict[str, str] = {}
 
-class ReferenceResourceShort(BaseModel):
+class ReferenceShortResource(BaseModel):
     resource: dbmodel.Resource
     version: str
     url: str
@@ -51,35 +51,48 @@ class SubjectVersionResource(BaseModel):
     version: str
     title: str
     type: dbmodel.SubjectType
-    validity: dbmodel.SubjectValidity
-    references: Optional[List[ReferenceResourceShort]] = None
+    validity: dbmodel.SubjectVersionValidity
+    references: Optional[List[ReferenceShortResource]] = None
     all_versions: Optional[List[str]] = None
+
+class SubjectVersionShortResource(BaseModel):
+    subject_id: str
+    version: str
+    validity: dbmodel.SubjectVersionValidity
 
 class SubjectResource(BaseModel):
     id: str
     title: str
     type: dbmodel.SubjectType
-    versions: List[str] = []
+    versions: List[SubjectVersionShortResource] = []
     latest_version: str
 
 class ResourceResource(BaseModel):
     id: str
     title: str
-    versions: List[dbmodel.ResourceVersion] = []
+    versions: List[dbmodel.ResourceVersion] = [] 
 
- 
-
-@api.get("/Subject", response_model=List[SubjectResource])
+@api.get(
+    "/Subject", 
+    response_model=List[SubjectResource]
+)
 async def get_all_subjects():
     result = db.SubjectVersion.aggregate([
+        {
+            '$addFields': {
+                'version.version': '$version',
+                'version.subject_id': '$subject_id',
+                'version.validity': '$validity',
+            }
+        },
         {
             '$group': {
                 '_id': { '$toLower': '$subject_id'},
                 'id': { '$first': '$subject_id'},
                 'type': { '$first': '$type'},
                 'title': { '$first': '$title'},
-                'latest_version': { '$max': '$version' },
-                'versions': { '$addToSet': '$version'}
+                'latest_version': { '$max': '$version.version' },
+                'versions': { '$addToSet': '$version'},
             }
         },
         {
@@ -91,9 +104,11 @@ async def get_all_subjects():
         response.append(SubjectResource(**subj_dict))
     return response
 
-@api.get("/Subject/{subject_id}", 
+@api.get(
+    "/Subject/{subject_id}", 
     response_model=List[SubjectVersionResource], 
-    response_model_exclude_unset=True)
+    response_model_exclude_unset=True
+)
 async def get_all_subject_versions(subject_id:str):
     result = db.SubjectVersion.aggregate([
         {
@@ -110,7 +125,11 @@ async def get_all_subject_versions(subject_id:str):
         response.append(SubjectVersionResource(**subj_dict))
     return response
 
-@api.get("/Subject/{subject_id}/{version}", response_model=SubjectVersionResource)
+@api.get(
+    "/Subject/{subject_id}/{version}", 
+    response_model=SubjectVersionResource,
+    response_model_exclude_unset=True
+)
 async def get_subject_version(subject_id:str, version:str, compare: Optional[str] = None) -> SubjectVersionResource:
     query_result = list(db.SubjectVersion.aggregate([
         {
@@ -220,7 +239,11 @@ async def get_subject_version(subject_id:str, version:str, compare: Optional[str
 
     return subject
 
-@api.get("/Resource", response_model=List[ResourceResource])
+@api.get(
+    "/Resource", 
+    response_model=List[ResourceResource],
+    response_model_exclude_unset=True
+)
 async def get_all_resources():
     query_result = db.Resource.aggregate([
         {
@@ -243,7 +266,11 @@ async def get_all_resources():
         response.append(ResourceResource(**res_dict))
     return response
 
-@api.get("/Reference/{subject_id}/{version}/{resource_id}", response_model=ReferenceResource)
+@api.get(
+    "/Reference/{subject_id}/{version}/{resource_id}", 
+    response_model=ReferenceResource,
+    response_model_exclude_unset=True
+)
 async def get_resource_reference(subject_id: str, version: str, resource_id: str, compare: Optional[str] = None):
     query_result = list(db.SubjectVersion.aggregate([
         {
