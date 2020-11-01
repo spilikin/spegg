@@ -51,17 +51,7 @@ def test():
         },
         {
             '$addFields': {
-                'id': { '$arrayElemAt': [ '$resource.id', 0 ] },
-                'title': { '$arrayElemAt': [ '$resource.title', 0 ] },
-            }
-        },
-
-        {
-            '$lookup': {
-                'from': "SubjectVersion",
-                'localField': 'resource_id',
-                'foreignField': 'references.resource_id',
-                'as': 'subject_versions'
+                'resource': { '$arrayElemAt': [ '$resource', 0 ] },
             }
         },
 
@@ -81,16 +71,14 @@ def test():
                     },
 
                 ],
-                'as': 'subject_versions'
+                'as': 'referenced_by_subjects'
             },
         },
 
 
         {
             '$project': {
-                'resource_id': 0,
-                'resource': 0,
-                'subject_versions.references': 0,
+                'referenced_by_subjects.references': 0,
             }
         },
 

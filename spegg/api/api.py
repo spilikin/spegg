@@ -70,15 +70,24 @@ class SubjectResource(BaseModel):
 class ResourceListItemResource(BaseModel):
     id: str
     title: str
+    type: dbmodel.ResourceType
     versions: List[dbmodel.ResourceVersion] = [] 
     latest_version: str
 
-class ResourceVersionResource(BaseModel):
-    id: str
+class SubjectReferenceResource(BaseModel):
+    subject_id: str
+    version: str
+    validity: dbmodel.SubjectVersionValidity
     title: str
+
+
+class ResourceVersionResource(BaseModel):
+    resource_id: str
+    version: str
+    resource: dbmodel.Resource
     url: str
     versions: List[dbmodel.ResourceVersion] = [] 
-    refereced_by_subjects: List[SubjectVersionShortResource] = []
+    referenced_by_subjects: List[SubjectReferenceResource] = []
 
 @api.get(
     "/Subject", 
@@ -398,20 +407,9 @@ async def get_resource_version(resource_id: str, version: str, compare: Optional
         },
         {
             '$addFields': {
-                'id': { '$arrayElemAt': [ '$resource.id', 0 ] },
-                'title': { '$arrayElemAt': [ '$resource.title', 0 ] },
+                'resource': { '$arrayElemAt': [ '$resource', 0 ] },
             }
         },
-
-        {
-            '$lookup': {
-                'from': "SubjectVersion",
-                'localField': 'resource_id',
-                'foreignField': 'references.resource_id',
-                'as': 'subject_versions'
-            }
-        },
-
         {
             '$lookup': {
                 'from': "SubjectVersion",
@@ -428,16 +426,14 @@ async def get_resource_version(resource_id: str, version: str, compare: Optional
                     },
 
                 ],
-                'as': 'refereced_by_subjects'
+                'as': 'referenced_by_subjects'
             },
         },
 
 
         {
             '$project': {
-                'resource_id': 0,
-                'resource': 0,
-                'refereced_by_subjects.references': 0,
+                'referenced_by_subjects.references': 0,
             }
         },
 
