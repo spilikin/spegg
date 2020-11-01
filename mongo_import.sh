@@ -1,5 +1,7 @@
 #!/bin/bash
+DATA_DIR="$( dirname ${BASH_SOURCE[0]} )/data"
 for collection in 'Resource' 'ResourceVersion' 'SubjectVersion'
 do
-    gunzip -c data/${collection}.json.gz | docker-compose exec -T mongo bash -c "mongoimport --username=\${MONGODB_USERNAME} --password=\${MONGODB_PASSWORD} --db=\${MONGODB_DATABASE} --collection=${collection}" 
+echo
+    gunzip -c ${DATA_DIR}/${collection}.json.gz | docker-compose exec -T mongo bash -c "mongoimport --username=\${MONGODB_USERNAME} --password=\${MONGODB_PASSWORD} --db=\${MONGODB_DATABASE} --collection=${collection}" 
 done
