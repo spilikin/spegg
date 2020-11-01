@@ -71,6 +71,7 @@ class ResourceListItemResource(BaseModel):
     id: str
     title: str
     versions: List[dbmodel.ResourceVersion] = [] 
+    latest_version: str
 
 class ResourceVersionResource(BaseModel):
     id: str
@@ -363,7 +364,10 @@ async def get_all_resources():
     ])
     response = []
     for res_dict in query_result:
-        response.append(ResourceListItemResource(**res_dict))
+        item = ResourceListItemResource(**res_dict, latest_version='None')
+        item.latest_version = max(item.versions, key=lambda version: version.version).version
+        response.append(item)
+
     return response
 
 @api.get(
