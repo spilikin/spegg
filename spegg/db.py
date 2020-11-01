@@ -26,8 +26,8 @@ def clean():
        db[c].delete_many({})
 
 def test():
-    resource_id = 'gemSpec_CM_KOMLE'
-    version = '1.8.0'
+    resource_id = 'gemSpec_FM_ePA'
+    version = '1.6.0'
 
     query_result = list(db.ResourceVersion.aggregate([
         {
@@ -54,7 +54,6 @@ def test():
                 'resource': { '$arrayElemAt': [ '$resource', 0 ] },
             }
         },
-
         {
             '$lookup': {
                 'from': "SubjectVersion",
@@ -83,6 +82,19 @@ def test():
         },
 
 
+    ]))
+
+    pprint(query_result)
+
+    query_result = list(db.SubjectVersion.aggregate([
+        {
+            '$match': {'subject_id': 'gemProdT_Kon', 'version': '4.4.0-0'}
+        },
+        {
+            '$project': {
+                'references.requirements': 0,
+            }
+        },
     ]))
 
     pprint(query_result)
