@@ -14,9 +14,18 @@ class PydanticObjectId(ObjectId):
             raise TypeError('ObjectId required')
         return str(v)
 
+class ResourceType(str, Enum):
+    DescriptorDocument = 'DescriptorDocument'
+    InternalDocument = 'InternalDocument'
+    ExternalDocument = 'ExternalDocument'
+    InternalAPI = 'InternalAPI'
+    ExternalAPI = 'ExternalAPI'
+    
+
 class Resource(BaseModel):
     id: str
     title: str
+    type: ResourceType
 
 class ResourceVersion(BaseModel):
     resource_id: str 
