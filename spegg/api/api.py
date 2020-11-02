@@ -46,6 +46,11 @@ class ReferenceResource(BaseModel):
     subject_version: str
     requirements: List[RequirementReferenceResource] = []
 
+class SubjectVersionShortResource(BaseModel):
+    subject_id: str
+    version: str
+    validity: dbmodel.SubjectVersionValidity
+
 class SubjectVersionResource(BaseModel):
     subject_id: str
     version: str
@@ -53,12 +58,7 @@ class SubjectVersionResource(BaseModel):
     type: dbmodel.SubjectType
     validity: dbmodel.SubjectVersionValidity
     references: Optional[List[ReferenceShortResource]] = None
-    all_versions: Optional[List[str]] = None
-
-class SubjectVersionShortResource(BaseModel):
-    subject_id: str
-    version: str
-    validity: dbmodel.SubjectVersionValidity
+    versions: List[SubjectVersionShortResource]
 
 class SubjectResource(BaseModel):
     id: str
@@ -214,21 +214,26 @@ async def get_subject_version(subject_id:str, version:str, compare: Optional[str
         {
             '$lookup': {
                 'from': "SubjectVersion",
-                'localField': 'subject_id',
-                'foreignField': 'subject_id',
-                'as': '_versions'
-            }
+                'let': {'resource_id': '$resource_id', 'version': '$version'},
+                'pipeline': [
+                    { 
+                        '$match': {'subject_id': subject_id },  
+                    },
+                    {
+                        '$project': { 
+                            'subject_id': 1,
+                            'version': 1,
+                            'validity': 1,
+                        }
+                    },
+
+                ],
+                'as': 'versions'
+            },
         },
-        {
-            '$addFields': {
-                'all_versions': '$_versions.version'
-            }
-        },
-        {
-            '$project': { 
-                "_versions": 0,
-            }
-        },
+
+
+  
     ]))
 
     if len(query_result) == 0:
