@@ -15,12 +15,12 @@ fastapi = "^0.61.1"
 uvicorn = "^0.12.1"
 
 [tool.poetry.dev-dependencies]
+pytest = "^6.1.2"
 
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
 
 [tool.poetry.scripts]
-db_test = "spegg.db:test"
 db_clean = "spegg.db:clean"
 serve = "spegg.api:serve"

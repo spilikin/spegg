@@ -51,11 +51,14 @@ class SubjectVersionShortResource(BaseModel):
     version: str
     validity: dbmodel.SubjectVersionValidity
 
-class SubjectVersionResource(BaseModel):
-    subject_id: str
-    version: str
+class SubjectShortResource(BaseModel):
+    id: str
     title: str
     type: dbmodel.SubjectType
+
+class SubjectVersionResource(BaseModel):
+    subject: SubjectShortResource
+    version: str
     validity: dbmodel.SubjectVersionValidity
     references: Optional[List[ReferenceShortResource]] = None
     versions: List[SubjectVersionShortResource]
@@ -231,9 +234,6 @@ async def get_subject_version(subject_id:str, version:str, compare: Optional[str
                 'as': 'versions'
             },
         },
-
-
-  
     ]))
 
     if len(query_result) == 0:

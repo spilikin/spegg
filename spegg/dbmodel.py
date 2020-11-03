@@ -1,18 +1,6 @@
 from enum import Enum
 from pydantic import BaseModel
 from typing import List, Optional
-from bson.objectid import ObjectId
-
-class PydanticObjectId(ObjectId):
-    @classmethod
-    def __get_validators__(cls):
-        yield cls.validate
-
-    @classmethod
-    def validate(cls, v):
-        if not isinstance(v, ObjectId):
-            raise TypeError('ObjectId required')
-        return str(v)
 
 class ResourceType(str, Enum):
     DescriptorDocument = 'DescriptorDocument'
@@ -20,7 +8,6 @@ class ResourceType(str, Enum):
     ExternalDocument = 'ExternalDocument'
     InternalAPI = 'InternalAPI'
     ExternalAPI = 'ExternalAPI'
-    
 
 class Resource(BaseModel):
     id: str
@@ -71,7 +58,7 @@ class SubjectVersion(BaseModel):
     type: SubjectType
     references: List[ResourceReference] = []
     description = ""
-    validity: SubjectVersionValidity = SubjectVersionValidity.Unspecified
+    validity = SubjectVersionValidity.Unspecified
 
 class SubjectVersionDescriptor(BaseModel):
     subject_id: str
