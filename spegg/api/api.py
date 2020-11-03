@@ -77,12 +77,11 @@ class ResourceListItemResource(BaseModel):
     versions: List[dbmodel.ResourceVersion] = [] 
     latest_version: str
 
-class SubjectReferenceResource(BaseModel):
+class SubjectVersionReferenceResource(BaseModel):
     subject_id: str
     version: str
     validity: dbmodel.SubjectVersionValidity
     title: str
-
 
 class ResourceVersionResource(BaseModel):
     resource_id: str
@@ -90,7 +89,7 @@ class ResourceVersionResource(BaseModel):
     resource: dbmodel.Resource
     url: str
     versions: List[dbmodel.ResourceVersion] = [] 
-    referenced_by_subjects: List[SubjectReferenceResource] = []
+    referenced_by_subjects: List[SubjectVersionReferenceResource] = []
 
 @api.get(
     "/Subject", 

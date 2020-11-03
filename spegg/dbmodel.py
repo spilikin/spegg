@@ -53,11 +53,9 @@ class SubjectVersionValidity(str, Enum):
 
 class SubjectVersion(BaseModel):
     subject_id: str
-    title: str
     version: str
-    type: SubjectType
-    references: List[ResourceReference] = []
     description = ""
+    references: List[ResourceReference] = []
     validity = SubjectVersionValidity.Unspecified
 
 class SubjectVersionDescriptor(BaseModel):
