@@ -25,7 +25,7 @@ class Diff(BaseModel):
 class ReferenceShortResource(BaseModel):
     resource: dbmodel.Resource
     version: str
-    url: str
+    url: Optional[str]
     requirements_count: int
     diff: Optional[Diff]
 
@@ -41,7 +41,7 @@ class RequirementReferenceResource(BaseModel):
 class ReferenceResource(BaseModel):
     resource: dbmodel.Resource
     version: str
-    url: str
+    url: Optional[str]
     subject_id: str
     subject_version: str
     requirements: List[RequirementReferenceResource] = []
@@ -56,6 +56,11 @@ class SubjectShortResource(BaseModel):
     title: str
     type: dbmodel.SubjectType
 
+class SubjectVersionListItemResource(BaseModel):
+    subject: SubjectShortResource
+    version: str
+    validity: dbmodel.SubjectVersionValidity
+
 class SubjectVersionResource(BaseModel):
     subject: SubjectShortResource
     version: str
@@ -68,7 +73,7 @@ class SubjectResource(BaseModel):
     title: str
     type: dbmodel.SubjectType
     versions: List[SubjectVersionShortResource] = []
-    latest_version: str
+    latest_version: Optional[str]
 
 class ResourceListItemResource(BaseModel):
     id: str
@@ -78,45 +83,47 @@ class ResourceListItemResource(BaseModel):
     latest_version: str
 
 class SubjectVersionReferenceResource(BaseModel):
-    subject_id: str
+    subject: SubjectShortResource
     version: str
     validity: dbmodel.SubjectVersionValidity
-    title: str
 
 class ResourceVersionResource(BaseModel):
     resource_id: str
     version: str
     resource: dbmodel.Resource
-    url: str
+    url: Optional[str]
     versions: List[dbmodel.ResourceVersion] = [] 
     referenced_by_subjects: List[SubjectVersionReferenceResource] = []
 
 @api.get(
     "/Subject", 
-    response_model=List[SubjectResource]
+    response_model=List[SubjectResource],
+    response_model_exclude_unset=True
 )
 async def get_all_subjects():
-    result = db.SubjectVersion.aggregate([
+    result = db.Subject.aggregate([
         {
-            '$addFields': {
-                'version.version': '$version',
-                'version.subject_id': '$subject_id',
-                'version.validity': '$validity',
+            '$lookup': {
+                'from': "SubjectVersion",
+                'localField': 'id',
+                'foreignField': 'subject_id',
+                'as': 'versions'
+            },            
+        },
+        {
+            '$project': { 
+                'id': 1,
+                'type': 1,
+                'title': 1,
+                'versions.subject_id': 1,
+                'versions.version': 1,
+                'versions.validity': 1,
+                'latest_version': { '$max': '$versions.version'}
             }
         },
         {
-            '$group': {
-                '_id': { '$toLower': '$subject_id'},
-                'id': { '$first': '$subject_id'},
-                'type': { '$first': '$type'},
-                'title': { '$first': '$title'},
-                'latest_version': { '$max': '$version.version' },
-                'versions': { '$addToSet': '$version'},
-            }
+            '$sort': { 'id': 1}
         },
-        {
-            '$sort': { '_id': 1}
-        }
     ])
     response = []
     for subj_dict in result:
@@ -125,7 +132,7 @@ async def get_all_subjects():
 
 @api.get(
     "/Subject/{subject_id}", 
-    response_model=List[SubjectVersionResource], 
+    response_model=List[SubjectVersionListItemResource], 
     response_model_exclude_unset=True
 )
 async def get_all_subject_versions(subject_id:str):
@@ -134,14 +141,25 @@ async def get_all_subject_versions(subject_id:str):
             '$match': {'subject_id': subject_id }
         },
         {
+            '$lookup': {
+                'from': "Subject",
+                'localField': 'subject_id',
+                'foreignField': 'id',
+                'as': 'subject'
+            },            
+        },
+        {
             '$project': {
-                'references': 0,
+                'subject_id': 1,
+                'version': 1,
+                'validity': 1,
+                'subject': { "$arrayElemAt": [ "$subject", 0 ] },
             }
         }
     ])
     response = []
     for subj_dict in result:
-        response.append(SubjectVersionResource(**subj_dict))
+        response.append(SubjectVersionListItemResource(**subj_dict))
     return response
 
 @api.get(
@@ -192,8 +210,6 @@ async def get_subject_version(subject_id:str, version:str, compare: Optional[str
         {
             '$project': { 
                 'subject_id': 1,
-                'type': 1,
-                'title': 1,
                 'version': 1,
                 'validity': 1,
                 'references.version': 1,
@@ -206,8 +222,6 @@ async def get_subject_version(subject_id:str, version:str, compare: Optional[str
             '$group': {
                 '_id': '$_id',
                 'subject_id': {'$first': '$subject_id' },
-                'type': {'$first': '$type' },
-                'title': {'$first': '$title' },
                 'version': {'$first': '$version' },
                 'validity': {'$first': '$validity' },
                 'references': {'$push': '$references'},
@@ -233,6 +247,20 @@ async def get_subject_version(subject_id:str, version:str, compare: Optional[str
                 'as': 'versions'
             },
         },
+        {
+            '$lookup': {
+                'from': "Subject",
+                'localField': 'subject_id',
+                'foreignField': 'id',
+                'as': 'subject'
+            },            
+        },
+        {
+            '$addFields': {
+                'subject': { "$arrayElemAt": [ "$subject", 0 ] },
+            }
+        }
+
     ]))
 
     if len(query_result) == 0:
@@ -428,7 +456,19 @@ async def get_resource_version(resource_id: str, version: str, compare: Optional
                             ]
                         } 
                     },
-
+                    {
+                        '$lookup': {
+                            'from': "Subject",
+                            'localField': 'subject_id',
+                            'foreignField': 'id',
+                            'as': 'subject'
+                        },            
+                    },
+                    {
+                        '$addFields': {
+                            'subject': { "$arrayElemAt": [ "$subject", 0 ] },
+                        }
+                    }
                 ],
                 'as': 'referenced_by_subjects'
             },

@@ -1,9 +1,14 @@
 from spegg.api import __version__
 from spegg.db import db
 from pprint import pprint
+import spegg.dbmodel as dbmodel
 
-def test_version():
-    assert __version__ == '0.10.0'
+def test_all_subjects():
+    query_result = list(db.Subject.find({}))
+
+    for subject_dict in query_result:
+        subject = dbmodel.Subject(**subject_dict)
+        pprint(subject.title)
 
 def test():
     resource_id = 'gemSpec_FM_ePA'
