@@ -293,7 +293,7 @@ async def get_subject_version(subject_id:str, version:str, compare: Optional[str
     response_model=ReferenceResource,
     response_model_exclude_unset=True
 )
-async def get_resource_reference(subject_id: str, version: str, resource_id: str, compare: Optional[str] = None):
+async def get_resource_reference(subject_id: str, version: str, resource_id: str, compare_version: Optional[str] = None, compare_resource_id: Optional[str] = None, compare_subject_id: Optional[str] = None):
     query_result = list(db.SubjectVersion.aggregate([
         {
             '$match': {'subject_id': subject_id, 'version': version}
@@ -359,9 +359,18 @@ async def get_resource_reference(subject_id: str, version: str, resource_id: str
 
     reference = ReferenceResource(**query_result[0])
 
-    if compare:
-        other = await get_resource_reference(subject_id, compare, resource_id)
-        for other_req in other.requirements:
+    if compare_version:
+        if not compare_subject_id:
+            compare_subject_id = subject_id
+        if not compare_resource_id:
+            compare_resource_id = resource_id
+        try:
+            other = await get_resource_reference(compare_subject_id, compare_version, compare_resource_id)
+            other_requirements = other.requirements
+        except:
+            other_requirements = []
+
+        for other_req in other_requirements:
             this_req = next((req for req in reference.requirements if req.id == other_req.id), None)
             if this_req != None:
                 if this_req.text.strip() != other_req.text.strip():
@@ -372,7 +381,7 @@ async def get_resource_reference(subject_id: str, version: str, resource_id: str
                 other_req.diff = Diff(type=DiffType.Removed)
                 reference.requirements.append(other_req)
         for this_req in reference.requirements:
-            other_req = next((req for req in other.requirements if req.id == this_req.id), None)
+            other_req = next((req for req in other_requirements if req.id == this_req.id), None)
             if other_req == None:
                 this_req.diff = Diff(type=DiffType.Added)
 
