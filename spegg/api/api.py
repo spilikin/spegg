@@ -374,8 +374,6 @@ async def get_resource_reference(subject_id: str, version: str, resource_id: str
             this_req = next((req for req in reference.requirements if req.id == other_req.id), None)
             if this_req != None:
                 if this_req.text.strip() != other_req.text.strip():
-                    print (this_req.text)
-                    print (other_req.text)
                     this_req.diff = Diff(type=DiffType.Changed, changes={'html': other_req.html})
             else:
                 other_req.diff = Diff(type=DiffType.Removed)
