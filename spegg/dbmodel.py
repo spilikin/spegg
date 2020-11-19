@@ -57,7 +57,3 @@ class SubjectVersion(BaseModel):
     description = ""
     references: List[ResourceReference] = []
     validity = SubjectVersionValidity.Unspecified
-
-class SubjectVersionDescriptor(BaseModel):
-    subject_id: str
-    version: str
