@@ -8,9 +8,9 @@ def test_all_subjects():
 
     for subject_dict in query_result:
         subject = dbmodel.Subject(**subject_dict)
-        pprint(subject.title)
+        #pprint(subject.title)
 
-def test():
+def test2():
     resource_id = 'gemSpec_FM_ePA'
     version = '1.6.0'
 
@@ -69,17 +69,48 @@ def test():
 
     ]))
 
+    #pprint(query_result)
+
+def test():
+    query_result = list(db.SubjectVersion.aggregate([
+        {
+            '$unwind': '$references'
+        },
+        {
+            '$unwind': '$references.requirements'
+        },
+        { 
+            '$group': { 
+                '_id': '$references.requirements.id', 
+                'resource:id': { '$first' : '$references.resource_id' },
+                'count': { '$sum': 1 },
+            } 
+        },
+        { '$sort' : { 'count': -1 } }, 
+        { 
+            '$limit' : 10 
+        }        
+    ]))
     pprint(query_result)
+
+    print()
 
     query_result = list(db.SubjectVersion.aggregate([
         {
-            '$match': {'subject_id': 'gemProdT_Kon', 'version': '4.4.0-0'}
+            '$unwind': '$references'
         },
         {
-            '$project': {
-                'references.requirements': 0,
-            }
+            '$unwind': '$references'
         },
+        { 
+            '$group': { 
+                '_id': '$references.resource_id', 
+                'count': { '$sum': 1 },
+            } 
+        },
+        { '$sort' : { 'count': -1 } }, 
+        { 
+            '$limit' : 10 
+        }        
     ]))
-
-    pprint(query_result)
+    pprint(query_result)    
