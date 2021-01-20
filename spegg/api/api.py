@@ -9,9 +9,72 @@ from . import __version__
 
 api = APIRouter()
 
-@api.get("/info")
-async def root():
-    return {"version": __version__}
+class InfoSubjectTypeResource(BaseModel):
+    type: dbmodel.SubjectType
+    count: int = 0
+    versions: int = 0
+
+class InfoResource(BaseModel):
+    version: str
+    subjects: List[InfoSubjectTypeResource] = []
+
+@api.get(
+    "/info",
+    response_model=InfoResource,
+)
+async def info():
+    response = InfoResource(version=__version__)
+
+    query_result = list(db.Subject.aggregate([
+        {
+            '$group' : {
+                '_id':'$type', 
+                'count': { '$sum': 1},
+                'type': {'$first': '$type' },
+            }
+        },
+        {
+            '$project': {
+                '_id': 0,
+            }
+        },
+     ]))
+
+    for subj_dict in query_result:
+        response.subjects.append(InfoSubjectTypeResource(**subj_dict))
+
+    query_result = list(db.SubjectVersion.aggregate([
+        {
+            '$lookup': {
+                'from': "Subject",
+                'localField': 'subject_id',
+                'foreignField': 'id',
+                'as': 'subject'
+            },        
+        },
+        {"$unwind":"$subject"},
+        {
+            '$group' : {
+                '_id':'$subject.type', 
+                'type': {'$first': '$subject.type' },
+                'versions': { '$sum': 1}
+            }
+        },
+        {
+            '$project': {
+                '_id': 0,
+            }
+        },
+     ]))
+     
+    for subj_ver_dict in query_result:
+        subject_info = next(filter(lambda s: s.type == subj_ver_dict['type'], response.subjects), None)
+        pprint(subj_ver_dict)
+        pprint(subject_info)
+        if subject_info != None:
+            subject_info.versions = subj_ver_dict['versions']
+
+    return response
 
 class DiffType(str, Enum):
     Added = 'Added'

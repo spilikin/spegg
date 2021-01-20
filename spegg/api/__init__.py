@@ -1,4 +1,4 @@
-__version__='0.12.0'
+__version__='0.14.0'
 import uvicorn
 from fastapi import FastAPI
 from .api import api
