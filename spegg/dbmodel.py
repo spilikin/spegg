@@ -1,6 +1,6 @@
 from enum import Enum
 from pydantic import BaseModel
-from datetime import date
+from datetime import datetime
 from typing import List, Optional
 
 class TextFormat(str, Enum):
@@ -71,7 +71,7 @@ class SubjectVersionReference(BaseModel):
 class Release(BaseModel):
     id: str
     title: str
-    release_date: date
+    release_date: datetime
     description: str
-    subject_versions: List[SubjectVersionReference] = []
     description_format: TextFormat = TextFormat.asciidoc
+    subject_versions: List[SubjectVersionReference] = []
