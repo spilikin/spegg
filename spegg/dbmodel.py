@@ -1,6 +1,12 @@
 from enum import Enum
 from pydantic import BaseModel
+from datetime import date
 from typing import List, Optional
+
+class TextFormat(str, Enum):
+    html = 'html'
+    asciidoc = 'asciidoc'
+    plain = 'plain'
 
 class ResourceType(str, Enum):
     DescriptorDocument = 'DescriptorDocument'
@@ -57,3 +63,10 @@ class SubjectVersion(BaseModel):
     description = ""
     references: List[ResourceReference] = []
     validity = SubjectVersionValidity.Unspecified
+
+
+class Release(BaseModel):
+    title: str
+    release_date: date
+    description: str
+    description_format: TextFormat = TextFormat.asciidoc

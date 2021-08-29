@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "spegg"
-version = "0.12.0"
+version = "0.20.0"
 description = ""
 authors = ["Spilikin"]
 

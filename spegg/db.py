@@ -18,7 +18,8 @@ COLLECTIONS = [
     'ResourceVersion',
     'Subject',
     'SubjectVersion',
-    'SubjectVersionDescriptor'
+    'SubjectVersionDescriptor',
+    'Release'
 ]
 
 def clean():
