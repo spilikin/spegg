@@ -64,10 +64,14 @@ class SubjectVersion(BaseModel):
     references: List[ResourceReference] = []
     validity = SubjectVersionValidity.Unspecified
 
+class SubjectVersionReference(BaseModel):
+    subject_id: str
+    version: str
 
 class Release(BaseModel):
     id: str
     title: str
     release_date: date
     description: str
+    subject_versions: List[SubjectVersionReference] = []
     description_format: TextFormat = TextFormat.asciidoc
