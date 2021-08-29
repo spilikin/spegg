@@ -66,6 +66,7 @@ class SubjectVersion(BaseModel):
 
 
 class Release(BaseModel):
+    id: str
     title: str
     release_date: date
     description: str
