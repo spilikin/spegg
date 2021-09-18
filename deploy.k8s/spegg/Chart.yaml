@@ -36,5 +36,4 @@ dependencies:
   repository: "https://charts.bitnami.com/bitnami"
   version: "10.26.2"
   alias: mongodb
-
-# TODO  traffic - it needs access to docker events - impossible in k8s, is there a k8s-alternative?
+  

@@ -40,6 +40,7 @@ docker-push: .docker-push.make
 	helm upgrade $(STAGE) spegg \
 			--install \
 			--namespace=$(K8S_NAMESPACE) \
+			--set stage=$(STAGE) \
 			--set api.image.repository=$(DOCKER_REGISTRY)/globex_spegg-api \
 			--set api.image.tag=$(IMAGE_TAG) \
 			--set api.env.mongodbUsername=$(MONGODB_USER) \
@@ -50,8 +51,9 @@ docker-push: .docker-push.make
 			--set mongodb.auth.rootPassword=$(MONGODB_ROOT_PASSWORD) \
 			--set mongodb.auth.username=$(MONGODB_USER) \
 			--set mongodb.auth.password=$(MONGODB_PASSWORD) \
-			--set mongodb.auth.database=$(MONGODB_DB)
-#			--debug --dry-run
+			--set mongodb.auth.database=$(MONGODB_DB) \
+			--set ingress.domain="thomasdonath.com" \
+			--set ingress.publicIpName="spegg-dev"  			               	          # --debug
 
 :ONESHELL:
 db-import:
@@ -60,14 +62,14 @@ db-import:
 	do
 	echo
 		gunzip -c $(DATA_DIR)/$${collection}.json.gz | \
-		kubectl exec -i $${MONGODB_POD} -- bash -c "mongoimport -u \$${MONGODB_USERNAME} -p \$${MONGODB_PASSWORD} --authenticationDatabase \$${MONGODB_DATABASE} --collection=$${collection}"
+		kubectl exec -i $${MONGODB_POD} -- bash -c "mongoimport -u \$${MONGODB_USERNAME} -p \$${MONGODB_PASSWORD} --authenticationDatabase \$${MONGODB_DATABASE} --db=\$${MONGODB_DATABASE} --collection=$${collection}"
 	done
 
 api-proxy:
 	kubectl -n $(K8S_NAMESPACE) port-forward $$(kubectl get pod -n $(K8S_NAMESPACE) -l "app.kubernetes.io/name=api,app.kubernetes.io/instance=dev" -o jsonpath="{.items[0].metadata.name}") 8080:80
 
 vue-proxy:
-	kubectl -n $(K8S_NAMESPACE) port-forward $$(kubectl get pod -n $(K8S_NAMESPACE) -l "app.kubernetes.io/name=vue,app.kubernetes.io/instance=dev" -o jsonpath="{.items[0].metadata.name}") 8080:80
+	kubectl -n $(K8S_NAMESPACE) port-forward $$(kubectl get pod -n $(K8S_NAMESPACE) -l "app.kubernetes.io/name=vue,app.kubernetes.io/instance=dev" -o jsonpath="{.items[0].metadata.name}") 8088:80
 
 db-proxy:
 	kubectl -n $(K8S_NAMESPACE) port-forward $$(kubectl get pod -n $(K8S_NAMESPACE) -l "app.kubernetes.io/name=mongodb,app.kubernetes.io/instance=dev" -o jsonpath="{.items[0].metadata.name}") 27017:27017

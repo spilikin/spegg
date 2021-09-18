@@ -2,6 +2,8 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
+stage: dev
+
 api:
   image:
     repository:
@@ -26,7 +28,7 @@ mongodb:
     rootUser: root
     rootPassword:
     username:
-    database: 
+    database:
   serviceAccount:
     create: false
   persistence:
@@ -63,13 +65,18 @@ service:
   port: 80
 
 ingress:
-  enabled: false
+  enabled: true
+  # solution should be one of GCP, NGINX, TRAEFFIK... only GCP is implemented yet
+  solution: "GCP"
+  domain: ""
+  publicIpName: ""
   className: ""
   annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
+  # for GCP completely inside template
   hosts:
-    - host: chart-example.local
+    - host: fqdn
       paths:
         - path: /
           pathType: ImplementationSpecific
