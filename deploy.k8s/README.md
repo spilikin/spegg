@@ -1,4 +1,4 @@
-Problems
+TODO: Problems
 
 - DB
   - there can't be a user and a db with the same name (seems to me so)
@@ -6,6 +6,7 @@ Problems
 - API
   - cant connect to another db than hardcoded spegg
 - PVC should be on NFS
+- DOKU!
 
 to test the API
 
