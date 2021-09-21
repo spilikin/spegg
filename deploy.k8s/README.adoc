@@ -1,0 +1,79 @@
+= Kubernetes Deployment Using Helm
+
+This is to deploy Spegg to a Kubernetes cluster.
+
+It's a Helm chart using a subchart for each service (API and web client, see ./_subcharts/) and a common ingress resource.
+
+I build and push the container images here too.
+
+The ingress is the only provider-specific part. For now I've implemented it for Google Cloud Platform (GCP). You could implement for any other ingress controller (NGINX, Traeffik, AWS,...). You have to modify ./spegg/values.yaml setting ingress.solution to your platform and enable your implementation in ./spegg/templates/. like in gcp.ingress.yaml.
+
+All parameters are set in ./spegg/values.yaml but mostly overwritten by command line. Here I'm using _make_ to do it easely.
+
+== Stages
+
+Makefile ist build to use stages like DEV, QS, PROD. So you have to set stage on top of Makefile or use
+
+```shell
+
+make <target> stage=dev
+
+```
+
+Your settings are provided per stage as _Make-settings.<STAGE>_ and _Make-settings.<STAGE>.private_
+
+== How to use
+
+You have to prepare
+
+* install kubectl and make
+* access to your k8s and configured kubectl config. (for GCP use _gcloud container clusters get-credentials_)
+
+To set your environment
+
+1. update Make-settings.dev with your own settings for dev stage (maybe you want to rename/copy it for other stage names)
+1. create a Make-settings.<STAGE>.private like Make-settings.private-template
+1. review the variables in the Makefile
+
+```shell
+
+# make it from scratch
+make clean default
+
+# load the sample database
+make db-import
+
+# to remove the deployment from k8s
+make uninstall
+```
+
+The Makefile implements docker-compose build and push using dependencies provided by files _.docker-build.<STAGE>.make_ and _.docker-push.<STAGE>.make_, the default target deploys the app  after the dependencies are resolved.
+
+If you want to skip the image part run _make unclean_ to build these files.
+
+The makefile provides kube-proxies for development
+
+* make api-proxy (local port 8080)
+* make vue-proxy (local port 8081)
+* make db-proxy (local port 27017)
+
+so you can access them from your local machine.
+
+to test the API
+
+```shell
+
+make api-proxy
+curl -v http://localhost:8080/api/v1/info
+curl -v http://localhost:8080/api/v1/Subject
+curl -v http://localhost:8080/api/v1/Resource
+```
+
+== Possible further enhancements
+
+* DB:
+  ** there can't be a user and a db with the same name (seems to me so)
+  ** so I've changed username to speggu
+* API: can't connect to another db than hardcoded spegg
+* MongoDB: the PVC should be on NFS to not bind the containers to one host (use persistence.existingClaim for MongoDB chart provideing a PVC on NFS mounted PV)
+* add ingress solutions for Traeffik and more

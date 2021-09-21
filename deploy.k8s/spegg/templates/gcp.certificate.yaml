@@ -1,0 +1,10 @@
+{{- if (and .Values.ingress.enabled (eq .Values.ingress.solution "GCP")) -}}
+{{- $fullName := include "spegg.fullname" . -}}
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: {{ $fullName }}
+spec:
+  domains:
+    - spegg.{{.Values.stage}}.{{.Values.ingress.domain}}
+{{- end }}
