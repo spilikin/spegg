@@ -1,3 +1,78 @@
 ﻿Name;Type-Id;TI-Betrieb Id;Produktteam
-E-Rezept-Fachdienst (neu!);gemProdT_eRp_FD;PDT50;Medical
-E-Rezept-Frontend des Versicherten;gemProdT_eRp_FdV;PDT51;Medical
+Zulassungsobjekt COS;gemProdT_COS;;Smartcard
+Zulassungsobjekt eGK-Objektsystem;gemProdT_eGK_ObjSys;;Smartcard
+Bestätigungsgegenstand Sicherheit für die Herausgabe- und Nutzungsprozesse der eGK (G2);gemProdT_eGK_Sich;;Smartcard
+Bestätigungsgegenstand Personalisierungsvalidierung eGK (G2);gemProdT_eGK_PersVal;;Smartcard
+Zulassungsobjekt HBA-Objektsystem;gemProdT_HBA_ObjSys;;Smartcard
+HBA (personalisiert);gemProdT_HBA;ML-123416 - PDT13;Smartcard
+Zulassungsobjekt SMC-B-Objektsystem;gemProdT_SMC-B_ObjSys;;Smartcard
+SMC-B (personalisiert);gemProdT_SMC-B;ML-123417 - PDT14;Smartcard
+Zulassungsobjekt gSMC-K-Objektsystem;gemProdT_gSMC-K_ObjSys;;Smartcard
+Zulassungsobjekt gSMC-KT-Objektsystem;gemProdT_gSMC-KT_ObjSys;;Smartcard
+Zulassungsobjekt eGK-Objektsystem G2.1;gemProdT_eGK_ObjSys_G2_1;;Smartcard
+Bestätigungsgegenstand Sicherheit für die Herausgabe- und Nutzungsprozesse der eGK G2.1;gemProdT_eGK_Sich_G2_1;;Smartcard
+Bestätigungsgegenstand Personalisierungsvalidierung eGK G2.1;gemProdT_eGK_PersVal_G2_1;;Smartcard
+Zulassungsobjekt HBA-Objektsystem G2.1;gemProdT_HBA_ObjSys_G2_1;;Smartcard
+HBA G2.1 (personalisiert);gemProdT_HBA_G2_1;ML-123440 - PDT39;Smartcard
+Zulassungsobjekt SMC-B-Objektsystem G2.1;gemProdT_SMC-B_ObjSys_G2_1;;Smartcard
+SMC-B G2.1 (personalisiert);gemProdT_SMC-B_G2_1;;Smartcard
+Zulassungsobjekt gSMC-KT-Objektsystem G2.1;gemProdT_gSMC-KT_ObjSys_G2_1;;Smartcard
+CVC-Root – ECC;gemProdT_CVC_Root_ECC;ML-123433 - PDT32;Core Infrastructure
+Trust Service Provider CVC;gemProdT_CVC_TSP;ML-123432 - PDT31;Core Infrastructure
+Konnektor;gemProdT_Kon;ML-123420 - PDT17;Edge
+Konnektor PTV1 (VSDM);gemProdT_Kon_PTV1;;Edge
+Konnektor PTV2 (VSDM, NFDM);gemProdT_Kon_PTV2;;Edge
+Konnektor PTV3 (eMP/AMTS, NFDM);gemProdT_Kon_PTV3;;Edge
+Konnektor PTV4 (ePA);gemProdT_Kon_PTV4;;Edge
+Konnektor PTV4 (ePA + Komfortsignatur);gemProdT_Kon_PTV4Plus;;Edge
+Konnektor PTV5 (ePA 2.0 + Komfortsignatur);gemProdT_Kon_PTV5;ML-123420 - PDT17;Edge
+Konfigurationsdienst;gemProdT_KSR;ML-123414 - PDT11;Core Infrastructure
+eHealth-Kartenterminal;gemProdT_KT;ML-123421 - PDT18;Smartcard
+Mobiles Kartenterminal;gemProdT_MobKT;ML-123422 - PDT19;Smartcard
+Namensdienst;gemProdT_NamD;ML-123409 - PDT06;Core Infrastructure
+OCSP-Proxy;gemProdT_OCSP_Proxy;ML-123404 - PDT01;Core Infrastructure
+Störungsampel;gemProdT_St_Ampel;;Core Infrastructure
+TSL-Dienst;gemProdT_TSL;ML-123407 - PDT04;Core Infrastructure
+VPN-Zugangsdienst;gemProdT_VPN_ZugD;ML-123412 - PDT09;Core Infrastructure
+Sicherheitsgateway Bestandsnetze;gemProdT_SG_BestNetze;ML-123413 - PDT10;Core Infrastructure
+Verzeichnisdienst;gemProdT_VZD;ML-123428 - PDT25;Communications
+Trust Service Provider X.509 (nonQES) – Komp;gemProdT_X509_TSP_nonQES_Komp;ML-123438 - PDT37;Core Infrastructure
+Trust Service Provider X.509 (nonQES) – eGK;gemProdT_X509_TSP_nonQES_eGK;ML-123406 - PDT03;Core Infrastructure
+Trust Service Provider X.509 (nonQES) – HBA;gemProdT_X509_TSP_nonQES_HBA;ML-123437 - PDT36;Core Infrastructure
+Trust Service Provider X.509 (nonQES) – SMC-B;gemProdT_X509_TSP_nonQES_SMC-B;ML-123439 - PDT38;Core Infrastructure
+Trust Service Provider X.509 QES;gemProdT_X509_TSP_QES;ML-123405 - PDT02;Core Infrastructure
+Zeitdienst;gemProdT_ZeitD;ML-123410 - PDT07;Core Infrastructure
+Zentrales Netz der TI;gemProdT_ZentrNetz;ML-123411 - PDT08;Core Infrastructure
+Servicemonitoring;gemProdT_ServiceMon;ML-123442 - PDT41;Core Infrastructure
+Fachdienste VSDM;gemProdT_FD_VSDM;ML-123423 - PDT20, ML-123426 - PDT23, ML-123429 - PDT26;Euro Vision
+Intermediär VSDM;gemProdT_Intermediaer_VSDM;ML-123424 - PDT21;Core Infrastructure
+Fachdienst KOM-LE;gemProdT_FD_KOMLE;ML-123427 - PDT24;Communications
+Clientmodul KOM-LE;gemProdT_CM_KOMLE;ML-123430 - PDT27;Communications
+KTR-AdV Terminal;gemProdT_KTR-AdV-Terminal;;Patient
+KTR-AdV;gemProdT_KTR-AdV;ML-123436 - PDT35;Patient
+gematik Root-CA;gemProdT_gematik_Root_CA;ML-123425 - PDT22;Core Infrastructure
+ePA-Aktensystem;gemProdT_Aktensystem_ePA;ML-123444 - PDT43;Patient
+ePA-Frontend des Versicherten;gemProdT_ePA_FdV;ML-123445 - PDT44;Patient
+Basis-Consumer;gemProdT_Basis-Consumer;ML-123446 - PDT45;Edge
+KTR-Consumer;gemProdT_KTR-Consumer;ML-123447 - PDT46;Edge
+ePA-Wiederherstellungsdienst;gemProdT_WHD_ePA;;Patient
+Signaturdienst;gemProdT_SigD;ML-123448 - PDT47;Identity Management
+Schlüsselgenerierungsdienst ePA;gemProdT_SGD_ePA;ML-123449 - PDT48;Identity Management
+ePA-Modul Frontend des Versicherten;gemProdT_ePA-Modul_FdV;;Patient
+E-Rezept-Fachdienst;gemProdT_eRp_FD;ML-123451 - PDT50;Medical
+E-Rezept-Frontend des Versicherten;gemProdT_eRp_FdV;ML-123452 - PDT51;Medical
+E-Rezept-Anwendungen des Versicherten;gemProdT_eRp_AdV;ML-123463 - PDT58;Medical
+Identity Provider - Dienst;gemProdT_IDP-Dienst;ML-123453 - PDT52;Identity Management
+ePA-Frontend des Versicherten im KTR-AdV-Terminal;gemProdT_ePA_FdV_AdV;;Patient
+SMC-B Dual Interface;gemProdT_SMC-B_G2_1_DI;;Smartcard
+SMC-B-Objektsystem Dual Interface;gemProdT_SMC-B_ObjSys_G2_1_DI;;Smartcard
+Private Key Generator;gemProdT_PKG;ML-123465 - PDT60;Identity Management
+Fachdienste VSDM nonGKV;gemProdT_FD_VSDM_nonGKV;ML-123466 - PDT61, ML-123467 - PDT62, ML-123468 - PDT63;Euro Vision
+Identity Provider - Authentisierungsmodul;gemProdT_IDP-AuthModul;ML-123454 - PDT53;Identity Management
+Apothekenverzeichnis;gemProdT_eRp_APOVZD;ML-123464 - PDT59;Medical
+TI-Messager Fachdienst;gemProdT_TIM_FD;ML-123469 - PDT64;Communications
+TI-Messager Frontend;gemProdT_TIM_Client;ML-123470 - PDT65;Communications
+Verzeichnisdienst FHIR;gemProdT_VZD_FHIR;ML-123471 - PDT66;Communications
+Highspeed Konnektor;gemProdT_Konn_Highspeed;ML-124076 - PDT67;Edge
+Anbietertypsteckbrief TI-Messenger;gemAnbT_TIM;;Communications
+Sektoraler Identity Provider;gemProdT_IDP-Sek;ML-124077 - PDT68;Identity Management
