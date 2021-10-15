@@ -74,5 +74,3 @@ TI-Messager Fachdienst;gemProdT_TIM_FD;ML-123469 - PDT64;Communications
 TI-Messager Frontend;gemProdT_TIM_Client;ML-123470 - PDT65;Communications
 Verzeichnisdienst FHIR;gemProdT_VZD_FHIR;ML-123471 - PDT66;Communications
 Highspeed Konnektor;gemProdT_Konn_Highspeed;ML-124076 - PDT67;Edge
-Anbietertypsteckbrief TI-Messenger;gemAnbT_TIM;;Communications
-Sektoraler Identity Provider;gemProdT_IDP-Sek;ML-124077 - PDT68;Identity Management
