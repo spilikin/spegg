@@ -61,7 +61,6 @@ ML-121706;final;ePA-Frontend des Versicherten;gemProdT_ePA_FdV_PTV_2.4.0-0;gemPr
 ML-124030;final;ePA-Frontend des Versicherten;gemProdT_ePA_FdV_PTV_2.5.0-0;gemProdT_ePA_FdV;2.5.0-0;gültig (keine Neuzulassung);2021-09-02;2021-10-04;;Konnektor-Maintenance-21.5
 ML-124844;final;ePA-Frontend des Versicherten;gemProdT_ePA_FdV_PTV_2.5.0-1;gemProdT_ePA_FdV;2.5.0-1;zulassungsfähig;2021-10-04;;;Release ePA_2.0.5
 ML-125256;geplant;ePA-Frontend des Versicherten;gemProdT_ePA_FdV_PTV_2.5.0-1;gemProdT_ePA_FdV;2.5.0-1;in Vorbereitung;;;;Konnektor_PTV5_Maintenance
-ML-122258;Entwurf;;gemProdT_eRp_AdV_PTV_1.0.x-0;gemProdT_eRp_AdV;1.0.x-0;in Vorbereitung;;;;Release E-Rezept 1.1.0
 ML-122257;final;Apothekenverzeichnis;gemProdT_eRp_APOVZD_PTV_1.0.0-0;gemProdT_eRp_APOVZD;1.0.0-0;zulassungsfähig;2021-06-21;;;Release E-Rezept 1.1.0
 ML-125214;Entwurf;Apothekenverzeichnis;gemProdT_eRp_APOVZD_PTV_1.0.0-x;gemProdT_eRp_APOVZD;1.0.0-x;zulassungsfähig;;;;TestRWE0815
 ML-119463;final;E-Rezept-Fachdienst;gemProdT_eRp_FD_PTV_1.2.0-0;gemProdT_eRp_FD;1.2.0-0;abgekündigt;2021-03-05;2021-10-11;2021-10-11;R4.0.2
