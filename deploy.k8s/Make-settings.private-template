@@ -1,0 +1,11 @@
+# private settings for stage dev (will be not pushed to Git)
+
+K8S_CONTEXT := "your kubectl context name"
+K8S_NAMESPACE := your-namespace
+DOCKER_REGISTRY := "eu.gcr.io/project"
+
+MONGODB_ROOT_PASSWORD := "secret password"
+MONGODB_PASSWORD := "secret password"
+
+INGRESS_DOMAIN := "example.com"
+PUBLIC_IP_NAME := "ip-addr-dev"

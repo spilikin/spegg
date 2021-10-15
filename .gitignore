@@ -2,3 +2,9 @@ raw-data
 .DS_Store
 __pycache__
 *.log
+
+**.tgz
+**.lock
+
+**.make
+**.private

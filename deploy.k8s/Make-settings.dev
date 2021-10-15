@@ -1,0 +1,6 @@
+# settings for Makefile in stage DEV
+
+IMAGE_TAG := "0.0.1"
+MONGODB_DB := "spegg"
+MONGODB_USER := "speggu"
+MONGODB_HOST := "$(STAGE)-mongodb"
