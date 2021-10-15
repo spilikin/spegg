@@ -119,7 +119,6 @@ ML-121511;final;Konnektor PTV5 (ePA 2.0 + Komfortsignatur);gemProdT_Kon_PTV5_5.0
 ML-121990;final;Konnektor PTV5 (ePA 2.0 + Komfortsignatur);gemProdT_Kon_PTV5_5.0.1-0;gemProdT_Kon_PTV5;5.0.1-0;EOL (EndOfLife);2021-07-14;2021-09-02;2021-09-02;Hotfix 1 zu gSMC-K-Laufzeitverlängerung, Konn_Maintenance_21.1/21.2/21.3
 ML-124032;final;Konnektor PTV5 (ePA 2.0 + Komfortsignatur);gemProdT_Kon_PTV5_5.0.2-0;gemProdT_Kon_PTV5;5.0.2-0;zulassungsfähig;2021-09-02;;;Konnektor-Maintenance-21.5
 ML-125258;geplant;Konnektor PTV5 (ePA 2.0 + Komfortsignatur);gemProdT_Kon_PTV5_5.0.2-0;gemProdT_Kon_PTV5;5.0.2-0;in Vorbereitung;;;;Konnektor_PTV5_Maintenance
-ML-121655;geplant;;gemProdT_Konn_Highspeed_PTV_1.0.0-0 CC;gemProdT_Konn_Highspeed;1.0.0-0 CC;in Vorbereitung;;;;Highspeed-Konnektor Prüfung
 ML-124821;Entwurf;Highspeed Konnektor;gemProdT_Konn_Highspeed_PTV_1.0.x-0;gemProdT_Konn_Highspeed;1.0.x-0;in Vorbereitung;;;;TEST RWE PROD 1
 ML-119505;final;Konfigurationsdienst;gemProdT_KSR_PTV_1.8.1-0;gemProdT_KSR;1.8.1-0;gültig (keine Neuzulassung);2018-05-18;2018-12-18;;
 ML-119420;final;Konfigurationsdienst;gemProdT_KSR_PTV_1.8.2-0;gemProdT_KSR;1.8.2-0;zulassungsfähig;2019-05-15;;;R3.1.0
@@ -187,7 +186,6 @@ ML-119527;final;Verzeichnisdienst;gemProdT_VZD_PTV_1.5.0-0;gemProdT_VZD;1.5.0-0;
 ML-119528;final;Verzeichnisdienst;gemProdT_VZD_PTV_1.5.0-1;gemProdT_VZD;1.5.0-1;gültig (keine Neuzulassung);;;;R3.1.3  Hotfix 5
 ML-119529;final;Verzeichnisdienst;gemProdT_VZD_PTV_1.5.3-0;gemProdT_VZD;1.5.3-0;gültig (keine Neuzulassung);2021-03-05;2021-04-16;;R4.0.2
 ML-119446;final;Verzeichnisdienst;gemProdT_VZD_PTV_1.6.0-0;gemProdT_VZD;1.6.0-0;zulassungsfähig;2021-04-16;;;KIM 1.5.1
-ML-121555;geplant;;gemProdT_VZD_PTV_1.6.1;gemProdT_VZD;1.6.1;zulassungsfähig;;;;
 ML-122907;Entwurf;Verzeichnisdienst;gemProdT_VZD_PTV_1.6.x-0;gemProdT_VZD;1.6.x-0;in Vorbereitung;;;;
 ML-119498;final;gematik-Root-CA;gemProdT_X509_gematik_Root_CA_PTV_1.4.0-1;gemProdT_X509_gematik_Root_CA;1.4.0-1;gültig (keine Neuzulassung);2017-10-23;2018-05-18;;R1.6.4-2
 ML-119531;final;Trust Service Provider X.509 (nonQES) – eGK;gemProdT_X509_TSP_nonQES_eGK_PTV_1.7.1-0;gemProdT_X509_TSP_nonQES_eGK;1.7.1-0;gültig (keine Neuzulassung);2017-12-06;2018-05-18;;R1.6.4-3
