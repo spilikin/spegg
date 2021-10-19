@@ -1,9 +1,9 @@
-Anwendung	Langname
-VSDM	Versichertenstammdatenmanagement
-KIM	Kommunikation in der Medizinversorgung
-EMP	E-Medikationsplan
-NFDM	Notfalldatenmanagement
-EPA	E-Patientenakte
-E-Rezept	E-Rezept
-TI-Messenger	TI-Messenger
-WANDA	WANDA
+﻿Anwendung;Langname
+VSDM;Versichertenstammdatenmanagement
+KIM;Kommunikation in der Medizinversorgung
+EMP;E-Medikationsplan
+NFDM;Notfalldatenmanagement
+EPA;E-Patientenakte
+E-Rezept;E-Rezept
+TI-Messenger;TI-Messenger
+WANDA;WANDA
