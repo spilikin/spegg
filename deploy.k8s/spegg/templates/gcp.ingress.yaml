@@ -22,6 +22,7 @@ metadata:
     kubernetes.io/ingress.global-static-ip-name: {{ .Values.ingress.publicIpName }}
     networking.gke.io/managed-certificates: {{ $fullName }}
     networking.gke.io/v1beta1.FrontendConfig: {{ $fullName }}
+    kubernetes.io/ingress.allow-http: "false"
 spec:
   {{- if and .Values.ingress.className (semverCompare ">=1.18-0" .Capabilities.KubeVersion.GitVersion) }}
   ingressClassName: {{ .Values.ingress.className }}

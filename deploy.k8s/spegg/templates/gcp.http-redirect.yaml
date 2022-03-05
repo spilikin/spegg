@@ -6,5 +6,6 @@ metadata:
   name: {{ $fullName }}
 spec:
   redirectToHttps:
-    enabled: true
+    enabled: false
+  sslPolicy: gematik-ssl-policy
 {{- end }}
