@@ -3,6 +3,49 @@ from pydantic import BaseModel
 from datetime import datetime
 from typing import List, Optional
 
+class Origin(BaseModel):
+    originName: str
+    originId: str
+    originUrl: str
+
+class SubjectType(str, Enum):
+    Product = "Product"
+    Provider = "Provider"
+    ThirdParty = "ThirdParty"
+    Interface = "Interface"
+
+class Subject(BaseModel):
+    cn: str
+    type: SubjectType    
+    title: str
+    created: datetime
+    updated: datetime
+    aliases: List[str] = []
+    description = ""
+    origin: Optional[Origin]
+
+class SubjectVersionValidity(BaseModel):
+    id: str
+    title: str
+    origin: Origin
+
+class SubjectVersion(BaseModel):
+    subjectCn: str
+    validityId: str
+    version: str
+    origin: Origin
+    created: datetime
+    updated: datetime
+    documentVersion: str
+    approvableFrom: Optional[datetime]
+    approvableTo: Optional[datetime]
+    description = ""
+#    references: List[ResourceReference] = []
+
+#
+# ===============================================
+#
+
 class TextFormat(str, Enum):
     html = 'html'
     asciidoc = 'asciidoc'
@@ -25,18 +68,6 @@ class ResourceVersion(BaseModel):
     version: str
     url: Optional[str]
 
-class SubjectType(str, Enum):
-    Provider = 'Provider'
-    Product = 'Product'
-    ThirdParty = 'ThirdParty'
-    Requirements = 'Requirements'
-
-class Subject(BaseModel):
-    id: str
-    type: SubjectType    
-    title: str
-    description = ""
-
 class RequirementReference(BaseModel):
     id: str
     title: str
@@ -49,20 +80,6 @@ class ResourceReference(BaseModel):
     resource_id: str
     resource_version: str
     requirements: List[RequirementReference] = []
-
-class SubjectVersionValidity(str, Enum):
-    Unspecified = 'Unspecified'
-    Invalid = 'Invalid'
-    ValidFrozen = 'ValidFrozen'
-    ValidActive = 'ValidActive'
-    Pending = 'Pending'
-
-class SubjectVersion(BaseModel):
-    subject_id: str
-    version: str
-    description = ""
-    references: List[ResourceReference] = []
-    validity = SubjectVersionValidity.Unspecified
 
 class SubjectVersionReference(BaseModel):
     subject_id: str

@@ -1,8 +1,6 @@
 from pymongo import MongoClient
 import logging
-import datetime
 import os
-from pprint import pprint
 
 client = MongoClient(
     os.getenv('MONGODB_HOST','localhost'),
@@ -18,10 +16,11 @@ COLLECTIONS = [
     'ResourceVersion',
     'Subject',
     'SubjectVersion',
-    'SubjectVersionDescriptor',
+    'SubjectVersionValidity',
     'Release'
 ]
 
 def clean():
     for c in COLLECTIONS:
-       db[c].delete_many({})
+        logging.info(f"Deleting collection: {c}")
+        db[c].delete_many({})
