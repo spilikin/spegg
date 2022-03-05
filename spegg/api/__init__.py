@@ -1,4 +1,4 @@
-__version__='2.0.1'
+__version__='0.23.0'
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
