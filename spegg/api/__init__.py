@@ -1,8 +1,8 @@
-__version__='0.23.0'
+__version__='2022.03.1'
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .api import api
+#from .api import api
 
 app = FastAPI(
     title="Spegg", 
@@ -25,7 +25,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(api, prefix="/api/v1")
+#app.include_router(api, prefix="/api/v1")
 
 
 

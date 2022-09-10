@@ -2,7 +2,10 @@ from enum import Enum
 from pydantic import BaseModel
 from datetime import datetime
 from typing import List, Optional
+from bson.objectid import ObjectId
 
+
+"""
 class TextFormat(str, Enum):
     html = 'html'
     asciidoc = 'asciidoc'
@@ -75,3 +78,4 @@ class Release(BaseModel):
     description: str
     description_format: TextFormat = TextFormat.asciidoc
     subject_versions: List[SubjectVersionReference] = []
+"""
